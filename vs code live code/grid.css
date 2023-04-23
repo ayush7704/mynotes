@@ -1,0 +1,39 @@
+.container{
+    background-color: indianred;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 200px 300px 200px;
+    /* column goes vertical there is 3 columns side by side */
+    /* grid-template-rows: 100px 200px auto; */
+    /* rows goes horizontal  */
+    grid-column-gap:10px;
+    grid-row-gap:10px;
+    justify-content: space-evenly;
+    align-content: space-around;
+    /* height: 400px;; */
+}
+
+.grid-item{
+    background-color: wheat;
+    border: 1px solid black;
+    padding: 20px;
+    font-size: 40px;
+    text-align: center;
+}
+#grid-1{
+    /* grid-column-start: 1;
+    grid-column-end: 4; */
+    /* shortcut of this  */
+    /* grid-column: 1/3;  */
+    /* grid-row: 1/span 3; */
+
+    /* if we write span2  insteat of writing line numver it means it will conbine or rows 2 column */
+
+    /* grid-row-start: 1;
+    grid-row-end: 4; */
+    /* grid-row: 1/4; */
+    /* grid-row: 1/span 3; */
+}
+#grid-5{
+    grid-area: 1/2/4/4;
+}

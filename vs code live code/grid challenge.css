@@ -1,0 +1,23 @@
+
+body{
+    margin: 0px;
+    padding: 5px;
+}
+.container{
+    display: grid;
+   height: 600px;
+    grid-template-columns: repeat(4,2fr);
+    grid-gap: 10px;
+}
+.child{
+    display: grid;
+    grid-gap: 10px;
+    box-sizing: border-box;
+    background-color: yellow;
+}
+
+.divone{
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+}

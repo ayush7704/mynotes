@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 20px;
+            background: linear-gradient(45deg, black, transparent);
+            height: 100vh;
+            max-width: 100vw;
+        }
+
+        nav {
+            flex-flow: row wrap;
+            background-color: aquamarine;
+            border-radius: 20px 20px 0 0;
+            display: flex;
+            align-items: center;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            padding: 0 14px;
+            text-transform: capitalize;
+            text-align: center;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            /* background-color: aquamarine; */
+        }
+
+        li {
+            list-style-type: none;
+
+        }
+
+        li a {
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+            color: white;
+            font-size: 1.4rem;
+            transition: background-color .6s;
+
+        }
+
+        li a:hover {
+            background-color: rebeccapurple;
+        }
+
+        main {
+            display: grid;
+            grid-template-areas: "h1 h1 h1 h1" 'about1 about1 about2 about2';
+            padding: 13px 20px;
+            grid-template-rows: 32px;
+        }
+
+        .abouts {
+            padding: 10px;
+        }
+
+        main h1 {
+            grid-area: h1;
+            font-size: 1.2rem;
+        }
+
+        .about1 {
+            grid-area: about1;
+            display: grid;
+            place-items: center;
+        }
+
+        .about1 img {
+            max-width: 50%;
+            height: auto;
+            border-radius: 20px;
+        }
+
+        .about2 {
+            grid-area: about2;
+        }
+
+        @media screen and (min-width:300px) and (max-width:450px) {
+            body {
+                margin: 0;
+                height: 100vh;
+                width: 100vw;
+                padding: 0;
+            }
+
+            nav {
+                border-radius: 0;
+                justify-content: center;
+            }
+
+            ul {
+            
+                justify-content: space-evenly;
+            }
+
+            .about1 img {
+                max-width: 50%;
+                height: auto;
+                border-radius: 20px;
+            }
+            main{
+              grid-template-areas: 'h1 h1' 'about1 about1' 'about2 about2';
+            }
+        }
+        section{
+            display: grid;
+            grid-gap: 5px;
+            grid-template-columns: repeat(auto-fit ,minmax(280px,1fr));
+        }
+        .h{
+              background-color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <h1>personal portfolio</h1>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">projects</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>About me</h1>
+        <div class="abouts about1"><img src="apun2.jpg" alt="myphoto"></div>
+        <div class="abouts about2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus minima sunt
+            temporibus aspernatur ducimus, culpa quas quae neque laborum illo possimus molestias distinctio explicabo
+            exercitationem quasi non a magni perspiciatis?</div>
+    </main>
+    <section>
+        <div class="h">1 </div>
+        <div class="h">2</div>
+        <div class="h">3</div>
+        <div class="h">4</div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="is">
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+    </ul>
+    <ul id="is2">
+        <li class="f">one</li>
+        <li>two</li>
+        <li>three</li>
+    </ul> 
+
+    <script>
+        let is = document.getElementById('is').firstElementChild;
+        let is2 = document.getElementById('is2').firstElementChild;
+        let equal = is.isEqualNode(is2); // isEqaulNode method dekhta hai ki sab kuch same he ya nahi 
+        // same he to true return karega 
+        console.log(equal);
+    </script>
+</body>
+</html>

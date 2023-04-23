@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            max-width: 100vw;
+            height: 100vh;
+        }
+
+        div {
+            height: 20px;
+            width: 200px;
+            background-color: red;
+            animation-name: animations;
+            position: relative;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes animations {
+            0% {
+                background-color: blue;
+                left: 0px;
+                top: 0px;
+                border-radius: 50px;
+            }
+
+            25% {
+                background-color: green;
+                right: 0;
+                top: 0px;
+                border-radius: 50px;
+                transform: rotate(180deg);
+            }
+
+            50% {
+                background-color: yellow;
+                right: 0;
+                top: 600px;
+                border-radius: 50px;
+            }
+
+            75% {
+                background-color: cadetblue;
+                left: 0px;
+                top: 600px;
+                border-radius: 50px;
+            }
+
+            100% {
+                background-color: red;
+                top: 0px;
+                left: 0px;
+                border-radius: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>dfs</div>
+</body>
+
+</html>

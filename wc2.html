@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            background: linear-gradient(90deg, #a845dbed, #00f2fd8a);
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+
+        div {
+            width: 70vw;
+            margin: auto;
+            text-align: center;
+            text-transform: capitalize;
+            font-family: system-ui;
+        }
+
+        textarea {
+            width: 100%;
+            resize: none;
+            font-size: 20px;
+            padding: 2px 4px;
+        }
+
+        h2 {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container" class="container">
+        <h1 id="h1" class="h1">welcome to word and character counter</h1>
+        <textarea name="text" id="text" id="" cols="30" rows="10"></textarea>
+        <h2 id="h2" class="h2">
+            <span id="word" class="word">0</span>
+            <span id="character" class="character">0</span>
+        </h2>
+    </div>
+
+    <script>
+        let text = document.getElementById('text').addEventListener('input', function (k) {
+            let word = document.getElementById('word');
+            let chara = document.getElementById('character');
+            let value = this.value;
+            value = value.trim();
+            let charalenght = value.length;
+            chara.innerHTML = (charalenght <= 1) ? charalenght + ' character' : charalenght + ' characters';
+
+
+            value = value.trim();
+            let wor = value.split(' ');
+            // let worlenght = wor.length;
+            let worlfilter = wor.filter(function (s) { return s != '' })
+            let worlflenght = worlfilter.length;
+            word.innerHTML = worlflenght <= 1 ? worlflenght + ' word' : worlflenght + ' words';
+            console.log(window.location.href);
+        })
+    </script>
+</body>
+
+</html>

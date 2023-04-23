@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+            height: 100vh;
+            background-color: black;
+            font-family: monospace;
+        }
+
+        .sun {
+            border: 1px solid red;
+            width: 400px;
+            height: 400px;
+            background-image:radial-gradient(circle, #d7a61d, #ff9d0a 65%, #ff6a00 70%);
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            position: relative;
+        }
+
+        .sun::after {
+            content: 'Sun';
+            position: absolute;
+            color: white;
+            font-weight: bold;
+            right: 47px;
+            bottom: 32px;
+        }
+
+        .both {
+            position: relative;
+        }
+
+        .earth {
+            height: 3px;
+            width: 3px;
+            border-radius: 50%;
+            background: black;
+            position: relative;
+        }
+
+        .downarrow {
+            position: absolute;
+            top: -20px;
+            left: -2.5px;
+        }
+
+        .downarrow2 {
+            position: absolute;
+            top: -20px;
+            left: -3.7px;
+        }
+
+        .downarrow::before {
+            left: -12px;
+            content: 'Earth';
+            color: black;
+            position: absolute;
+            top: -18px;
+        }
+
+        .downarrow2::before {
+            left: -12px;
+            content: 'Moon';
+            color: black;
+            position: absolute;
+            top: -18px;
+        }
+
+        .moon {
+            height: 1px;
+            width: 1px;
+            top: 0;
+            border-radius: 50%;
+            background: black;
+            position: absolute;
+            right: -120px;
+        }
+
+        /* .downarrow::after::before{
+            content: 'hh';
+            position: absolute;
+            top: -20px;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="sun">
+        <div class="both">
+            <div class="earth">
+                <div class="downarrow">&#8681;</div>
+            </div>
+            <div class="moon">
+                <div class=" downarrow2">&#8681;</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let j = 0;
+        for(j=0; j<3; j++){
+            document.write(`${j} <br>`)
+        }
+
+        // this is for loop
+        let name = "ayush";
+        for(let i=0; i<=10; i++) {
+        document.write(`${i} ${name} "for loop" <br>`);
+        }
+
+        // outer name bana diya hai loop ka (outer :) 
+        outer: for(let a=1; a<=10; a++){
+            if(a== 5){
+                break outer;
+            }
+           console.log(`29 x ${a} = ${29 * a}`)
+        }
+        // yaha humne condition deke break karaya loop ko name ke accourding 
+
+        document.write("<hr>");
+        // Array ko iterate karana 1
+        let friends = ["rohan","sanjay","deepti","rahul"]
+        for(i=0; i<friends.length; i++) {
+        document.write(`${friends[i]} <br>`);
+       
+        // document.write me friends k baad i use index btane k liy karte hai 
+        // jese abhi i ki value 0 hai to vh friends Array 0 index par ki value ko print karayga 
+        // or next time jb i ki value 1 ho jayegi to 1 index ki value print karayga
+        }
+       
+          // Array ko iterate karana 2 
+         friends.forEach(element => {
+            document.write(`hello from foreach loop > ${element} <br>`)
+         });
+         // foreach me 2 parameter dene par second array ki index batata hai
+
+
+           // Array ko iterate karana 3
+       for (element of friends){
+        document.write(`from of loop > ${element} <br>`)
+       }
+
+       document.write("<hr>");
+       let example = {
+        name:"ayush",
+        salary:0,
+        channel:"no"
+       }
+        // Object
+       for( let key in example){
+        document.write(key +' : '+ example[key]+"<br>");
+       }
+        
+        let k=0;
+       while(k<4)
+        {
+        document.write(`${k}  is less then 4 <br>`);
+        k++;
+        // isme ++ niche lagana hai
+       }
+
+       let  p = 43;
+       do{
+        document.write(`${k}  is less then 43 because we are in do while loop 
+        yh ek moka deta hai <br>`);
+         p++;
+       } while(p<4); //isme condition niche dete hai
+
+       document.write("<hr>");
+
+       cars = ["BMW", "Volvo", "Saab", "Ford"];
+       c=0;
+       for(c=0; c<cars.length; c++){
+        document.write(`${cars[c]} <br>`); 
+       } 
+        let u = 0;
+       while ( u<cars.length){
+        document.write(`${cars[u]} <br>`); 
+        u++;
+       }
+      
+       
+    </script>
+</body>
+</html>

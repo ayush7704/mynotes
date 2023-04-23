@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAPTOP</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: grid;
+            place-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: grid;
+            justify-content: center;
+            width: 600px;
+            overflow: hidden;
+            padding: 0 0 20px 0;
+            height: 600px;
+            background-color: #000000ba;
+        }
+
+        .webcame {
+            width: 100%;
+            height: 20px;
+            display: grid;
+            place-items: center;
+            background-color: #00000000;
+        }
+
+        .came {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: white;
+        }
+
+        .screen {
+            width: 550px;
+            height: 250px;
+            background-color: antiquewhite;
+            /* border-bottom: 13px solid black; */
+            background: url(owl\ picture.jpg);
+            background-origin: padding-box;
+            background-size: 100% 110%;
+            position: relative;
+        }
+
+        .task {
+            width: 100%;
+            background-color: #161515;
+            height: 15px;
+            position: absolute;
+            bottom: 0;
+            display: flex;
+        }
+
+        .win-logo {
+            width: 29px;
+            height: 100%;
+            grid-template-columns: 1fr 1fr;
+            display: grid;
+            align-content: center;
+            grid-gap: 0;
+            /* border-radius: 50%; */
+            /* border: 1px solid rgb(255, 255, 255); */
+            justify-items: center;
+            margin-left: -2px;
+            transform: rotateY(53deg);
+        }
+
+        .child {
+            width: 8px;
+            height: 5px;
+            background-color: rgb(247, 247, 247);
+            position: relative;
+            margin: 0.5px;
+        }
+
+        .child1,
+        .child2 {
+
+            justify-self: end;
+        }
+
+        .child1r,
+        .child2r {
+            width: 10px;
+            justify-self: start;
+        }
+
+        .searchcontainer {
+            border: 0.7px solid #ffffff6b;
+            outline: none;
+            display: flex;
+            background-color: #3f3f3f;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        .search:focus .sl {
+            background-color: red;
+        }
+
+        .searchcontainer:hover {
+            /* border-color: ; */
+            border-width: 0.7px;
+            box-sizing: border-box;
+            background-color: #4e4d4d;
+        }
+
+        .searchlogo {
+            height: 100%;
+            width: 14px;
+            padding-right: 3px;
+            display: flex;
+            /* background: aliceblue; */
+            justify-content: flex-end;
+            align-items: flex-start;
+            padding-top: 6px;
+            color: white;
+        }
+
+        .sl {
+            height: 40%;
+            border: 1px solid white;
+            width: 40%;
+            box-sizing: border-box;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .sl::before {
+            position: absolute;
+            content: '';
+            bottom: -3px;
+            background: white;
+            height: 4px;
+            width: 1px;
+            transform: rotate(54deg);
+            left: -2px;
+        }
+
+        /* .search:focus .sl::before{
+            background: black;
+        } */
+
+        .search {
+            /* place-items: center; */
+            width: 137px;
+            display: flex;
+            font-size: x-small;
+            height: 100%;
+            border: none;
+            /* color: white; */
+            background-color: transparent;
+            box-sizing: border-box;
+            outline: none;
+            padding: 1px 4px 1px 2px;
+        }
+
+
+        .logobar {
+            width: 109%;
+            margin: 0;
+            left: -24px;
+            position: relative;
+            background: black;
+            height: 20px;
+        }
+
+        .powerbtn {
+            width: 100%;
+            place-items: center;
+            display: grid;
+            height: 30px;
+        }
+
+        .power {
+            width: 20px;
+            background-color: white;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid #c19595;
+            cursor: pointer;
+        }
+
+        .power:focus {
+            background-color: aqua;
+        }
+
+        .keyboard {
+            width: 550px;
+            height: 250px;
+            background-color: black;
+            display: grid;
+        }
+
+        .key1 {
+            display: grid;
+            grid-template-columns: repeat(17, 1fr);
+        }
+
+        .key2 {
+            display: grid;
+            grid-template-columns: repeat(17, 1fr);
+        }
+
+        .key3 {
+            display: grid;
+            grid-template-columns: repeat(16, 1fr);
+        }
+
+        .key4 {
+            display: grid;
+            grid-template-columns: repeat(15, 1fr);
+        }
+
+        .key5 {
+            display: grid;
+            grid-template-columns: repeat(15, 1fr);
+        }
+
+        .key6 {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+        }
+
+        .tab {
+            width: 48px;
+            font-size: 9px;
+        }
+
+        .pg {
+            width: 48px;
+        }
+
+        .back {
+            grid-column: span 2;
+            font-size: 8px;
+        }
+
+        .caps {
+            width: 57px;
+            font-size: 10px;
+        }
+
+        .enter {
+            width: 72px;
+            font-size: 10px;
+        }
+
+        .shiftl {
+            width: 73px;
+            font-size: 10px;
+        }
+
+        .shiftr {
+            width: 56px;
+            font-size: 10px;
+        }
+
+        .rarr {
+            width: 30px;
+        }
+
+        .home,
+        small {
+            font-size: 8px;
+        }
+
+        .stop {
+            width: 30px;
+        }
+
+        .font-size-8px {
+            font-size: 8px
+        }
+
+        .width-30px {
+            width: 30px;
+        }
+
+        .width-33px {
+            width: 33px;
+        }
+
+        .width-38px {
+            width: 38px;
+        }
+
+        .font-size-10px {
+            font-size: 10px;
+        }
+
+        .width-184px {
+            width: 184px;
+            padding: 0 2px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        button {
+            padding: 0;
+            margin: 0;
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            border: 1px solid rebeccapurple;
+            margin: 1px;
+            cursor: pointer;
+            /* box-shadow: 0 0 0 1px white; */
+        }
+
+        .searchclose{
+            content: 'X';
+            font-size: 12px;
+            font-family: monospace;
+            position: relative;
+            right: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="webcame">
+            <div class="came" id="came"></div>
+        </div>
+        <div class="screen" id="screen">
+            <div class="task" id="task">
+                <div class="win-logo">
+                    <div class="child child1"></div>
+                    <div class=" child child1r"></div>
+                    <div class="child child2"></div>
+                    <div class="child child2r"></div>
+                </div>
+                <div class="searchcontainer" id="searchcontainer">
+                    <div class="searchlogo">
+                        <div class="sl"></div>
+                    </div>
+                    <input type="text" class="search" placeholder="Type here to search" id="search">
+                    <span class="searchclose" id="inputclean">X</span>
+                </div>
+            </div>
+        </div>
+        <div class="logobar">
+            <div class="logo"></div>
+        </div>
+        <div class="powerbtn">
+            <div class="power" id="power"></div>
+        </div>
+        <div class="keyboard">
+            <div class="key1">
+                <button>esc</button>
+                <button>f1</button>
+                <button>f2</button>
+                <button>f3</button>
+                <button>f4</button>
+                <button>f5</button>
+                <button>f6</button>
+                <button>f7</button>
+                <button>f8</button>
+                <button>f9</button>
+                <button>f10</button>
+                <button>f11</button>
+                <button>f12</button>
+                <button>wf</button>
+                <button>au</button>
+                <button>in</button>
+                <button>dlt</button>
+            </div>
+            <div class="key2">
+                <button>&gt;&gt;</button>
+                <button>~</button>
+                <button>!<sub>1</sub></button>
+                <button>@<sub>2</sub></button>
+                <button>#<sub>3</sub></button>
+                <button>$<sub>4</sub></button>
+                <button>%<sub>5</sub></button>
+                <button>^<sub>6</sub></button>
+                <button>&<sub>7</sub></button>
+                <button>*<sub>8</sub></button>
+                <button>(<sub>9</sub></button>
+                <button>)<sub>0</sub></button>
+                <button>-<sub>_</sub></button>
+                <button>+<sub>=</sub></button>
+                <button class="back">&larr; backspace</button>
+                <button class="home">Home <br><small>scroll</small></button>
+            </div>
+            <div class="key3">
+                <button class="stop">
+                    &lt;&lt;</button>
+                        <button class="tab"> tab &#8676; &#8677;</button>
+                        <button>Q</Q></button>
+                        <button>W</button>
+                        <button>E</button>
+                        <button>R</button>
+                        <button>T</button>
+                        <button>Y</button>
+                        <button>U</button>
+                        <button>I</button>
+                        <button>O</button>
+                        <button>P</button>
+                        <button>[{</button>
+                        <button>]}</button>
+                        <button class="pg">\|</button>
+                        <button class='font-size-8px'>Pg up</button>
+            </div>
+            <div class="key4">
+                <button>
+                    &lt;&lt;|</button>
+                        <button class="caps">caps lock</button>
+                        <button>A</button>
+                        <button>S</button>
+                        <button>D</Q></button>
+                        <button>F</button>
+                        <button>G</button>
+                        <button>H</button>
+                        <button>J</button>
+                        <button>K</button>
+                        <button>L</button>
+                        <button>;:</button>
+                        <button>'"</button>
+                        <button class="enter">&larr; enter</button>
+                        <button class='font-size-8px'>pg dn</button>
+            </div>
+            <div class="key5">
+                <button class="font-size-10px">Aup</button>
+                <button class="shiftl">Shift ^</button>
+                <button>Z</button>
+                <button>X</button>
+                <button>C</Q></button>
+                <button>V</button>
+                <button>B</button>
+                <button>N</button>
+                <button>M</button>
+                <button>,&lt;</button>
+                        <button>.&gt;</button>
+                        <button>/?</button>
+                        <button class="shiftr">Shift ^</button>
+                        <button>&#9650;</button>
+                        <button class='font-size-8px'>end</button>
+            </div>
+            <div class="key6">
+                <button class="font-size-10px width-30px">ADO</button>
+                <button class="width-38px font-size-10px">CTRL</button>
+                <button class="width-33px font-size-8px">fn</button>
+                <button class="width-30px font-size-8px">win</button>
+                <button class="width-30px font-size-8px">alt</button>
+                <button class="width-184px">_________________________</button>
+                <button class='font-size-8px'>altgr</button>
+                <button>-_-</button>
+                <button class="width-30px font-size-8px">CTRL</button>
+                <button class="width-30px">&#9668;</button>
+                <button class="width-30px">&#9660;</button>
+                <button class="rarr" id="rarr">&#9658;</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        let power = document.getElementById('power');
+        power.style.backgroundColor = 'white';
+        power.addEventListener('click', name);
+        function name() {
+            setTimeout(function fun() {
+                let came = document.getElementById('came');
+                let screen = document.getElementById('screen');
+                let btn = document.querySelectorAll('button');
+                let winchild = document.getElementsByClassName('child');
+                let task = document.getElementById('task');
+
+                let color = power.style.backgroundColor;
+                if (power.style.backgroundColor == 'white') {
+                    came.style.backgroundColor = 'black';
+                    power.style.backgroundColor = 'black';
+                    screen.style.cssText = ' background: url(); background-color:black';
+
+                    task.style.cssText = 'display:none';
+
+
+                    for (let c of btn) {
+                        c.style.cssText += 'box-shadow:0 0 0; border: 1px solid  #9f8e8e';
+                    }
+                    for (let c of winchild) {
+                        c.style.cssText = 'display:none';
+                    }
+                }
+                else {
+                    came.style.backgroundColor = 'white';
+                    power.style.backgroundColor = 'white';
+                    screen.style.cssText = 'background-color:white';
+
+                    task.style.cssText = ''
+
+                    for (let c of btn) {
+                        c.style.cssText = 'border 1px solid rebeccapurple;'
+                    }
+                    for (let c of winchild) {
+                        c.style.cssText = 'display:block;';
+                    }
+                }
+                console.log(color);
+            }, 2000)
+        };
+
+
+        let win = task.firstElementChild;
+        let winchilds = win.children;
+        let winhover1 = win.addEventListener('mouseover', () => {
+            for (c of winchilds) {
+                c.style.backgroundColor = '#84d2ffeb';
+            }
+        });
+        let winhover2 = win.addEventListener('mouseleave', () => {
+            for (c of winchilds) {
+                c.style.backgroundColor = 'white';
+            }
+        });
+
+        let searchcontainer = document.getElementById('searchcontainer').firstElementChild.nextElementSibling;
+        searchcontainer.addEventListener('focus', function () {
+            let cc = this.previousElementSibling.firstElementChild;
+            cc.style.borderColor = 'black'
+            this.parentElement.style.cssText =
+                'border-color:#2ec5ce; background-color:white; color:black; outline:none;'
+            console.log(searchcontainer)
+        });
+
+        searchcontainer.addEventListener('blur', function () {
+            let cc = this.previousElementSibling.firstElementChild;
+            cc.style.borderColor = '';
+            this.style.cssText = "";
+            this.parentElement.style.cssText = ''
+        });
+
+
+        // button click event 
+        let btn = document.getElementsByTagName('button');
+        Array.from(btn).forEach(element => {
+            element.addEventListener('mousedown', function (e) {
+                this.style.cssText = 'color:grey;'
+            })
+            element.addEventListener('mouseup', function () {
+                this.style.cssText = 'color:white;'
+            })
+        });
+
+        let s = document.getElementById('inputclean').addEventListener('click',function(){
+            this.previousElementSibling.value=''
+        })
+    </script>
+</body>
+
+</html>

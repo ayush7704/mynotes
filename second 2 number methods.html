@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = 88.90;
+        let x = parseInt(n); 
+    //parseInt() parses a string and returns a whole number. Spaces are allowed. Only the first number is returned:
+        document.write(x);
+
+        document.write('<br>');
+
+        let n2 = 88.90;
+         n2 = parseFloat(n2); // parseFloat same value deta hai round figure me
+        //parseFloat() parses a string and returns a number. Spaces are allowed. Only the first number is returned:
+        document.write(n2);
+        document.write('<br>');
+      //If the number cannot be converted, NaN (Not a Number) is returned.
+
+      let g=Number.isInteger(n) // isInteger boolian return karta hai agar variable ki value me . heto false 
+      document.write(g);
+      document.write('<br>');
+
+      let l = 9.656; //toFixed() returns a string, with the number written with a specified number of decimals: round figure
+      let u = l.toFixed(2); 
+      document.write(u);
+    </script>
+</body>
+</html>

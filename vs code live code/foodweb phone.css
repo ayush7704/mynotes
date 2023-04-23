@@ -1,0 +1,82 @@
+@media screen and (max-width: 500px) and (min-width: 300px) {
+    body{
+      background-color: black;
+    }
+  .navvar{
+    background-color: red;
+    display: grid;
+    width: 100%;
+    justify-content: space-around;
+    justify-items: center;
+  }
+.ul{
+    display: flex;
+    justify-items: start;
+    padding: 0;
+}
+.services-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+}
+ .ourclients,.ourclientsimg{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+ }   
+ .services-item{
+    width: 80%;
+    margin: 10px auto;
+    justify-content: center;
+ }
+ .home{
+    margin: 0;
+ }
+ .servicebtn{
+     margin-top: 0;
+}
+.formcontain form {
+   
+    width: 85%;
+}
+.h2center{
+  color: white;
+}
+.ourclients img{
+  width: 220px;
+}
+}
+
+@media screen and (min-width: 740px) and (max-width: 1000px){
+  .services-item {
+    display: grid;
+    grid-template-columns: auto;
+    height: auto;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+  }
+  .formcontain form{
+    width: 70%;
+  }
+  
+}
+@media screen and (min-width: 500px) and (max-width: 740px){
+  body{
+    width: 100vw;
+  }
+  
+  .services-item {
+    display: grid;
+    grid-template-columns: auto;
+    height: auto;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+  }
+      
+  .formcontain form{
+    width: 70%;
+  }
+}

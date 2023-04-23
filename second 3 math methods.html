@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn" style="margin: auto; display:block;">get otp</button>
+    <script>
+        document.write(Math.ceil(4.5)); //Math.ceil() rounds a number up to its nearest integer.
+        //ceil upar ki hi number batayga   Math.ceil() me M capital hota hai 
+        document.write('<br>')
+
+        document.write(Math.floor(4.5));//Math.floor() rounds a number down to its nearest integer.
+        //floor niche ki hi number batayga 
+        document.write('<br>')
+
+        document.write(Math.round(5.7));  // Math.round() rounds a number to the nearest integer:  
+        // . k badd ki value pe depend karta hai 
+        document.write('<br>')
+
+        document.write(Math.trunc(4.6)+'trunc'); // ye dote hone par bhi same integer return karega
+
+        document.write('<br>')
+
+        let btn= document.getElementById('btn').addEventListener('click',function(){
+            return alert(Math.floor(Math.random()*(10000 - 1000))+1000);
+        });
+
+       function random(min,max){
+        let x = Math.floor(Math.random()*(max - min))+ min;
+        return alert(x) 
+       }
+       document.write(random(1000,10000));
+
+
+    </script>
+</body> 
+</html>

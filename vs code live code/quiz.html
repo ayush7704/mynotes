@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            align-content: center;
+            height: 80vh;
+            display: grid;
+        }
+
+        .container {
+            grid-gap: 6px;
+            display: grid;
+            text-align: center;
+            width: 50%;
+            margin: auto;
+        }
+
+        h3 {
+            text-transform: capitalize;
+            font-family: system-ui;
+            font-size: 1.2rem;
+        }
+
+        .ans,
+        .next {
+            font-size: 0.9rem;
+            padding: 7px;
+            border-color: #c8d9d0;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-family: system-ui;
+            border-radius: 6px;
+        }
+
+        .next {
+            color: black;
+            cursor: pointer;
+            background: rgb(192, 255, 0);
+            width: 90%;
+            border: none;
+            justify-self: center;
+            transition: all 0.5s;
+        }
+
+        .next:hover {
+            box-shadow: 0px 0px 3px 2px gray;
+        }
+
+        .next span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .next span:after {
+            content: '»';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .next:hover span {
+            padding-right: 25px;
+        }
+
+        .next:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3 class="question" id="question">html stands for ?</h3>
+        <button class="ans" id="ans1">hyper typing markup language</button>
+        <button class="ans" id="ans2">hyper text markup language</button>
+        <button class="ans" id="ans3">hyper tool markup language</button>
+        <button class="ans" id="ans4">hyper translate markup language</button>
+        <!-- <button class="next" id="next">Next</button> -->
+        <button class="next" id="next" style="vertical-align:middle"><span>Next </span></button>
+    </div>
+    <script>
+        let ansbtn = document.getElementsByClassName('ans');
+        let ansbtnary = Array.from(ansbtn);
+        let next = document.getElementById('next');
+        let number = 0;
+
+        ansbtnary.forEach(element => {
+            element.addEventListener('click', function (ele) {
+                for (x of ansbtnary) {
+                    x.style.borderColor = ''
+                }
+                ele.target.style.cssText = 'border-color:rgb(192, 255, 0)'
+            })
+        })
+        next.addEventListener('click', function () {
+            let blankornot = ansbtnary.some(function (e) {
+                if (e.style.borderColor != 'rgb(192, 255, 0)') {
+                    return false
+                }
+                else {
+                    return true
+                }
+            })
+            if (blankornot === false) {
+                alert('choose anything please')
+            }
+            else if (blankornot === true) {
+                console.log(document.getElementById('question').innerHTML)
+                if (document.getElementById('question').innerHTML == 'html stands for ?' && ansbtnary[1].style.borderColor == 'rgb(192, 255, 0)') {
+                    number++
+                }
+                if (document.getElementById('question').innerHTML == 'CSS STANDS FOR?' && ansbtnary[0].style.borderColor == 'rgb(192, 255, 0)') {
+                    number++
+                }
+                if (document.getElementById('question').innerHTML == 'js stands for?' && ansbtnary[2].style.borderColor == 'rgb(192, 255, 0)') {
+                    number++
+                }
+                if (document.getElementById('question').innerHTML == 'html is used for?' && ansbtnary[3].style.borderColor == 'rgb(192, 255, 0)') {
+                    number++
+                }
+                if (document.getElementById('question').innerHTML == 'which type of language javascript is ?' && ansbtnary[2].style.borderColor == 'rgb(192, 255, 0)') {
+                    number++
+                }
+                if(document.getElementById('question').innerHTML == 'which type of language javascript is ?'){
+                    if(number <= 3){
+                        alert(number + ' outof ' + 5 +' do little hard work')
+                        console.log('aa gya')
+                    }
+                    else{
+                        alert(number + ' outof ' + 5 +' now you are ready for job')
+                    }
+                }
+
+                if (document.getElementById('question').innerHTML == 'html stands for ?') {
+                    document.getElementById('question').innerHTML = 'CSS STANDS FOR?'
+                    ansbtnary[0].innerHTML = 'CASCADING STYLES SHEET';
+                    ansbtnary[1].innerHTML = 'CASCADING STYLING SHEET';
+                    ansbtnary[2].innerHTML = 'CASSCADING STYLED SHEET';
+                    ansbtnary[3].innerHTML = 'CONTROL STYLES SHEET';
+                }
+
+                else if (document.getElementById('question').innerHTML == 'CSS STANDS FOR?') {
+                    document.getElementById('question').innerHTML = 'js stands for?'
+                    ansbtnary[0].innerHTML = 'java script language';
+                    ansbtnary[1].innerHTML = 'join script';
+                    ansbtnary[2].innerHTML = 'java script';
+                    ansbtnary[3].innerHTML = 'java structure';
+                }
+                else if (document.getElementById('question').innerHTML == 'js stands for?') {
+                    document.getElementById('question').innerHTML = 'html is used for?'
+                    ansbtnary[0].innerHTML = 'html is not used on website';
+                    ansbtnary[1].innerHTML = 'for styling of website';
+                    ansbtnary[2].innerHTML = 'for back-end of website';
+                    ansbtnary[3].innerHTML = 'making structure of website';
+                }
+                else if (document.getElementById('question').innerHTML == 'html is used for?') {
+                    document.getElementById('question').innerHTML = 'which type of language javascript is ?'
+                    ansbtnary[0].innerHTML = 'scripting';
+                    ansbtnary[1].innerHTML = 'programming';
+                    ansbtnary[2].innerHTML = 'both a & b';
+                    ansbtnary[3].innerHTML = 'markup language';
+                }
+                console.log(number)
+            }
+            for (x of ansbtnary) {
+                x.style.borderColor = ''
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+    <li id="demo">hello</li>
+    <li>hello</li>
+    <li>hello</li>
+    </ul>
+
+    <p class="intro">paragraph 1</p>
+    <h2 class="intro">heading 1</h2>
+    <p>paragraph 2</p>
+    <h2>heading 2</h2>
+    <p class="intro">paragraph 3</p>
+
+
+
+    <script>
+ let dcm = document.getElementById('demo').innerHTML;
+ console.log(dcm);
+
+ //isme sabhi intro classes select ho gyi 
+ let clas = document.getElementsByClassName('intro');
+ console.log(clas);
+   
+ 
+
+ // (1) yaha humne querySelecter use kiya hai or bataya hai ki asa (p) element jiski class name 
+// intro he usko select karo 
+// (2) yeh first vale p.intro ko select karega 
+ let query = document.querySelector('p.intro');
+ console.log(query);
+ query.innerHTML = 'hello';
+
+ // here we use querySelecterAll
+ let query2 = document.querySelectorAll('p.intro');
+ console.log(query2);
+ // (1) agar hume iske innerHTML ko change karna hai to loop lagaana padega kyo isme AllSelector use 
+ // kiya hai 1 se jada hone p innerHTML kaam nahi karega 
+  for(i=0; i<query2.length; i++){
+      query2[i].innerHTML = 'loop';
+  }
+  
+  
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

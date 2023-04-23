@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // default parameter 
+        function talk(msg='default parameter'){
+            console.log(msg);
+        }
+       document.write(talk()); // agar hum koi argument na deto undefined aayega isliy use kiya jaata hai default parameter
+
+    
+        // ...name   = rest parameters
+        //humko maalum nahi ki user kitni arguments dega tab rest parameter use karte with any name bo name ek array hai
+        function sum(...args){
+            console.log(args);
+        }
+        sum(3,5);  // yh ek array ban jaata hai isliy [same result aayega]
+
+
+        function ayush(...args){
+            let result = 0;
+
+            // for(let x of args){
+            //     result += x;
+            // }
+
+            // let r = 0;
+            // while(r < args.length){
+            //     result +=args[r]
+            //     r++
+            // }
+
+            console.log(result);
+        }
+
+        ayush(88);
+    </script>
+</body>
+</html>

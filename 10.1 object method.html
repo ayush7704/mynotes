@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //method 1
+        
+        let person = {
+            firstname : 'ayush',
+            lastname : 'nagar',
+        }
+        person.age =18;
+        // anonymous function banaya
+        person.sayhello = function (){
+            console.log('hello');
+        }
+        person.sayhello();
+        console.log(person);
+        
+
+
+        // method 2
+        function greet(){
+            console.log("second method");
+        }
+        person.sayhello = greet;
+
+        person.sayhello();
+
+         // method 3 
+        // isme yahi par anonymous function assign karna 
+        // sayhello : function () {
+        //     console.log("sayby");
+        // }
+
+        // method 4
+        // sayhello : () {
+        //     console.log("sayby");
+        // }
+
+
+        // 3rd practice
+        let teacher ={
+            fname : 'ayush',
+            lname :  'nagar',
+            subject : 'math,urdu',
+            salary : 5000,
+            time : "4hour",
+            work : function (){
+                return `hello from 3rd method ${this.fname} ${this.lname}`;
+            }
+        }
+        teacher.period =3;
+        console.log(teacher);
+        // console.log(teacher.work);
+       console.log(teacher.work())
+
+        // method 4
+        let fourth ={
+            subject : 'math,urdu',
+            salary : 5000,
+            time : "4hour",
+            // total (){
+            //     console.log(`${this.subject} + ${this.salary} `);
+            // }
+            total (){
+               return this.subject +'  '+ this.salary; 
+            }
+        }
+        
+        console.log(fourth.total())
+        console.log(fourth);
+        // fourth.total();
+        
+        
+        for(let x in fourth){
+            console.log(`${x} : ${fourth[x]}`);
+        }
+
+
+    </script>
+</body>
+</html>

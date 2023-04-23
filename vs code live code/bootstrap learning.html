@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+  <style>
+    /* .ctive{
+      background-color: greenyellow !important;
+    }
+    li{
+      border: 1px solid transparent;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+    li:hover{
+      border: 1px solid grey;
+    } */
+
+    .card .h50 {
+      height: 10rem;
+    }
+
+    div .w-220 {
+      width: 220px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- bootstrap flow will be like -->
+  <!-- container > row > column > content (text/img) -->
+
+  <!-- Grid Classes
+    The Bootstrap grid system classes:
+    xs (for phones)
+    sm (for tablets)
+    md (for desktops)
+    lg (for larger desktops) -->
+
+  <!-- when ever we define a div with a row class it devides that class in 12 columns -->
+  <!-- <div class="row" style="height: 200px;">
+        <div class="bg-danger col-sm-8"></div>
+        <div class="bg-success col-sm-4"></div>  -->
+
+  <!-- column class must be inside row container -->
+
+  <!-- <div class="bg-warning col-sm-8"></div>
+        <div class="bg-primary col-sm-4">
+            <div class="row">
+                <div class="col-sm-6"></div>
+                <div class="bg-primary  col-sm-6"></div>
+            </div>
+        </div> 
+    </div> -->
+
+  <!-- ek column ke andar direct nyi column nhi de sakte pahle row banani padegi -->
+  <!-- </div> -->
+  <!-- 1 The .container class provides a responsive fixed width container -->
+  <!-- jo container class hai bo bade screen pe kuch margin deta hai mobile par 100% percent rehta hai -->
+
+
+  <!-- 2 The .container-fluid class provides a full width container, spanning the entire width of the viewport -->
+  <!-- jo container-fluid class he bo full width leti hai chahe jo bhi screen ho -->
+  <!-- if a container-fluid is also throwing a little space around x scace use px-0 -->
+
+  <!-- <pre>
+    
+    x-small                 0px - 575px  [col-*] ispe aane par 100% ho jayega
+     small                  575px - 767px  [col-sm-*] [col-sm-6][col-sm-6] yh aage walo par bhi apply hoga 
+     medium                 768px - 991x   [col-md-*] 
+     large                  992px - 1199x  [col-lg-*] 
+     Extra Large            1200px - 1399px  [col-xl-*] 
+     Extra extra large      1400px - infinite  [col--*] 
+
+    </pre> -->
+
+  <!-- <div class="row"> -->
+  <!-- (s1) yh hume shortcut milta he equal width ke liy class='col' only -->
+  <!-- <div class="col bg-danger">danger</div> -->
+  <!-- <div class="col-lg-auto bg-primary">bg-primary</div> -->
+  <!-- <div class="col bg-secondary">bg-secondary</div> -->
+  <!-- (s2) bich me kisi ko bhi kuch de (col-*) de sakte hai -->
+  <!-- (col-auto) karne se sirf content jitni hi width lijaayegi isme md,lg,sm bhi likh sakte hai -->
+  <!-- </div> -->
+
+  <!-- defining columns  -->
+  <!-- ( row-cols-2) karne se row me kitne colums define karne hai hai btaya jaata hai -->
+
+  <!-- content size width only -->
+  <!-- ( row-cols-auto) karne se sirf content jitni hi width lijaayegi -->
+
+  <!-- flexbox -->
+  <!-- bootstrap flexbox ka use karta hai same properties isme bhi use karte hai class likhke -->
+
+  <!-- align-items example  -->
+  <!-- <div class="container text-center">
+    <div class="row align-items-center border border-danger">
+      <div class="col bg-danger">
+        One of three columns
+        Lorem ipsum dolor sit amet consectetur.
+      </div>
+      <div class="col bg-success">
+        One of three columns Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, quidem.
+      </div>
+      <div class="col bg-secondary">
+        One of three columns Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur quasi excepturi harum libero nulla, ipsam vitae ut odio voluptatem dolorum.
+      </div>
+    </div>
+  </div> -->
+  <!-- same align-content by default full height (stretch) hota hai -->
+  <!-- we can also use them with breakpoints align-content-lg-center -->
+  <!-- the baseline property make a line from fonts bottom area of all divs -->
+
+
+  <!-- we can set direction of flex   (.flex-column) (.flex-column-reverse)-->
+
+  <!-- flex-fill karne se sabhi items me same 100% width aa jaata hai jiska content jaada hoga uski width automatic  badegi yh class child par lagegi -->
+  <!-- flex-fill only works with .col  -->
+
+  <!-- .flex-grow-1 elements uses all available space it can -->
+
+  <!-- .flex-shrink-* jarurat hone pe sikudne ki capacity batane k liy -->
+
+  <!-- .me-auto karne se right me margin milta hai -->
+
+  <!-- .ms-auto karne se  left me margin milta hai -->
+
+  <!-- .mb-auto .mt-auto bhi ese hi he  -->
+
+  <!-- flex order changing  -->
+  <!-- for changing order we have .order-first,last (order-breakpoint-name-*) -->
+  <!-- jis column ko order nahi diya bo first pe aaygi or jisko order-0 diya bo uske baaad -->
+
+  <!-- for giving gap in side  -->
+  <!-- offset se left side me gap diya jaata hai as column kitne gap chahiye bo -->
+  <!-- we can also use them with breakpoints -->
+
+  <!-- <div class="container">
+    <div class="row">
+      <div class="col-4 order-1">hello world 1</div>
+      <div class="col-4">hello world 2</div>
+      <div class="col-4 order-0">hello world 3</div>
+    </div>
+  </div> -->
+
+
+  <!-- classes and components -->
+  <!-- bg-danger for background-color red -->
+  <!-- text-center for text-align-center -->
+  <!-- text-white for make text color white -->
+  <!-- rounded se radius lagate hai -->
+  <!-- <div class="container">
+        <div class="row bg-danger"><div class="col-12"><p class="text-center rounded-5 text-white">hello</p></div></div>
+    </div> -->
+
+  <!-- img-fluid se img ko risponsive kiya jaata hai -->
+  <!-- <div class="container-fluid">
+        <div class="row"><img src="car.jfif" class="img-fluid" alt=""></div>
+    </div> -->
+
+  <!-- <div class="alert alert-primary text-center">
+        A simple primary alert 
+    </div> -->
+
+
+  <!-- bootstrap table  -->
+  <!-- table class use for basic table formating  -->
+  <!-- table-success for bg-color green ho jayega-->
+  <!-- table-dark se bg-black text-white ho jaata hai -->
+  <!-- table-striped se 1 row skip karke jo bhi bg-color ho uska light color aa jaata hai -->
+  <!-- table-hover hover effect ka kaam karta hai -->
+  <!-- Use .table-striped-columns to add zebra-striping to any table column. -->
+  <!-- Highlight a table row or cell by adding a .table-active class. -->
+  <!-- table-bordered to add borders -->
+  <!-- border-danger for border color  -->
+  <!-- table-borderless for border-none  -->
+  <!-- do .table-sm to make any .table more compact by cutting all cell padding in half. -->
+  <!-- for make table responsive table div andar leke div ko .table responsive class dedo  table ka khud ka 
+    scrollbar aa jaata hai -->
+  <!--ye kisi khas jagah bhi lagai ja sakti hai table ke andar -->
+  <!-- .table-group-divider. Add a thicker border, darker between table groups—<thead>, <tbody>, and <tfoot>—with  -->
+  <!-- .align-middle for vertically align the table content  -->
+  <!-- use .table-dark or .table-light for thead  -->
+  <!-- You can also put the <caption> on the top of the table with .caption-top. -->
+
+
+  <!-- <div class="container-fluid">
+    <div class="row text-center">
+      <div class="col-12 table-responsive">
+        <table class="table  table-sm table-bordered border-danger table-dark  table-hover align-middle">
+          <tr class="table-dark">
+            <th>name</th>
+            <th>number</th>
+            <th>address</th>
+          </tr>
+          <tr class="table-group-divider">
+            <td class="table-active">ayush</td>
+            <td>9894595944</td>
+            <td>bakaniya</td>
+          </tr>
+          <tr class="table table-success table-striped-columns">
+            <td>piyush</td>
+            <td>9894595944</td>
+            <td>bakaniya</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- bootstrap carousel -->
+  <!-- data-bs-ride="carousel"  for  autoplay -->
+  <!-- data-bs-ride="true" the carousel won’t automatically start to cycle on page load. Instead, it will only start after the first user interaction. -->
+  <!-- Add data-bs-interval="" to a .carousel-item to change the amount of time to delay between automatically cycling to the next item. -->
+  <!-- Carousels support swiping left/right on touchscreen devices to move between slides. This can be disabled by setting the touch option to false. -->
+
+  <!-- bootstrap button  -->
+  <!-- d-grid is for display grid and gap 2 means grid gap and m-auto means margin-auto -->
+  <!-- <button type="button" class="btn-close" aria-label="Close"></button> -->
+  <!-- <div class="d-grid gap-2 col-8 m-auto"> 
+    <button class="btn btn-primary" type="button">Button</button>
+     <button class="btn btn-primary" type="button">Button</button> 
+  </div> -->
+
+  <!-- isme md ka mtlv medium width se hai 768px - 991x -->
+  <!-- <div class="d-grid gap-2 d-md-block col-sm-8 m-auto justify-content-md-end"> 
+     <button class="btn btn-primary me-md-2" type="button">Button</button> 
+    <button class="btn btn-primary" type="button">Button</button>
+  </div> -->
+
+
+  <!-- bootstrap card  -->
+
+
+  <!-- .card made a card with 0 padding i think with a border 
+  the .card-img-top class basically add a border-radius to img 
+  .card-img-top places an image to the top of the card. 
+   the .card-body class add a padding to that block  -->
+  <!-- <div class="row">
+    <div class="col-12 col-sm-4">
+        <div class="card text-center">
+            <img src="car.jfif" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+    </div>
+  </div> -->
+
+  <!-- <div class="card" style="width: 18rem;">
+    <div class="card-header">
+        Featured
+      </div>
+    <ul class="list-group">
+      <li class="list-group-item">An item</li>
+      <li class="list-group-item">A second item</li>
+      <li class="list-group-item">A third item</li>
+      <li class="list-group-item">A fourth item</li>
+    </ul>
+  </div> -->
+
+  <!-- .card-img-overlay class let the content overlay the img  -->
+  <!-- <div class="card text-bg-dark">
+    <img src="car.jfif" class="card-img" alt="...">
+    <div class="card-img-overlay">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><small>Last updated 3 mins ago</small></p>
+    </div>
+  </div> -->
+
+  <!-- <div class="card mb-3">
+    the .mb-3 is for margin-bottom :1rem 
+    <div class="row g-0">
+      <div class="col-md-4">
+        img-fluid make the img responsive 
+        rounded-start make the img little bit rounded 
+        <img src="car.jfif" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text text-muted">Last updated 3 mins ago</p>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- <div class="row row-cols-1 row-cols-sm-2 g-4">
+    .row-cols is for defining colums also defined with breakpoints
+    .g-4 is for gap between row and colums 
+    <div class="col">
+      <div class="card">
+        <img src="food 1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="apun.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="Zomato.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="car.jfif" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- collapse
+     .collapse hides content ye class rahegi hi
+    button me target me id ka name or <a> k time href me id ka name for target
+    use button everytime, In both cases, the data-bs-toggle="collapse" is required. -->
+  <!-- aria-controls me target ki id ka name aata hai  -->
+  <!-- <p>
+        <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+            aria-controls="collapseExample">
+            Link with href
+        </a>
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2"
+            aria-expanded="false" aria-controls="collapseExample2">
+            Button with data-bs-target
+        </button>
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".toggle"
+            aria-expanded="false" aria-controls="collapseExample collapseExample2">
+            Button with both data-bs-target
+        </button>
+    </p>
+    <div class="collapse toggle" id="collapseExample">
+        <div class="card card-body">
+            1st Some placeholder content for the collapse component. This panel is hidden by default but revealed
+            when the user activates the relevant trigger.
+        </div>
+    </div>
+    <div class="collapse toggle" id="collapseExample2">
+        <div class="card card-body">
+            2nd Some placeholder content for the collapse component. This panel is hidden by default but revealed
+            when the user activates the relevant trigger.
+        </div>
+    </div> -->
+
+  <!-- list  -->
+  <!-- .list-unstyled Remove the default list-style and left margin on list items (immediate children only). use it on ul,ol  -->
+  <!-- Remove a list’s bullets and apply some light margin with a combination of two classes, .list-inline and .list-inline-item. -->
+
+
+  <!-- img -->
+  <!-- Images in Bootstrap are made responsive with .img-fluid. This applies max-width: 100%; and height: auto; to the image so that it scales with the parent width. -->
+  <!-- <img src="food 3.jpg" class="img-fluid img-thumbnail w-50 d-block mx-auto" alt=""> -->
+  <!--  rounded img  > .img-thumbnail to give an image a rounded 1px border appearance. -->
+  <!-- for aligning a block elements to center we use mx-auto  -->
+  <!-- we can use .float classes for aligning images end,start  -->
+
+  <!-- one more method to center the image  -->
+  <!-- <div class="text-center">
+    <img src="food 3.jpg" alt="" class="" style="max-width: 50%;">
+   </div> -->
+
+
+  <!-- form  -->
+  <!-- set height of inputs using .form-control-lg and .form-control-sm.  -->
+  <!-- readonly inputs can still be focused and selected, but disabled inputs cannot. -->
+  <!-- Custom <select> menus need only a custom class, .form-select to trigger the custom styles.
+    we can also set height like inputs .form-select-lg -->
+  <!-- .form-check-input add some style to the checkbox  -->
+
+  <!-- <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg"aria-label=".form-control-lg example" readonly>
+  <input class="form-control-plaintext" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example" readonly> -->
+
+  <!-- <form action="">
+    <label for="in" class="form-label">file</label>
+    <input type="file" id="in" class="form-control">
+  </form> -->
+  <!-- same multiple file upload krane ka bhi banta hai multiple attribute lgata ha -->
+
+  <!-- <select class="form-select form-select-lg" aria-label="Default select example">
+    <option selected>Open this select menu</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select> -->
+
+  <!-- <input type="checkbox" class="form-check-input"> hello <br>
+  <input type="checkbox" class="form-check-input" > by <br>
+  <input type="radio" name="a">ayush <br>
+  <input type="radio" name="a">ayush <br> -->
+  <!-- <div class="form-check form-switch ms-5">
+    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+    <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+  </div> -->
+
+
+  <!-- input group and floating  -->
+  <!-- <div class="input-group">
+    <span class="input-group-text" id="basic">@</span>
+    <input type="text" class="form-control" aria-label="username" aria-describedby="basic">
+  </div> -->
+
+  <!-- without the .form-floating class on the container it will not work  -->
+  <!-- and the placeholder is also required  in the inuts -->
+  <!-- <div class="form-floating">
+    <input type="text" class="form-control" placeholder="name" id="floatinginput">
+    <label for="floatinginput">name</label>
+  </div> -->
+
+  <!-- float -->
+  <!-- float has .float-start and .float-end -->
+  <!-- also can use them with breakpoints float-md-end  -->
+  <!-- content container se bahar a jaane par .clearfix   on container -->
+
+  <!-- position and overflow  -->
+  <!--.position-relative,.position-absolute,.position-fixed,.position-sticky,.position-static -->
+  <!-- .start-0,.end-0  for horizontaly -->
+  <!-- .top-0,.bottom-0  for verticaly -->
+  <!-- whenever we set position-fixed width and height stay only around the content -->
+
+  <!-- text and background  -->
+  <!-- for bg-gradient image use  .bg-gradient -->
+
+  <!-- text-formatting  -->
+  <!-- font-size classes  -->
+  <!-- 2.5 rem  = .fs-1 40px -->
+  <!-- 2.0 rem  = .fs-2 32px -->
+  <!-- 1.75 rem = .fs-3 28px -->
+  <!-- 1.5 rem  = .fs-4 24px -->
+  <!-- 1.25 rem = .fs-5 20px -->
+  <!-- 1 rem    = .fs-6 16px -->
+
+  <!-- font-style-italic = .fst-italic  -->
+  <!-- line-height:1 = .lh-1  -->
+  <!-- line-height:1.25 = .lh-sm  -->
+  <!-- line-height:1.5 = .lh-base -->
+  <!-- line-height:2 = .lh-lg  -->
+
+  <!-- word-break:break-word; = .text-break; -->
+  <!-- word-wrap:break-word;  = .text-break; -->
+
+  <!-- btn group           -->
+  <!-- the .btn-group class  can also be like .btn-group-lg .btn-group-sm  for large or small buttons-->
+  <!-- <div class="btn-group p-3">
+    <button class="btn btn-primary">left</button>
+    <button class="btn btn-primary">middle</button>
+    <button class="btn btn-primary">right</button>
+  </div> -->
+
+  <!-- btn-toolbar  -->
+  <!-- <div class="btn-toolbar">
+    <div class="btn-group">
+      <button class="btn btn-primary">1</button>
+      <button class="btn btn-primary">2</button>
+      <button class="btn btn-primary">3</button>
+    </div>
+    <div class="btn-group">
+      <button class="btn btn-primary">4</button>
+      <button class="btn btn-primary">5</button>
+      <button class="btn btn-primary">6</button>
+    </div>
+  </div> -->
+  <!-- vertical  -->
+  <!-- <div class="btn-group-vertical">
+    <button class="btn btn-primary">4</button>
+    <button class="btn btn-primary">5</button>
+    <button class="btn btn-primary">6</button>
+  </div> -->
+
+  <!-- dropdown  -->
+  <!-- .btn-group for create a group   on container-->
+  <!-- the id in the button will be same as aria-labelledby in ul  -->
+  <!-- .dropdown-toggle class for the down arrow in the button  -->
+  <!-- <div class="btn-group">
+    <button type="button" id='idd' class="btn btn-primary dropdown-toggle" aria-expanded="false"
+   data-bs-toggle="dropdown">click to see</button>
+    <ul class="dropdown-menu" aria-labelledby="idd">
+      <li class="dropdown-item" role="button">item 1</li>
+      <li class="dropdown-item" role="button">item 2</li>
+    </ul>
+  </div> -->
+
+  <!-- list-group  -->
+  <!-- .list-group  and .list-group-item classes make a simple structure -->
+  <!-- .list-group-flush se border chali jati hai  on container -->
+  <!-- .active for make the list item active  -->
+  <!-- .list-group-item-action lagane par hover effect aata hai  for(a)-->
+  <!-- .list-group-numbered class could be use with ol to the numberes  -->
+  <!-- .list-group-item-danger also give color like this  -->
+
+  <!-- <ol class="list-group list-group-numbered list-group-flush w-50 m-auto">
+    <li class="list-group-item active">list 1</li>
+    <li class="list-group-item list-group-item-action">list 2</li>
+    <li class="list-group-item">list 3</li>
+    <a href="" class="list-group-item list-group-item-danger">anchor 1</a>
+    <a href="" class="list-group-item list-group-item-action">anchor 2</a>
+  </ol> -->
+
+  <!-- pagination  -->
+  <!-- pagination is the combination of 3 classes  -->
+  <!-- .pagination on container -->
+  <!-- .page-item on li  -->
+  <!-- page-link on anchor inside the li  -->
+  <!-- <nav>
+    <ul class="pagination">
+      <li><a href="" class="page-link">previous</a></li>
+      <li class="page-item"><a href="" class="page-link">1</a></li>
+      <li class="page-item"><a href="" class="page-link">2</a></li>
+      <li class="page-item"><a href="" class="page-link">next</a></li>
+    </ul>
+  </nav> -->
+
+
+  <!-- nav and tabs  -->
+  <!-- the .nav class is display-flex  -->
+  <!-- .nav-link remove the underline and give some padding -->
+  <!-- for aligning horizontaly use flex properties  -->
+  <!-- the flex-column class makes the vertical navbar  on container -->
+  <!-- simple .nav-tabs class se hover effect bn raha hai navs par or active link ko border detaa hai-->
+  <!-- .nav-pills or .active ke combination se se background blue ho jayega  -->
+  <!-- .nav-fills will  cover the whole width  -->
+  <!-- <ul class="nav  nav-tabs  mt-3">
+      <li class="nav-item"><a href="#" class="nav-link">HOME</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">ABOUT</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">SERVICES</a></li>
+      <li class="nav-item"><a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+        aria-expanded="false" id="c">CONTACT
+        <ul class="dropdown-menu" aria-labelledby="c">
+          <li class="dropdown-item">HOME</li><li class="dropdown-item">HOME</li>
+        </ul>
+      </a></li>
+    </ul> -->
+
+  <!-- img and iframe  -->
+  <!-- <div class="text-center"> -->
+  <!-- <img src="food 3.jpg" alt="" class="" style="max-width: 100%;"> -->
+  <!-- </div> -->
+
+  <!-- card-group  -->
+  <!-- flow will like this        container > row > col > card  -->
+  <!-- cards ko breakpoints se direct responsive bnaya ja sakta hai .row container par (row-cols) ki advance  classes lagake like (row-cols-sm-2) se small brkpnt pe 2 colums rahenge ye define hoga aise hi different divices 
+  ke ly diffrent (row-col) ki classes laga kar responsive kar sakte hai  sath hi colums par normal .col class rahegi -->
+
+  <!-- badge  -->
+  <!-- badge has some defalt bootstrap css  -->
+  <!-- <h1 class="position-relative">Example heading <span class="badge bg-secondary">New</span></h1>
+  <h2>Example heading <span class="badge bg-secondary">New</span></h2> -->
+
+  <!-- badge in button  -->
+  <!-- .translate-middle class has transform:translate(-50%,-50%); -->
+  <!-- text-bg-* classes automatic adjust font color accourding to bg-color  -->
+  <!-- <button type="button" class="btn btn-primary position-relative ms-5 mt-3">
+    Notifications <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+      id="spn">4</span>
+  </button>
+
+  <button type="button" class="btn btn-primary position-relative ms-5 mt-3">
+    Notifications <span class="position-absolute top-0 start-100 p-2 translate-middle badge rounded-circle bg-success"
+      id="spn">
+      <span class="visually-hidden"></span>
+    </span>
+  </button>
+
+  <span class="badge text-bg-info">Info</span>
+  <span class="badge text-bg-success">Light</span> -->
+
+  <!-- progress bar  -->
+
+  <!-- <div class="progress">
+    <div class="progress-bar progress-bar-striped progress-bar-animated w-50 bg-danger"
+      style="animation: 1s linear infinite progress-bar-stripes;"></div>
+    <div class="progress-bar progress-bar-striped progress-bar-animated w-50 bg-success"></div>
+  </div> -->
+
+  <!-- spinner  -->
+  <!-- .spinner-border make a  simple loader -->
+  <!-- use text-* classes for change the color of loader  -->
+  <!-- .spinner-grow make circle with blinking effect  -->
+  <!-- <div class="spinner-border text-danger" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div> -->
+  <!-- <div class="text-center">
+    <div class="spinner-grow sp-5" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+  <button class="btn btn-primary">
+    <span class="spinner-border spinner-border-sm"></span>
+    Loading
+  </button> -->
+
+
+  <!-- .placeholders is structure of a website shown before load  -->
+  <!-- .placeholder-glow class give a blinking effect  -->
+  <!-- <div class="d-flex justify-content-center">
+    <div class="card col-md-5 col-12" aria-hidden="true">
+
+      <span class="placeholder col-12 h50"></span>
+      <div class="card-body">
+        <h5 class="card-title placeholder-glow">
+          <span class="placeholder col-3"></span>
+        </h5>
+        <p class="card-text placeholder-glow">
+          <span class="placeholder col-7"></span>
+          <span class="placeholder col-4"></span>
+          <span class="placeholder col-4"></span>
+          <span class="placeholder col-6"></span>
+          <span class="placeholder col-8"></span>
+        </p>
+        <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- <div class="row justify-content-evenly text-center mt-3 placeholder-glow"  aria-hidden="true">
+    <div class="col-sm-2 col-6">
+        <h1 class="py-3"><span class="placeholder p-5 rounded-circle"></span></h1>
+        <span class="placeholder col-4"></span>
+    </div>
+    <div class="col-sm-2 col-6">
+      <h1 class="py-3"><span class="placeholder p-5 rounded-circle"></span></h1>
+        <span class="placeholder col-4"></span>
+    </div>
+    <div class="col-sm-2 col-6">
+      <h1 class="py-3"><span class="placeholder p-5 rounded-circle"></span></h1>
+      <span class="placeholder col-4"></span>
+    </div>
+    <div class="col-sm-2 col-6">
+      <h1 class="py-3"><span class="placeholder p-5 rounded-circle"></span></h1>
+        <span class="placeholder col-4"></span>
+    </div>
+</div> -->
+
+  <!-- tooltip  -->
+  <!-- tooltip works on hover  -->
+  <!-- tooltip ko lagane par unki script bhi lagani padegi  or buldle bali js ki file bhi-->
+
+  <!-- <button type="button" class="btn btn-secondary m-5" data-bs-toggle="tooltip" data-bs-placement="top"
+    data-bs-title="Tooltip on top">
+    Tooltip on
+  </button> -->
+
+  <!-- popover  -->
+  <!-- unki script or js is complesory  (679) -->
+  <!-- popover works on click  -->
+  <!-- <div class="container">
+    <div class="row">
+      <div class="col-sm-6 pt-5">
+        <button type="button" class="btn btn-secondary" data-bs-toggle="popover" data-bs-container="body"
+          data-bs-placement="top" data-bs-content="Tooltip nahi popover">
+          Tooltip on
+        </button>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- alert  -->
+  <!-- unki javascript is complesory (695) -->
+  <!-- <div id="liveAlertPlaceholder"></div>
+  <button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>
+
+  <div class="alert alert-primary" role="alert">
+    A simple primary alert with <a href="https://getbootstrap.com/docs/5.3/components/alerts/" class="alert-link">an
+      example link</a>. Give it a click if you like.
+  </div> -->
+
+  <!-- Button trigger modal -->
+  <!-- div .modal wale par data-bs-backdrop="static" data-bs-keyboard="false" lagane sirf modal click se hi close hoga  -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, atque!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script>
+    // const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+
+    // const alert = (message, type) => {
+    //   const wrapper = document.createElement('div')
+    //   wrapper.innerHTML = [
+    //     `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+    //     `   <div>${message}</div>`,
+    //     '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+    //     '</div>'
+    //   ].join('')
+
+    //   alertPlaceholder.append(wrapper)
+    // }
+
+    // const alertTrigger = document.getElementById('liveAlertBtn')
+    // if (alertTrigger) {
+    //   alertTrigger.addEventListener('click', () => {
+    //     alert('Nice, you triggered this alert message!', 'success')
+    //   })
+    // }
+  </script>
+  <script>
+    // let popover = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    // let popoverlist = popover.map(function (poptriggerEI) {
+    //   return new bootstrap.Popover(poptriggerEI)
+    // })
+  </script>
+  <script>
+    // const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    // const tooljtipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+  </script>
+  <script>
+    // let a = Math.floor(Math.random() * (400 - 200) + 200);
+    // a = Number(a)
+    // document.getElementById('spn').innerHTML = a
+  </script>
+  <!-- <script>
+      let nav = document.getElementsByClassName('nav-link');
+       Array.from(nav).forEach(element => {
+        element.addEventListener('focus',function(e){
+          let f = e.target.setAttribute('onfocus','form1');
+        e.target.classList.add('ctive')
+        console.log(e.target)
+      })
+       });
+    </script> -->
+  <!-- <script>
+      let nav = document.getElementsByClassName('nav-link');
+      Array.from(nav).forEach(element=>{
+        element.addEventListener('focus',(e)=>{
+          e.target.classList.add('active')
+        })
+      })
+    </script> -->
+</body>
+
+</html>

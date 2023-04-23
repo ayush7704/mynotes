@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #26bccb;
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .services-item {
+            display: flex;
+            background-color: #8dd5e5;
+            align-items: center;
+            margin: 50px auto;
+            flex-direction: column;
+
+            justify-content: center;
+            width: 400px;
+            height: 501px;
+            padding: 20px;
+            border-radius: 28px;
+        }
+
+        .services-item img {
+            width: 150px;
+            border-radius: 50%;
+            width: 150px;
+            height: 99px;
+
+        }
+
+        .servicebtn {
+            font-size: 1.10rem;
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 12px 19px;
+            margin: 16px 20px;
+            border-radius: 35px;
+            cursor: pointer;
+            width: 94%;
+            text-transform: capitalize;
+            box-shadow: 0 3px 2px black;
+
+
+        }
+
+        .btn:active {
+            box-shadow: 0 0;
+            color: rgba(245, 245, 245, 0.719);
+            transform: translateY(3px);
+            border: none;
+            /* animation-name: shadow;
+            animation-duration: 1s; */
+        }
+
+        /* @keyframes shadow {
+            0% {
+                box-shadow: 0 0 0;
+                transform: translateY(0);
+            }
+
+            50% {
+                box-shadow: 0px 0px 100px 0 blue;
+                transform: translateY(3px);
+            }
+
+            100% {
+                box-shadow: 0 0 0;
+                transform: translateY(0);
+            }
+        } */
+
+        .sabji,
+        .salad,
+        .quantity,
+        .Rotiquantity {
+            padding: 7px;
+            background-color: darkseagreen;
+            width: 83%;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+            font-weight: bold;
+            text-transform: capitalize;
+            margin: 11px;
+        }
+
+        h2 {
+            margin: 8px;
+        }
+
+        select {
+            border-bottom: none;
+        }
+
+        textarea {
+            height: 82px;
+            width: 332px;
+            font-weight: 600;
+            resize: none;
+            text-align: left;
+            box-sizing: border-box;
+            padding: 1px 11px;
+            font-size: 1rem;
+        }
+
+        form {
+            width: 100%;
+            display: flex;
+        }
+         @media screen and (max-width:500px)and (min-width:300px){
+            .services-item {
+                  width: 83%;
+            }
+            textarea {
+                width: 260px;
+            }
+            .Rotiquantity option{
+                width: 260px;
+            }
+         }
+    </style>
+</head>
+
+<body>
+    <div class="services-item">
+        <img src="food 3.jpg" alt="food image">
+        <h2 class="h2-primary center">FOOD ORDERING</h2>
+        <p>mannu dhaba and family restaurant 11 mil bypass
+        </p>
+        <select name="sabji" id="sabji" class="sabji select">
+            <option value="selectSabji">Select Sabji</option>
+            <option value="tomato"> Tomato</option>
+            <option value="potato">Potato</option>
+            <option value="ladyfinger">Ladyfinger</option>
+            <option value="daal">Daal</option>
+            <option value="sevtamatar">Sev,tamatar</option>
+        </select>
+
+        <select name="quantity" id="" class="quantity select">
+            <option value="Selectsabjiquantity">Select Sabji Quantity</option>
+            <option value="half plate">Half plate</option>
+            <option value="full plate">Full plate</option>
+            <option value="two plate">2 plates</option>
+            <option value="three plate">3 plate</option>
+        </select>
+
+        <select name="Rotiquantity" id="" class="Rotiquantity select">
+            <option value="select roti" id="roti Quantity">Select Roti's quantity</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+        </select>
+
+        <select name="salad" id="salad" class="salad select">
+            <option value="Add some salad ?" id="nosalad">Wanna Add Some Salad ?</option>
+            <!-- <option value="no salad">no salad needed</option> -->
+            <option value="Onion">Onion only</option>
+            <option value="OTFC">Onion+Tomato+Frychili</option>
+            <!-- <option value="tomato">Tomato only</option> -->
+        </select>
+        <textarea name="message" rows="27" cols="50" id="textarea">
+     
+            </textarea>
+
+        <form action="">
+            <input type="button" value="Order now" id="servicebtn" class="servicebtn btn">
+        </form>
+    </div>
+    <script>
+      
+          let btn = document.getElementById('servicebtn');
+          btn.addEventListener('click',function(){
+            let select = document.getElementsByClassName('select');
+           if(select[0].value != 'selectSabji' && select[1].value != 'Selectsabjiquantity' && select[2].value 
+           != 'select roti' && select[3].value != 'Add some salad ?')
+           {
+            alert('order on the way')
+            location.reload()
+    }
+         else if (select[0].value == 'selectSabji' && select[1].value == 'Selectsabjiquantity' && select[2].value 
+         == 'select roti' && select[3].value == 'Add some salad ?'){
+             alert('you forgot to chose')
+            }
+            else if (select[0].value == 'selectSabji' || select[1].value == 'Selectsabjiquantity' || select[2].value 
+         == 'select roti' || select[3].value == 'Add some salad ?'){
+             if(select[0].value == 'selectSabji' && select[1].value == 'Selectsabjiquantity'){
+                alert('select sabji and quantity please')
+            }
+            if(select[0].value == 'selectSabji'){
+               alert('select sabji please')
+            }
+             else if (select[1].value == 'Selectsabjiquantity'){
+                alert('you did not select the sabji quantity')
+                 
+             }
+            else if(select[2].value == 'select roti'){
+                let pro = confirm('select roti quantity please')
+                if(pro == false){
+                    // select[2].innerHTML='No roti needed'
+                    document.getElementById('roti Quantity').innerHTML = 'No roti needed'
+                    document.getElementById('roti Quantity').value='No roti'
+                 }
+                //  else{
+                //  }
+             }
+             else if(select[3].value == 'Add some salad ?'){
+                let pros = confirm('no salad selected do you want to add')
+                if(pros == false){
+                    console.log(document.getElementById('salad'))
+                    document.getElementById('nosalad').innerHTML='no salad needed'
+                    document.getElementById('nosalad').value = 'nosalad'
+                }
+                
+             }
+            }
+        console.log(select[0].value)
+        console.log(select[1].value)
+        console.log(select[2].value)
+        console.log(select[3].value)
+          })  
+
+
+
+
+
+        //  btn.addEventListener('click',()=>{
+        //   let cls = document.getElementsByClassName('select');
+        //   let y=0;
+        //   for(var x of cls ){
+          
+        //     if(x.value =='selectSabji'){alert('select sabji please')}
+        //     else if (x.value == 'Selectsabjiquantity'){alert('select sabji quantity')}
+        //     else if (x.value == 'select roti'){alert('select roti')}
+        //     else if (x.value == 'Add some salad ?'){alert('select some salad')}
+        //     else{alert('order onthe way')} 
+        //     console.log(x.children) }
+
+        //   });
+          </script>
+          </body>
+          </html>
+             

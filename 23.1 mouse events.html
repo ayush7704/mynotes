@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #demo{
+            width: 200px;
+            height: 200px;
+            background-color: cadetblue;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="demo"></div>
+
+    <script>
+        // (1) onclick
+        // (2) oncontextmenu (right sight button click) 
+        // (3) ondblclick (doubletab) 
+        // (4) mousedown     work as name 
+        // (5) mouseup       work as name 
+        // (6) mouseout      work after out 
+        let id = document.getElementById('demo');
+        id.addEventListener('dblclick',(e)=>{
+            alert('hello dblclick');
+            console.log(e.target) // e.target karne se pura element console ho jayega
+            // e.type likhne se bo batayga konsa event hai
+        });
+         
+        // function fun(){
+        //     alert('hello dblclick');
+        // };
+
+        id.addEventListener( 'contextmenu', function(){
+            alert('oncontextmenu');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="demo"></h1>
+    <script>
+        // let date = new Date().getMinutes();
+        //    { setTimeout(function (){
+        //         if(date == 51){alert('happy  new year')}
+        //     },1000);
+
+        //     let date = new Date();
+        //     let x=0;
+        //   let time = setInterval(function(){
+        //     x= x + 1;
+
+        //       let demo = document.getElementById('demo');
+        //      demo.style.marginTop=x+'vh';
+        //      if(x == 50){
+        //         clearInterval(time)
+        //         alert('time out finised');
+        //      };
+
+        //    },250);}
+
+
+        // document.write(date.getSeconds())
+        setInterval(function () {
+            let date = new Date();
+            document.getElementById('demo').innerHTML = date.toDateString() + ' ' + date.getHours() + ' : ' + date.getMinutes() + " : " + date.getSeconds()
+        }, 1000)
+
+        // (315 % 30) ye values swaip ho jayegi horizontaly 30)315(  kuch aise
+
+        {
+            function formatAMPM(date) {
+                var hours = date.getHours();
+                var minutes = date.getMinutes();
+                var ampm = hours >= 12 ? 'pm' : 'am';
+                hours = hours % 12;
+                console.log(hours)
+                hours = hours ? hours : 12; // the hour '0' should be '12'
+                minutes = minutes < 10 ? '0' + minutes : minutes;
+                var strTime = hours + ':' + minutes + ' ' + ampm;
+                return strTime;
+            }
+
+            console.log(formatAMPM(new Date) +' ' + 29 % 567); 
+        }
+
+
+    </script>
+</body>
+
+</html>

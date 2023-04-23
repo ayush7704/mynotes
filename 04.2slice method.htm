@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0 5%;
+        }
+        div{
+            font-size: 2rem;
+        }
+        h3,p{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 id="demo">hello babbu mosaye</h1>
+    <div>
+        <h3>
+            slice:
+        </h3>
+        // The method takes 2 parameters: the starting index (position), and the ending index (position).
+        // This example slices out a portion of a string from position 7 to position 13: 
+        <h3>
+            negative:
+        </h3>
+        <p>If a parameter is negative, the position is counted from the end of the string.
+            This example slices out a portion of a string from position -18 to position -6: </p>
+    </div>
+    <button onclick="funktion()">try it</button>
+    <div>
+        <ul><li>substring () method
+            <ul>
+                <li>
+                    substring() is similar to slice().
+                    The difference is that substring() cannot accept negative indexes.  
+                </li>
+            </ul>
+        </li>
+        </ul>
+        <ul><li>substr() method
+            <ul>
+                <li>
+                    substr() is similar to slice().The difference is that the second parameter specifies the length of the extracted part.  
+                </li>
+            </ul>
+        </li>
+        </ul>
+    </div>
+    <script>
+        // slice() extracts a part of a string and returns the extracted part in a new string.
+        // The method takes 2 parameters: the starting index (position), and the ending index (position).
+        // This example slices out a portion of a string from position 7 to position 12: 
+        function funktion(){
+            let id= document.getElementById("demo").innerHTML;    
+            let slice = id.slice(6,12)
+            alert(slice);
+
+            let id2= document.getElementById("demo").innerHTML;    
+            let slice2 = id2.slice(-18,-6)
+            // negative values
+            alert(slice2);
+        }
+
+        // splice method changes the real array    the  slice does'nt !
+        let stu = ['ayush',25,'b.a','bhopal'];
+        stu.splice(-2,2,'bca','indore');
+        stu.splice(1,1,18);
+        document.write(stu +'<br>');
+        // document.write(Array.isArray(stu)); 
+        if(Array.isArray(stu)){
+            document.write('yes this is a array');
+        }
+        else{document.write('no this is not a array');}
+    </script>
+</body>
+</html>

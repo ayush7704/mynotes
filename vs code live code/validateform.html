@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: grid;
+            margin: 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin: auto;
+        }
+
+        input {
+            padding: 7px;
+            font-size: 20px;
+            margin: 2px;
+        }
+
+        input[type='submit'] {
+            box-shadow: 0px 0px 4px 1px #8f8080;
+            border: none;
+            margin: 4px 0;
+            background: ivory;
+            transition: all 0.3s;
+        }
+
+        input[type='submit']:active{
+             box-shadow: 0px 0px 0px ;
+        }
+        @media screen and (max-width:700px) {
+            form {
+                width: 90%;
+            }
+
+        }
+
+        p {
+            margin: 0;
+            color: red;
+            font-size: 1.1em;
+            font-weight: 400;
+            padding: 10px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" name="myform" onsubmit="return myfunction()" method="get">
+        <input type="text" name="fname" placeholder='Enter name'>
+        <p></p>
+        <input type="email" name="email" placeholder="Enter email">
+        <p></p>
+        <input type="password" name="password" placeholder="Enter password" autocomplete="on">
+        <p></p>
+        <input type="submit" value="submit">
+    </form>
+    <script>
+        function myfunction() {
+            let a = document.myform.fname.value;
+            let email = document.myform.email.value;
+            let psw = document.myform.password.value;
+            let e = document.querySelectorAll('p');
+
+            if (a == '') {
+                e[0].innerHTML = "Name Can't Be Empty"
+                e[0].style.cssText = 'display:block;'
+                return false
+            }
+
+            else if (a.length < 3) {
+                e[0].innerHTML = "Name Length Is Too Short"
+                e[0].style.cssText = 'display:block;'
+                return false
+            }
+            else {
+                e[0].style.cssText = 'display:none'
+            }
+
+            if (email == '') {
+                e[1].innerHTML = "Email Must Be Filled"
+                e[1].style.cssText = 'display:block;'
+                return false
+            }
+            else {
+                e[1].style.cssText = 'display:none;'
+            }
+
+            if (psw == '') {
+                e[2].innerHTML = "Please Fill Password"
+                e[2].style.cssText = 'display:block;'
+                return false
+            }
+            else if (psw.length < 8) {
+                e[2].innerHTML = "Password Must be greater than 8 or equal"
+                e[2].style.cssText = 'display:block; text-transform:capitalize'
+                return false
+            }
+            else {
+                e[2].innerHTML = ""
+
+            }
+
+            alert('Form Submitted Succesfully ')
+            return true
+        }
+    </script>
+</body>
+
+</html>

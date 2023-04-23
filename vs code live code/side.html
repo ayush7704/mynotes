@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 25%;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+
+        li:first-child {
+            background-color: green;
+            color: white;
+        }
+
+        li:active {
+            background-color: yellow;
+        }
+
+        li {
+            display: block;
+            color: black;
+            padding: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        li:hover:not(li:first-child) {
+            background-color: #555;
+            color: white;
+        }
+
+        div {
+            margin-left: 25%;
+            display: inline-block;
+
+        }
+
+        .d {
+            display: none;
+        }
+
+        div:hover .d {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="ul">
+        <li class="li">HOME</li>
+        <li class="li">ABOUT</li>
+        <li class="li">SERVICE</li>
+        <li class="li">CONTACT</li>
+        <li class="li">HOME</li>
+        <li class="li">ABOUT</li>
+        <li class="li">SERVICE</li>
+        <li class="li">CONTACT</li>
+        <li class="li">HOME</li>
+        <li class="li">ABOUT</li>
+        <li class="li">SERVICE</li>
+        <li class="li">CONTACT</li>
+        <li class="li">HOME</li>
+        <li class="li">ABOUT</li>
+        <li class="li">SERVICE</li>
+        <li class="li">CONTACT</li>
+    </ul>
+    <div>
+        <p>hover over me</p>
+        <p class="d">chalo aa gaya</p>
+    </div>
+</body>
+
+</html>

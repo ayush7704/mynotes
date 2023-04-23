@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let numbers= [20,25,30,200,40];
+        // find method gives the first occurance after checking the condition !
+        let find = numbers.find(function(k){
+            return k >= 21;
+        })
+        document.write(find +'<br>');
+
+        // findIndex check the condition and then give the first occurance index 
+        let findindex = numbers.findIndex(function(k){
+            return k >= 50;
+        })
+        document.write(findindex+1 +'<br>');
+        numbers.forEach((value , index)=>{document.write(index +' : '+ value +'<br>')});
+        // first parameter in foreach always give value of it and second give the index s
+         
+        
+    </script>
+</body>
+</html>

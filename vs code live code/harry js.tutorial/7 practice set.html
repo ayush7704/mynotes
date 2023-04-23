@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0
+        }
+        header{
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            margin: 0;
+         display: flex;
+         background-color: brown;
+        }
+        ul li{
+            list-style: none;
+            padding: 10px 20px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        li:hover{
+            background-color: red;
+        }
+        td,th{
+            margin: auto;
+            border: 1px solid red;
+        }
+       
+    </style>
+</head>
+<body>
+  <header>
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Caurses</li>
+    </ul>
+  </header>
+    <script>
+      {// 1 change the color of the first li to red 
+         document.querySelector('ul').firstElementChild.style.color="red";
+    }
+    {// 2 change the color of the firstand the last li to green 
+        document.querySelector('ul').firstElementChild.style.color="green";
+        document.querySelector('ul').lastElementChild.style.color="green";
+    }
+     {// 3 change the backgroundcolor of the firstand the last li to green 
+       let d =  document.querySelector('ul').children;
+    //    for(c of d){
+    //    c.style.backgroundColor='cyan'} // method one
+       Array.from(d).forEach(element => { // method second
+        element.style.backgroundColor='red';
+       });
+        
+     }
+       
+    </script>
+</body>
+</html>

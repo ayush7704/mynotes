@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cls1{
+            background-color: yellow;
+            color: red;
+        }
+        .cls2{
+            border: 1px solid red;
+            padding: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" class="cls1 cls2">
+        <p>heelo heelo re baaba</p>
+    </div>
+
+    <script>
+        let cls = document.getElementById('box');
+        // cls.className +=" dim2";                // purani wali class me add kiya
+
+        // cls.classList.add('dim');               // add kar sakte hai 
+
+        //  cls.classList.remove('dim');          //remove kiya
+
+        //   cls.classList.replace("cls1","dim");  // first is what to replace second is whome to replace
+
+        // cls.classList.toggle('check'); // toggle class nhi hone par laga deta hai hone par hata deta hai
+        
+        // console.log(box.className); // class dekhne k liy
+
+        // let rslt = cls.classList.contains('dim'); // for check class availabel or not
+        // console.log( cls.classList.contains('dim')); // will return in boolian value T/F 
+
+        // console.log(cls.classList); // puri list k liy 
+
+        //a one more method
+        // for(let clss of cls.classList){ 
+        //     console.log(clss);
+        // }
+
+
+            </script>
+</body>
+</html>

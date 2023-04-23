@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    .container{
+        display: flex;
+    }
+    input{
+        padding: 5px;
+        margin: 0 3px;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="number" id="far" placeholder="Fahrenheit"> 
+        <input type="submit" value="convert" id="convert">
+        <input type="text" id="cel" placeholder="Celsius">
+    </div>
+    <script>
+        document.getElementById('convert').addEventListener('click',function(){
+           let far = document.getElementById('far').value;
+           far = Number(far)
+           console.log(far)
+           let Celsius = document.getElementById('cel').value = ((5/9) * (far-32)).toFixed(2) +' Celsius'
+        })
+    </script>
+</body>
+</html>

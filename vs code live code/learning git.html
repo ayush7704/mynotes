@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 1 first install git from browser  -->
+    <!-- 2 then make a folder on desktop  -->
+    <!-- 3 open that folder with git base here -->
+    <!-- 4 jab pehli baar git chalate hai to email or name likhna hota hai  
+     for name  > git config --global user.name ayush nagar 
+     for email > git config --global user.email nagarayush570@gmail.com-->
+    <!-- 5 jo email and name likhaa hai bo save hua hai ya nahi eske liy 
+    >  git config --global user.email  and  name on different time-->
+    <!-- 6 for edit in email and name type   git config --global --edit   
+    eske baad direct changes kar sakte hai  -->
+    <!-- git --version  for know git version -->
+    <!-- staging area bo set of files hoti ki jiski files ko hum track kar sakte hai agle stage of area me bhejna sakte hai (commit)  -->
+    <!-- pehli baar files ko staging area me bhejte hai to bo unmodifed area me jaati hai fir kuch changes karke usko again git add  karne par bo modified ho jayegi or commit ke liy ready ho jayegi  -->
+    <!-- git status for knowing the status  yaha pe bata deta untracked files-->
+    <!-- git init se git repository banate hai -sath hi ek blank .git hidden folder bhi ban jaata hai-->
+    <!-- repositery matlav git  us file ko track kar sakte hai  -->
+    <!-- rm -rf .git karne se repository  delete ho jaati hai (dangerous)-->
+    <!-- git add --a   se saari files ko staging area me daal dete hai  -->
+    <!-- yadi ab git status kare saari staging files aa jayengi  -->
+    <!-- git commit -m "Initial Commit" se commit hoga -->
+    <!-- git log se commit changes dekhne ko milte hai kisne kiya kab kiye -->
+    <!-- yadi kisi ek file ko commit karna ho to git add file.name likhdo with extention  -->
+    <!-- folder mese manually file ko delete karne ke baad git add . ya git add --a  se  bo folder me update ho jayega -->
+
+    <!-- normal touch likhke file name likh dene se bo file ban jaati us folder me -->
+    <!-- kisi file ko ignore karana hoto us folder me .gitignore name ki file banake usme ignore karane wali file ka name daal de  error.log  untracked area ki honi chahiye-->
+    <!-- or yadi hume all over .log wali files ko ignore karna hai to *.log likhna padega .gitignore me  -->
+    <!-- or kisi folder ko ignore karna heto foldername/ ese likhna padega  blank folder ko git ignore karta hai bydefault  -->
+    <!-- yadi sirf bahar bale folder ko ignore karna hai to /foldername/ ese likhna padega  -->
+
+
+    <!-- git diff cammand working directry or staging area ko compare karta hai  -->
+    <!-- aisi files jisme changes hue uske changes ko compare karti hai  -->
+    <!-- usko commit ke  liy stage area me add kar dene par git diff kuch show nahi kar payega -->
+    <!-- last commit or staging area ko bhi compare kiya jaa sakta hai git diff --staged cammand se  -->
+    <!-- last time jab commit kiya tha tab kya tha or ab kya hai  -->
+
+    <!-- git commit -a -m "tracked commit" aapki kisi bhi tarah ki tracked files ko stage karke direct commit kar deta hai  untracked ko nahi karega  -->
+
+    <!--  git me kisi file ke name ko rename karne k liy   git mv filename new filename  -->
+    <!-- remove karne k liy git rm filename  -->
+    <!-- git rm --cached filename se  untracked ho jayegi -->
+    <!-- git restore filename se modified file bapas pehle jesi ho jayegi  -->
+
+    <!-- git log -p se kisne kis commit me kya changes kiiye bo dikhte hai  -p ke aage -2,3,4...n likhne se utne commit aayenge-->
+    <!-- git log --pretty=oneline se saare commit ek ek line me dikhne lagenge  -->
+    <!-- git log --pretty=short se auther name or commit dekhega  
+    aise hi git log --pretty=full se auther name commiter name or commit dikhega-->
+    <!-- git log --since=2.days  karne se 2 last 2 din ke hi commit dikhenge  2.days ko weak ,month , year bhi kar sakte hai -->
+    <!-- git log --pretty=format:'%h -- %an'  likhne se usi format me data aayega commit ka or bhi format hote hai-->
+    <!-- git commit --amend se pichle commit me is baar ke changes append ho jayege or us commit ka name bhi change kar sakte hai   -->
+    <!-- git commit --amend se editor open hoga uspe likhne k liy i type kare or fir quit karne k liy esk+/ type kare fir aap niche type karne ko allow ho jaoge baha : likhke wq likhne se quit ho jaayga  -->
+
+    <!-- git checkout -- filename se pichle commit  me jo data tha besa hi ho jayega same chahe jo bhi changes kiye ho sab delete ho jayegne  (bs jin files ko checkout karna ho unke changes staged nahi ho) or yadi he git restore se changes restore karle  for two or more git checkout -f  -->
+
+    <!-- github -->
+    <!-- github ek website hai jo git repository ko host karta hai  -->
+    <!-- remote repositories bo repositories hoti jo kisi bhi hoesting website yaani kisi server par rakhi hai or baha se hum pull ya push kar sakte hai -->
+    <!-- pull karne par software ke sath saath uski history bhi aa jaati hai apne system me  -->
+    <!-- (ssh key)with secure shell protocol  we can access and write data in repositories in github.com using ssh keys -->
+
+    <!-- alias  -->
+    <!-- alias shortcut banane ka ek trika hai  -->
+    <!-- git config --global alias.st status    ye likhne ke baad st ka matlav status
+    ho jayega -->
+    <!-- git config --global alias.unstage 'restore --staged --' -->
+
+    <!-- branching -->
+    <!-- to avoid changes in master branch we create new branches and work in that branch
+    this new branch changes would not be visible in master branch -->
+    <!-- git checkout -b <branch-name> to create a new branch -->
+    <!-- git checkout <branch-name> to switch into different branch-->
+
+    <!-- 7  mkdir se folder banate hai  -->
+    <!-- then cd change directly se aap us folder me aa jaate ho  -->
+
+
+</body>
+
+</html>

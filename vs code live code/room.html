@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROOM</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: auto;
+            display: grid;
+            grid-template-columns: 50%;
+            /* grid-template-rows: 0; */
+            height: 100vh;
+            grid-template-areas: 'colorscontainer colorscontainer'
+            'container img';
+            /* justify-content: center; */
+            justify-items: center;
+            align-content: center;
+        }
+
+        img {
+            width: 400px;
+            height: 500px;
+            grid-area: img;
+        }
+
+        .container {
+            box-sizing: border-box;
+            width: 400px;
+            height: 500px;
+            background-color: black;
+            border-radius: 10px;
+            grid-area: container;
+            display: grid;
+            padding: 0 0 0 10px;
+            justify-content: space-evenly;
+            align-content: space-between;
+            grid-area: container;
+        }
+
+        .dote {
+            padding: 0;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+            margin-top: 60px;
+            display: grid;
+            place-items: center;
+            justify-self: center;
+            grid-area: dote;
+        }
+
+        .two {
+
+            width: 14px;
+            padding: 0;
+            height: 15px;
+            background: rgb(249 244 243);
+            border-radius: 50%;
+            justify-self: center;
+            display: grid;
+            place-items: center;
+        }
+
+        .do {
+            width: 8px;
+            height: 8px;
+            background: #b16525d9;
+            border-radius: 50%;
+        }
+
+        .plybord {
+            box-shadow: -8px -8px #c35026c2;
+            background-color: coral;
+            height: 171px;
+            width: 283px;
+            transform: skewX(3deg);
+            grid-area: plybord;
+        }
+
+        .c1 {
+            display: grid;
+            justify-content: center;
+        }
+
+        .c2 {
+            display: grid;
+            grid-column-gap: 7px;
+            grid-template-areas:
+                'plybord plybord tv'
+                'plybord plybord tv2';
+                visibility: hidden;
+        }
+
+        .tv {
+            width: 80px;
+            height: 81px;
+            background-color: #ffffff99;
+            border-radius: 9px;
+            display: grid;
+            place-items: center;
+            grid-area: tv;
+
+
+        }
+
+        .lcd {
+            width: 63px;
+            height: 64px;
+            background-color: #221a1a69;
+            border-radius: 4px;
+            margin-top: 5px;
+            box-shadow: 0px 0px 0 1px black;
+            /* display: grid;
+            align-items: flex-end; */
+
+        }
+
+        .btn {
+            background-color: black;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+        }
+
+        .btnb {
+            width: 7px;
+            height: 7px;
+            background-color: black;
+            border-radius: 50%;
+        }
+
+        .lcon {
+            display: flex;
+            align-items: center;
+        }
+
+        .tv2 {
+            width: 81px;
+            height: 90px;
+            background-color: #cdc9c9;
+            border-radius: 9px;
+            display: grid;
+            transform: rotateY(-51deg);
+            /* transform: skew(-27deg, 0deg); */
+            place-items: center;
+            grid-area: tv2;
+
+
+        }
+
+        .lcd2 {
+            transform: skew(-2deg, 0deg);
+            width: 53px;
+            height: 63px;
+            background-color: #221a1a69;
+            border-radius: 4px;
+            margin-top: 5px;
+            box-shadow: 0px 0px 0 1px black;
+        }
+
+        .btn2 {
+            background-color: black;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+        }
+
+        .btnb2 {
+            width: 7px;
+            height: 7px;
+            background-color: black;
+            border-radius: 50%;
+        }
+
+        .lcon2 {
+            display: flex;
+            align-items: center;
+        }
+
+        .bulb {
+            position: relative;
+            width: 13px;
+            height: 16px;
+            top: 10px;
+            background-color: #9f8e8e;
+            margin: auto;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .bulb::before {
+            position: absolute;
+            content: '';
+            border-top-left-radius: 9px;
+            top: 0px;
+            /* left: 1px; */
+            height: 7px;
+            border-top-right-radius: 9px;
+            overflow: hidden;
+            width: 100%;
+            background: #ffffff;
+        }
+
+        .colorscontainer {
+            width: 139px;
+            height: 40px;
+            /* border: 1px solid red; */
+            padding: 2px;
+            grid-area: colorscontainer;
+            cursor: pointer;
+        }
+
+        .color {
+            width: 20px;
+            height: 20px;
+            border: 1px solid black;
+            display: inline-block;
+            border-radius: 50%;
+        }
+        .red{
+            background-color:#db2020;
+        }
+        .yellow{
+            background-color:  #bdbd18;
+        }
+        .green{
+            background-color: green;
+        }
+        .blue{
+            background-color: #25407a;
+        }
+        .white{
+            background-color:  #f3b2b2;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="room.jpg"><img src="room.jpg" alt="room pic"></a>
+
+
+    <div class="container">
+        <div class="c1">
+            <div class="dote">
+                <div class="two">
+                    <!-- <div class="do"></div> -->
+                    <div class="bulb" id="bulb"></div>
+                </div>
+            </div>
+        </div>
+        <div class="c2">
+            <div class="plybord">
+            </div>
+            <div class="tv">
+                <div class="lcd"></div>
+                <div class="lcon">
+                    <div class="btn"></div>
+                    <div class="btn"></div>
+                    <div class="btn"></div>
+                    <div class="btn"></div>
+                    <div class="btnb"></div>
+                </div>
+            </div class="c2">
+            <div class="tv2">
+                <div class="lcd2"></div>
+                <div class="lcon2">
+                    <div class="btn2"></div>
+                    <div class="btn2"></div>
+                    <div class="btn2"></div>
+                    <div class="btn2"></div>
+                    <div class="btnb2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="colorscontainer">
+        <span class="color green" onclick="colorchange('green')"></span>
+        <span class="color yellow" onclick="colorchange('yellow')"></span>
+        <span class="color white" onclick="colorchange('white')"></span>
+        <span class="color red" onclick="colorchange('red')"></span>
+        <span class="color blue" onclick="colorchange('blue')"></span>
+    </div>
+    <script>
+        let bulb = document.getElementById('bulb');
+        
+
+        
+
+        bulb.addEventListener('click', function () {
+            let ply = document.getElementsByClassName('c2');
+
+            let c = getComputedStyle(this);
+            console.log(c.backgroundColor)
+            if (c.backgroundColor == 'rgb(159, 142, 142)') {
+                 for(kk of ply) {
+         kk.style.cssText="visibility:visible";}
+                this.style.backgroundColor = '#ff8d00eb';
+            }
+            else {
+                for(kk of ply) {
+         kk.style.cssText="visibility:hidden";}
+                this.style.backgroundColor = '';
+            }
+        });
+       function colorchange(j){
+        let container = document.getElementsByClassName('container');
+        for(k of container){
+           if(j == 'white'){
+            k.style.cssText="background-color:#f3b2b2;";
+           }
+          else if(j == 'yellow'){
+           
+            k.style.backgroundColor=" #bdbd18";
+           }
+           else if(j == 'red'){
+            
+            k.style.backgroundColor="#db2020";
+           }
+           else if(j == 'green'){
+            
+            k.style.backgroundColor="green";
+           }
+           else if(j =='blue'){
+            
+            k.style.backgroundColor="#25407a";
+           }
+           else{
+            k.style.backgroundColor="pink";
+           }
+        }
+        console.log(container)
+       }
+
+    </script>
+</body>
+
+</html>

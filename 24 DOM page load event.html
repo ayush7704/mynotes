@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="photuk.JPG" alt="img" id="demo" style="width: 100vw;">
+
+    <button>50</button>
+    <button>100%</button>
+
+    <script>
+    //   document.body.style.cssText='margin:0;'
+
+    //     let id = document.getElementById('demo');
+    //     id.style.cssText ="width:100vw; height:100vh;"
+
+    //     window.addEventListener("DOMContentLoaded",function(){
+    //         console.log('dom has loaded'); 
+    //     });
+    //     window.addEventListener("load",function(){
+    //         console.log('dom has fully loaded');
+    //     });
+
+    //     // kisi ek element k load hone par bhi kara sakte bs window ki jagah bo element likhna padega
+
+    let id = document.getElementById('demo');
+    let b = document.getElementsByTagName('button')[0];
+    b.addEventListener('click',()=>{
+        id.style.cssText="width:50% ; transition:all 1s linear;max-height:100vh"
+    });
+    let b2 = document.getElementsByTagName('button')[1];
+    b2.addEventListener('click',()=>{
+        id.style.cssText="width:100%; transition:all 2s linear; max-height:100vh"
+    });
+
+
+    </script>
+</body>
+</html>

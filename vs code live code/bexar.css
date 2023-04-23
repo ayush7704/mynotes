@@ -1,0 +1,151 @@
+body{
+   margin: 0px;
+   padding: 0px
+}
+*{
+    box-sizing: border-box;
+}
+
+header{
+    background-color: black;
+    color: white;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 111px;
+}
+.headersection{
+    display: flex;   
+    align-items:center;
+   }
+.header-ul{
+    display: flex;
+}
+.header-li{
+  list-style-type:none;
+  padding: 0 10px;
+}
+.headera{
+    color: white;
+    padding: 0 10px ;
+    border-right: 1px solid white;
+    text-decoration: none;
+}
+.headerp{
+    padding-left: 10px;
+    padding-right: 5px;
+}
+.headerspan{
+    color: green;
+}
+
+/* nav section */
+
+nav{
+    display: flex;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 107px;
+    color: black;
+    font-weight: bold;
+}
+.bexar-ul{
+    display: flex;
+    color: black;
+    font-weight: bold;
+}
+.bexar-li{
+    list-style-type: none;
+    padding: 15px;
+}
+.bexar-a{
+    text-decoration: none;
+    font-weight: bold;
+}
+.bexarh1{
+    font-size: 1.9rem;
+}
+.bexar-button{
+    border-radius: 30px;
+    padding: 15px;
+    height: 45px;
+    background-color: #1bed1b;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* SECTIOM */
+
+section{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   position: relative;
+}
+.section::before{
+    content: "";
+    background:url("food\ 1.jpg")no-repeat center/cover;
+    /* background-color: black; */
+    position: absolute;
+    height: 130%;
+    width: 100%;
+    z-index: -2;
+    opacity: 0.6; 
+ }
+ .SECTIONBUTTON{
+    padding: 10px;
+    background-color: #120f0f00;
+    border-radius: 25px;
+ }
+
+ .sectiondiv{
+    padding: 105px;
+    color:black;
+ }
+ .SECTIONP{
+    font-weight: bold;
+    margin-bottom: 10px;
+ }
+ .SECTIONH1{
+    margin-top: 0;
+ }
+ .sectionp2{
+    color: white;
+ }
+ .dabbesection{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 88px;
+    margin-bottom: 30px;
+}
+.dabbe{
+    padding: 33px 20px 17px;
+    display: flex;
+    flex-direction: 252px;
+    height: 250px;
+    width: 258px;
+    flex-direction: column;
+    background-color: whitesmoke;
+    text-align: center;
+ }
+ #blackdabba{
+    background-color: black;
+    color: white;
+ }
+ .dabbaimg{
+    border: 2px solid #00f900;
+    align-self: center;
+    height: 66px;
+    display: flex;
+    border-radius: 50%;
+    width: 70px;
+    margin-bottom: 10px;
+ }
+ .dabbah2{
+    margin: 10px 0;
+    font-size: 1em;
+ }
+ 

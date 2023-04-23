@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       *{
+        box-sizing: border-box;
+       }
+        body{
+            margin: 0;
+        }
+        .container{
+           width: 70vw;
+           margin: auto;
+           text-align: center;
+        }
+        h1{
+            background-color: black;
+            color: white; margin-bottom: 0;
+        }
+        textarea{
+            resize: none;
+            width: 100%;
+            font-size: 17px;
+        }
+        p{
+            background-color: black;
+            color: white;
+            margin-top: 0;     
+            font: bold;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>word and character counter</h1>
+        <textarea name="text" id="text" cols="30" rows="10"></textarea>
+        <p><span id="word">0</span>word <span id="chara">0</span>character</p>
+    </div>
+    <script>
+       let text = document.getElementById('text');
+       
+           text.addEventListener('input',function(){
+           let c = this.value;
+           c = c.trim();
+           let cl = c.length;
+           let cs = c.split(' ');
+           let csl = (cs.length - 1)
+           document.getElementById('chara').innerHTML = cl - csl ;
+           
+        //    let f = c.filter(function (s) { return s != '' });
+           console.log(cs.length)
+           let csf = cs.filter(function(s){ return s != ''})
+
+           document.getElementById('word').innerHTML=csf.length;
+          
+       })
+       
+    </script>
+</body>
+</html>

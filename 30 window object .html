@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn">google</button>
+    <button id="yahoo">yaaho</button>
+    <button id="cls">close</button>
+    <input type="button" value="Back" onclick="goBack()">
+    <input type="button" value="forward" onclick="goForward()">
+    <script>
+        let x = document.getElementById('btn');
+        let z = document.getElementById('yahoo');
+        let y = document.getElementById('cls');
+
+        let win;
+        let features = 'height=600 px,width=600 px';
+        let url = 'https://www.google.com';
+
+        x.addEventListener('click', function () {
+            // window.open(url,name,features);
+            win = window.open(url, 'google', features);
+            // isko close karne k liy isko variable me store karna padega
+            // lekin yaha error aayega kyoki iska scope local he isliy bahar define karo
+        })
+
+        z.addEventListener('click', function () {
+            window.open(`https://www.yahoo.com`, 'google', features);
+        })
+
+        y.addEventListener('click', function () {
+            win.close();
+
+        })
+
+        function goBack() {
+            window.history.back()
+        }
+        function goForward() {
+            window.history.forward()
+        }
+        window.addEventListener('load', function () {
+            window.open(``, 'google', 'width:400px; height:400px; background-color:red; margin:auto;')
+        })
+
+        // innersirf display area btata hai 
+        //outer sav kuch mila kar bataata hai
+        // document.write(window.innerHeight + '<br>');
+        // document.write(window.outerHeight);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        // The toDateString() method converts a date to a more readable format:
+        
+        //D is capital when using Date object
+        var a=  Date();
+        document.write(a + " normal date " + "<br>" + "<hr>");
+
+        //for get something we can use get method
+        let b = new Date("july,7,2018")
+        document.write(b.getFullYear() + " get year or anything " +"<br>" + "<hr>");
+
+        //for set something we use set method.
+        let c = new Date("july,7,2018 10:20:22")
+        c.setFullYear(2004);  //set alag se hi hoga 
+        c.setHours(2);       //there is lot of properties like this 
+        document.write(c +  " set date or anything " +"<br>" +"<hr>");
+
+        // yaha ye dekha he ki is date se 50 days after konsi date hogi
+        let d = new Date();
+        d.setDate(d.getDate() + 50)
+        document.write(d + " yaha increament kiya hai date me 50 days ka");
+        // hum kuch bhi change kar sakte hai yaha hour,year,minute,date anything about date();
+    </script>
+</body>
+</html>

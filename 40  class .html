@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js classes</title>
+</head>
+
+<body>
+
+    <script>
+        class Student {
+            constructor(name, roln, age) {
+                this.name = name;
+                this.rollnumberroln = roln;
+                this.age = age;
+            }
+        }
+        let one = new Student('ayush', 333, 18)
+        let two = new Student('piyush', 323, 13)
+        console.log(one)
+        console.log(two)
+
+        {
+            class developers {
+                constructor(name, age, tech, salary) {
+                    this.name = name;
+                    this.age = age;
+                    this.technology = tech;
+                    this.salary = salary;
+                }
+                developer() { // we can also set parameter here 
+                    return this.name + " " + this.technology
+                }
+            }
+            let first = new developers('ayush', 18, 'front-end', 20000)
+            let second = new developers('gopi', 33, 'full-stack', 30000)
+
+            let a = '';
+            for (let key in first) {
+                a += key + ' : ' + first[key] + '<br>'
+            }
+            document.write(a)
+            console.log(first.developer())
+        }
+
+        {
+            // parent
+            class enj {
+                constructor(n, w) {
+                    this.name = n;
+                    this.work = w;
+                }
+                work() {
+                    return this.name + " " + this.role
+                }
+                msg() {
+                    console.log('message')
+                }
+
+                // static method only can called by class  
+                static sttk() {
+                    return 'static huu class se hi call ho paunga'
+                }
+            }
+            let first = new enj('parent', 22, 51000, 'front-end developer')
+            console.log(first)
+            // console.log(first.work())
+
+            // child  bcz this inherit from enj  
+            class worker extends enj {
+                constructor(p, w, age) {
+                    super(p, w)
+                    // parent k constructer ko call karna padega , or agar parameter he to bobhi dena padega name change bhi kar sakte hai parameter ka 
+                    // yadi khali supar() likh de to uske total parameters aa jayenge 
+                    this.age = age;
+                }
+                n() {
+                    super.msg() // parent ke method ko call kiya
+                    // yadi same method isi class me bhi he to this.msg() ese call hoga 
+                    return this.name
+                }
+            }
+            // class name k aage extends likhke jis class se inherit karbana uska name likhdo  upar worker me enj ki total property method aa gya he  static method bhi 
+            let worker1 = new worker('child', 'front-end', 30)
+
+            console.log(worker1)
+            console.log(worker1.n())
+            // console.log(worker1.work())
+            // console.log(worker.sttk())
+            // console.log(worker1.msg())
+
+            // multiple inheritance bhi kar sakte hai is worker class ko inherit karba sakte hai kisi new class se 
+        }
+
+        {
+            // public and personal 
+            class Person {
+                #name = '';
+                constructor(n) {
+                    this.#name = n;
+                }
+                getName() {
+                    return this.#name
+                }
+            }
+            let one = new Person('ayush')
+            // public property's  ko direct value name se dekh sakte hai 
+            // class ke andar private property ko access kiya ja sakta hai
+            // private property's ko direct bahar access nahi sakte isliy usko methods se send karte hai  method bhi  private ho sakta hai usko fir doosre method se return krna padega
+            // private banane k liy pehle # lagana pdega
+            console.log(one.getName())
+
+        }
+
+        {
+            // mixing
+            let obj = {
+                sayhi(){
+                   return 'hii...'
+                },
+                sayby(){
+                   return 'by...'
+                }
+            }
+
+            class person {
+                constructor(){
+                    this.name = 'ayush'
+                }
+            }
+
+            Object.assign(person.prototype, obj)
+            let first = new person()
+            console.log(first.sayby());
+        }
+
+
+        {
+            // price = 19.90;
+            // tax = 0.20;
+
+            // fullPrice = price + (price * tax);
+            // console.log(price*tax)
+        }
+
+    </script>
+</body>
+
+</html>

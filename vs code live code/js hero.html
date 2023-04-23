@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        {
+            function secondIndexOf(s1, s2) {
+                let a = 'White Rabbit';
+                let d = a.indexOf('it');
+                let b = s1.indexOf(s2)
+                return s1.indexOf(s2, b + 1)
+
+            }
+            console.log(secondIndexOf('White Rabbit', 'it'))
+        }
+        {// Write a function round100 that rounds a number to the nearest hundred.Example: round100(1749) should return 1700 and round100(856.12) should return 900.
+
+            // function round100(vla) {
+            //     let a = Math.round(vla / 100) * 100
+            //     return a
+            // }
+            // round100(1749)
+
+        }
+        {
+            // Write a function dice that returns like a dice a random number between 1 and 6.
+            // function dice() {
+            //     // return Math.floor(Math.random() * (6 - 1) + 1)
+            //     return parseFloat('10 + 10')
+            // }
+            // alert(dice())
+        }
+        {
+
+            // Write a function add that takes a string with a summation task and returns its result as a number. Two natural numbers should be added. The summation task is a string of the form '102+17'.Example: add('102+17') should return 119.
+
+            // function add(s) {
+            //     let summand1 = parseInt(s);
+            //     document.write(summand1 + '<br>')
+
+            //     let indexPlus = s.indexOf('+');
+            //     document.write(indexPlus + '<br>')
+
+            //     let sAfterPlus = s.substr(indexPlus + 1);
+            //     document.write(sAfterPlus + '<br>')
+
+            //     let summand2 = parseInt(sAfterPlus, 10);
+            //     document.write(summand2 + '<br>')
+
+            //     return summand1 + summand2;
+            // }
+            // add('102+17')
+        }
+        {
+            //     function nand(a, b) {
+            //         let and = a && b;
+            //         return !and;
+            //     }
+            //    document.write(nand(false, true))
+        }
+        {
+            // Write a function xor that takes two Boolean values. If both values are different, the result should be true. If both values are the same, the result should be false.
+
+            // true - true = true 
+            // false - false = false
+
+            function xor(a, b) {
+                if (a != b || b != a) {
+                    return true
+                }
+                else { return false }
+            }
+
+
+        }
+        {
+            // Write a function equals that checks 3 values for strict equality. The function should only return true if all 3 values are equal.
+            // Example: equals(1, 1, 1) should return true and equals(1, 2, 1) should return false.
+
+            function equals(a, b, c) {
+                if (a === b && a === c) {
+                    return true
+                }
+                else {
+                    return false
+                }
+            }
+        }
+        {
+            // Write a function isEven that checks if a passed number is even. If the given number is even, true should be returned, otherwise false.
+            // isEven(2) should return true and isEven(3) should return false.
+
+            function isEven(v) {
+                if (v % 2 == 0) {
+                    return true
+                }
+                else { return false }
+            }
+
+        }
+        {
+            // Write a function repdigit that determines whether a two - digit decimal is a repdigit or not.If the decimal is a repdigit, 'Repdigit!' should be returned, otherwise 'No Repdigit!'.
+
+            // Example: repdigit(22) should return 'Repdigit!' and repdigit(23) should return 'No Repdigit!'
+
+            // repdigit ka matlab ase number jo repeat hote ho bo jese 2.222
+            function repdigit(a) {
+                let one = a % 10; //yadi  a me 11 he to remider 1.1 hoga 
+                let b = Math.floor(a / 10); // or devide karne par 1.1 aayga usko floor kr diya
+                return (one === b) ? 'Repdigit!' : 'No Repdigit!';  // yaha condition false ho jayegi 
+            }
+            let rep = repdigit(Math.floor(Math.random() * (100 - 10) + 10))
+            console.log(rep)
+        }
+        {
+            // Write a function addWithSurcharge that adds two amounts with surcharge.For each amount less than or equal to 10, the surcharge is 1. For each amount greater than 10, the surcharge is 2.// Example: addWithSurcharge(5, 15) should return 23.
+            function addWithSurcharge(a, b) {
+                let one = 0;
+                if (a <= 10) {
+                    one += 1
+                }
+                else {
+                    one += 2
+                }
+                if (b <= 10) {
+                    one += 1
+                }
+                else {
+                    one += 2
+                }
+                return a + b + one
+
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="demo">
+         <li>home</li>
+         <li>about</li>
+         <li>contact</li>
+         <li>hhhh</li>
+    </ul>
+</body>
+<script>
+    let id = document.getElementById('demo');
+    
+    let clonelm = id.cloneNode(true); // (1)cloneNode for make a clone (2) value true for whole element
+    // if we don't write true it will select only the ul not li's !
+
+    clonelm.id ="mobile"; //for add a id attribute and value
+
+    document.body.appendChild(clonelm); // for make it visible on screen we use the location
+
+    console.log(clonelm);
+</script>
+</html>

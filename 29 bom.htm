@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // var keyword se banaya gaya variable window object ka property ban jaata hai
+        var x = 'hello';
+        document.write(window.x + '</br>'); // yaha humne window.x kiya tabbhi same result aayga
+
+        function xyz(){
+            console.log('hi....');
+        }
+         window.xyz();
+        //   isko hum bina window likhe bhi access kar sakte hai kyoki window object default object hai 
+        //   browser ka 
+        
+
+        // yaha humne do baar ek name ka variable bana diya firbhi koi erore nhi aayega kyoki 
+        // var keyword se banaya he variable 
+        // purane wali value ko change kar dega lekin error nhi dega (var)
+        // par esa let me nhi hai isiliy let use karte hai
+        var ayush = 'nagar';
+        var ayush = 'dhakad';
+         document.write(ayush);
+    </script>
+</body>
+</html>

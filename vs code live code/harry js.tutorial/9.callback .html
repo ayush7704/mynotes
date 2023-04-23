@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ek function ke andar as a parameter ek function ko dena callback kehlata hai 
+        function run(a,b,callback){
+        console.log(a+b)
+        callback(a*b)
+        }
+        run(40,40,c)
+        function c(){
+            console.log('callback')
+        }
+        // har bar naya function de sakte hai yaha 
+        run(50,50,b)
+        function b(){ 
+            console.log('callback 2 ')
+        }
+        run(500,500,()=>{
+            console.log('anonymous callback 3')
+        })
+        run(5,5,z)
+        function z(x){
+            console.log(x +' callback with parameter argument')
+        }
+
+
+        //  function run (){
+        //     let a=  document.createElement('script')
+        //     a.setAttribute('src','hello')
+        //    document.body.appendChild(a)
+        //  }
+        //  run()
+       
+
+    </script>
+</body>
+</html>

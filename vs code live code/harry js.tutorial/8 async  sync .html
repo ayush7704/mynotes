@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // syncronous promgramming step by step exicution ko kehte hai 
+        console.log('sync 1');
+        setTimeout(()=>{
+            console.log('sync 2')
+        },3000)
+        console.log('sync end 3')//2nd
+
+        // async ke example nichhe hai
+        console.log('asyncronous 1');//1st
+        setTimeout(()=>{
+            console.log('async 2')//3rd pe aayega kyoki seduled ho jayegi 3 second k liy 
+        },3000)
+        console.log('async end 3')//2nd
+        
+    </script>
+</body>
+</html>

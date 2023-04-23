@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // cookie capacity 4kb / HTML4/ HTML5
+        // jab koi bhi site browser me data save karta hai to use cookies kehte hai  
+        // this is how we write cookie 
+        // yh name value pair me save hoti hai 
+        document.cookie = "name=value" // YADI  esi me or value put karna hai to , laga ke kar  sakte hai 
+        document.cookie = "ayush=nagar; expires=Sat, 20 march 2027 12:00:00 UTC"
+        alert(document.cookie)
+        // cookie ko delete karne k liy expire date past ka dedo 
+
+        // local storage capacity 10mb / HTML5 / ANY WINDOW / EXPIRES=NEVER / LOCATION=BROWSER / 
+        localStorage.setItem("firstName","ayush") // for set  local storage 
+        localStorage.setItem("lastName","nagar") 
+
+        // for get 
+       alert(localStorage.getItem('firstName')) // pas the key name here value will come 
+
+       // for remove item 
+       localStorage.removeItem("lastName")
+
+       // same session storage bhi hota he bss usme page close karne pe band hojayega or sirf esi tab me open ho sakta hai 
+
+
+
+    </script>
+</body>
+</html>

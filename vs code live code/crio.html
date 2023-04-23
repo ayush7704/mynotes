@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            /* width: 100vw; */
+            height: 100vh;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: #17dbd2;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: whitesmoke;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: grey;
+            border-radius: 50px;
+
+        }
+
+        ::-webkit-scrollbar {
+            width: 15px;
+        }
+
+
+        nav {
+            /* margin-top: 47px; */
+            padding: 20px;
+            background: white;
+            width: 100%;
+            position: fixed;
+            z-index: 1;
+            top: 47px;
+            box-sizing: border-box;
+            font-family: system-ui;
+        }
+
+        .disnone {
+            display: none;
+        }
+
+        nav div h2,
+        a {
+            margin: 6px 0;
+        }
+
+        nav div h2 {
+            font-size: 1.3rem;
+        }
+
+        header div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* width: 100%; */
+            padding: 10px 20px;
+            font-family: system-ui
+        }
+
+        .signin {
+            color: black;
+            box-sizing: border-box;
+            display: block;
+            border: 2px solid black;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+            font-family: system-ui;
+            padding: 8px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .signin:hover {
+            color: blue;
+        }
+
+        .yellowa {
+            background-color: #ffd60b;
+            border: none;
+        }
+
+        div p {
+            font-weight: 400;
+            margin: 3px;
+        }
+
+        span {
+            display: inline-block;
+            width: 60px;
+            text-align: center;
+            font-weight: 400;
+            cursor: pointer;
+        }
+
+        /* article {
+            background: whitesmoke;
+        } */
+
+        article div {
+            width: 100%;
+            padding: 14px 13px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .margin-top-47 {
+            margin-top: 47px;
+        }
+
+        .margin-top-371 {
+            margin-top: 371px;
+        }
+
+
+        article h3 {
+            margin: 5px;
+            font-family: sans-serif;
+        }
+
+        article div p:first-child {
+            font-weight: bold;
+            color: #1f701f;
+            font-family: system-ui;
+        }
+
+        article div p:last-child {
+            font-family: system-ui;
+        }
+
+        .gray {
+            color: gray;
+        }
+
+        article .dc {
+            padding: 0 22px;
+            display: grid;
+            box-sizing: border-box;
+            margin-top: 17px;
+            grid-row-gap: 3px;
+            grid-column-gap: 7px;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            justify-items: center;
+        }
+
+        @media screen and (min-width:533px) and (max-width:712px) {
+            article .dc {
+                grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+            }
+
+        }
+
+
+
+        .d {
+            justify-content: center;
+            min-width: 160px;
+            margin-top: 8px;
+            display: flex;
+            height: 127px;
+            flex-direction: column;
+            background-color: chartreuse;
+            border-radius: 9px;
+        }
+
+        .d:first-of-type {
+            background: #caef00;
+            color: black;
+        }
+
+        .d:nth-of-type(4) {
+            background: #0cfbc4bd;
+        }
+
+        .d:nth-of-type(3) {
+            background: #4ced67;
+        }
+
+        .black {
+            color: black;
+        }
+
+        .articlediv2 {
+            margin-top: 0;
+            background: white;
+        }
+
+        .side {
+            font-size: 1.5rem;
+            margin: 7px 41px;
+        }
+
+        .one-4rem {
+            font-size: 1.4rem;
+        }
+
+        .blocks {
+            position: relative;
+            padding: 0;
+        }
+
+        .margintop20 {
+            margin: 20px 0 0 0;
+            padding: 10px;
+        }
+
+        button {
+            font-weight: 500;
+            background: #c2f105;
+            padding: 10px;
+            position: absolute;
+            border: none;
+            top: -17px;
+            color: black;
+            border-radius: 23px;
+            transition: all 0.3s linear;
+        }
+
+        button:hover {
+            cursor: pointer;
+            background-color: #98e31f;
+            transform: scale(1.1);
+        }
+
+        .gridallcenter {
+            position: relative;
+            margin: 0 13px 41px;
+            padding-bottom: 19px;
+        }
+
+        .gridallcenter::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            border-radius: 25px;
+            height: 100%;
+            background-color: #8080800f;
+        }
+
+        .margintop0 {
+            margin-top: 0;
+        }
+
+        .padding0 {
+            padding: 0;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: system-ui;
+        }
+
+        .justify-center {
+            display: flex;
+            justify-content: center
+        }
+
+        .companies {
+            align-items: baseline;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(107px, auto));
+            justify-content: center;
+            padding-bottom: 0;
+        }
+
+        @media screen and (min-width:1050px) and (max-width:1700px) {
+            .companies {
+                grid-template-columns: repeat(auto-fit, minmax(116px, 210px));
+            }
+        }
+
+        .button {
+            background-color: chartreuse;
+        }
+
+        .button3 {
+            background: #4ced67;
+        }
+
+        .marginbottom0 {
+            margin-bottom: 0;
+        }
+        select,option{
+            display: block;
+            width: 100%;
+            border: none;
+            outline: none;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <p>Crio.<b>Do</b></p>
+            <span id="click"><b>--</b></span>
+        </div>
+    </header>
+    <nav class="disnone" id="disnone">
+        <div>
+            <select name="" id="">
+                <h1>programs</h1>
+                <option value="name">ayush</option>
+                <option value="">fkf</option>
+            </select>
+            <h2>Hire Crio Developers</h2>
+            <h2>Projects</h2>
+            <h2>Blog</h2>
+            <h2>Placement</h2>
+            <a href="" class="signin">Sign In &gt;</a>
+            <a href="" class="signin yellowa">Book Your Free Trial, Now &gt;</a>
+        </div>
+    </nav>
+    <article>
+        <div class="margin-top-47" id="margin-top-47">
+            <p class="bold">Placements Stats</p>
+            <h3 class="bold side one-4rem">Helping our Learners get the Best Career breakthroughs and into the Best
+                Companies</h3>
+            <p class="gray">We want to ensure that our learners achieve the best posiibiecareer outcomes and are able to
+                fulfill their professional goals.</p>
+        </div>
+        <div class="dc">
+            <div class="d">
+                <h3>93%</h3>
+                <p class="black">place within 8 months of graduation</p>
+            </div>
+            <div class="d">
+                <h3>11 LPA</h3>
+                <p class="black">Average CTC</p>
+            </div>
+            <div class="d">
+                <h3>89%</h3>
+                <p class="black">Average salary Hike</p>
+            </div>
+            <div class="d">
+                <h3>240</h3>
+                <p class="black">Hiring partners</p>
+            </div>
+        </div>
+        <div class="articlediv2">
+            <p class="bold">Recruiters</p>
+            <h3 class="bold side">Top Unicorns Soonicorns, and Global Tech MCCs hire from Crio </h3>
+            <p class="gray">Recruiters from top companies and hyper-growth startups love working with Crio grads</p>
+        </div>
+    </article>
+    <article class="gridallcenter">
+        <div class="btn margintop20 justify-center"><button>Unicorns</button></div>
+        <div class="blocks margintop0">
+            <div class="companies margintop0 ">
+                <div class="margintop0">
+                    <h4>grow</h4>
+                </div>
+                <div class="margintop0">
+                    <h3>Slice</h2>
+                </div>
+                <div class="margintop0">
+                    <h4>Bharatpe</h4>
+                </div>
+                <div class="margintop0">
+                    <h5>POSTMAN</h5>
+                </div>
+                <div class="margintop0">
+                    <h3>grofers</h3>
+                </div>
+                <div class="margintop0">
+                    <h4>CRED</h4>
+                </div>
+                <div class="margintop0">
+                    <h3>CARS 24</h3>
+                </div>
+                <div class="margintop0">
+                    <h5>Urban Company</h5>
+                </div>
+                <div class="margintop0">
+                    <h3>meesho</h3>
+                </div>
+                <div class="margintop0">
+                    <h5>NOBROKER</h5>
+                </div>
+                <div class="margintop0">
+                    <h4>PharmEasy</h4>
+                </div>
+                <div class="margintop0">
+                    <h4>upGrad</h4>
+                </div>
+                <div class="margintop0">
+                    <h4>OLA</h4>
+                </div>
+                <div class="margintop0">
+                    <h5>flipkart</h5>
+                </div>
+                <div class="margintop0">
+                    <h4>dailyhunt</h4>
+                </div>
+            </div>
+            <div class="padding0 justify-center gray bold">And More...</div>
+        </div>
+    </article>
+    <article class="gridallcenter">
+        <div class="btn margintop20 justify-center"><button class="button">Hyper growth startups & Soonicorns</button>
+        </div>
+        <div class="blocks margintop0">
+            <div class="companies margintop0 ">
+                <div class="margintop0">
+                    <h4>Jumbotail</h4>
+                </div>
+                <div class="margintop0">
+                    <h3> ninjacart</h2>
+                </div>
+                <div class="margintop0">
+                    <h4>ula</h4>
+                </div>
+                <div class="margintop0">
+                    <h5>Shiprocket</h5>
+                </div>
+                <div class="margintop0">
+                    <h3>Tracxn</h3>
+                </div>
+                <div class="margintop0">
+                    <h4>ATHER</h4>
+                </div>
+                <div class="margintop0">
+                    <h3>fampay</h3>
+                </div>
+                <div class="margintop0">
+                    <h5> Rupeek</h5>
+                </div>
+                <div class="margintop0">
+                    <h3>meesho</h3>
+                </div>
+                <div class="margintop0">
+                    <h5>LENDINGKART</h5>
+                </div>
+                <div class="margintop0">
+                    <h4>superset</h4>
+                </div>
+                <div class="margintop0">
+                    <h4>navi</h4>
+                </div>
+                <div class="margintop0">
+                    <h4>JUSPAY</h4>
+                </div>
+                <div class="margintop0">
+                    <h5>capillary</h5>
+                </div>
+                <div class="margintop0">
+                    <h4>WebEngage</h4>
+                </div>
+                <div class="margintop0">
+                    <h4>VOUCH</h4>
+                </div>
+                <div class="margintop0">
+                    <h4>vicara</h4>
+                </div>
+                <div class="margintop0">
+                    <h4>yellow class</h4>
+                </div>
+            </div>
+            <div class="padding0 justify-center gray bold">And More...</div>
+        </div>
+    </article>
+    <article class="gridallcenter marginbottom0">
+        <div class="btn margintop20 justify-center"><button class="button3">Global tech MNCs</button>
+        </div>
+        <div class="blocks margintop0">
+            <div class="companies margintop0 ">
+                <div class="margintop0">
+                    <h4>Microsoft</h4>
+                </div>
+                <div class="margintop0">
+                    <h3>amazon</h2>
+                </div>
+                <div class="margintop0">
+                    <h4> grab</h4>
+                </div>
+                <div class="margintop0">
+                    <h5>oracle</h5>
+                </div>
+                <div class="margintop0">
+                    <h3>IBM</h3>
+                </div>
+                <div class="margintop0">
+                    <h4>Arcisium</h4>
+                </div>
+                <div class="margintop0">
+                    <h3>Walmart</h3>
+                </div>
+                <div class="margintop0">
+                    <h5>TEKION</h5>
+                </div>
+                <div class="margintop0">
+                    <h3>vmware</h3>
+                </div>
+                <div class="margintop0">
+                    <h5>LENDINGKART</h5>
+                </div>
+                <div class="margintop0">
+                    <h5>DeShaw & go</h5>
+                </div>
+                <div class="margintop0">
+                    <h4><b>Deloitte</b></h4>
+                </div>
+            </div>
+            <div class="padding0 justify-center gray bold">And More...</div>
+        </div>
+    </article>
+    <article>
+        <div>
+            <p class="bold">Student background</p>
+            <h3 class="bold side one-4rem">Our learners come from diverse backgrounds and experiences</h3>
+            <p class="gray">Get a Comprehensive learning experience.</p>
+        </div>
+    </article>
+    <script>
+        // yaha par this keybord fail ho gaya kyoki arrow function hai
+        let click = document.getElementById('click');
+        click.addEventListener('click', run)
+        function run() {
+            setTimeout(() => {
+                let disnone = document.getElementById('disnone');
+                let margintop47 = document.getElementById('margin-top-47').classList.toggle('margin-top-371');
+                disnone.style.cssText = "transition:all 2s linear;"
+                disnone.classList.toggle('disnone');
+                if (disnone.classList.contains('disnone')) {
+                    click.innerHTML = '--'
+                }
+                else {
+                    click.innerHTML = 'x'
+                }
+            }, 300)
+        }
+    </script>
+</body>
+
+</html>

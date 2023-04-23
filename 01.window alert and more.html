@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window alert and more</title>
+</head>
+
+<body>
+    <button id="confirm">try confirm</button>
+    <button id="prompt">try prompt</button>
+    <h1>My First Web Page</h1>
+    <p id="demo">hh</p>
+    <button type="button" onclick="alert(5+6);">this is window alert</button>
+    <button type="button" onclick="document.write(5+6)">this is document. write</button>
+
+    <script>
+        // document.write(5+6);
+        let x = document.getElementById('confirm').addEventListener('click', fun)
+        function fun() {
+            let c = confirm("mein nito kon be?");
+            if (c) { console.log('you pressed okay') }
+            else { console.log('you pressed cancel') }
+        }
+
+        // window.alert(5+6);
+        document.getElementById("demo").innerHTML = "this is innerHTML";
+//  always use capital HTML in innerHTML 
+
+    let p = document.getElementById('prompt').addEventListener('click',()=>{
+        let pro  = prompt('what is your age', 28);
+       
+        if(pro == null || pro == '' ){
+            console.log('user clicked cancel');
+        }
+        else{console.log('user clicked ' +typeof pro)}
+    })
+    </script>
+</body>
+</body>
+
+</html>

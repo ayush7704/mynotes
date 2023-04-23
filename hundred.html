@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        for (let i = 1; i <= 100; i = i + 10) {
+            for (let k = i; k <= i + 9; k++) {
+                document.write(k + ' ')
+            }
+            document.write('<br>')
+        }
+
+        document.write('<br>');
+
+        for (x = 1; x <= 5; x++) {
+            for (k = 1; k <= x; k++) {
+                document.write(k)
+            }
+            document.write('<br>')
+        }
+        document.write('<br>');
+
+        for (x = 1; x <= 5; x++) {
+            for (k = 1; k <= x; k++) {
+                document.write(x)
+            }
+            document.write('<br>')
+        }
+        document.write('<br>');
+
+        for (x = 5; x >=1; x--) {
+            for (k = 1; k <= x; k++) {
+                document.write(x)
+            }
+            document.write('<br>')
+        }
+        
+        document.write('<br>');
+        for(let i =1; i<=10; i++){
+            if(i % 2 == 0){ // i ko value ko devide karne par yadi 0 reminder aaye to chalega
+                document.write(i +'<br>');
+            }
+        }
+
+        document.write('<br>');
+        for(let i =1; i<=10; i++){
+            if(i % 2 != 0){  
+                document.write(i +'<br>');
+            }
+        }
+
+        let hello =[
+            ['ayush',18,'male','b a'],
+            ['piyush',18,'male','b a'],
+            ['ush',18,'male',"bca"],
+            ['ayus',18,'male','b a']
+        ]
+        document.write('<table border="1px ">');
+        for(i=0; i<hello.length; i++){
+              document.write('<td>');
+             document.write('<b>' +hello[i]+'</b>' +'<br>');
+             document.write('</td>');
+        }
+          document.write('</table>');
+        // document.write('<b>' +hello +'</b>');
+
+    </script>
+</body>
+
+</html>

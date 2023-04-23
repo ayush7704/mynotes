@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // let student1 = {
+        //     fname : 'ayush',
+        //     lname : 'nagar',
+        //     age  : 18 
+        // } 
+        // console.log(student1);
+
+        function Student(fname,lname,age,cls){
+            this.firstname = fname;
+            this.lastname = lname;
+            this.age = age;
+            this.class = cls;
+            this.nationality = 'indian';
+            this.fullname = function (){
+                return this.firstname +" "+ this.lastname
+            }
+            this.changename = function(neww){
+                this.firstname = neww
+            }
+        }
+            // we cannot set property's to existing object constructer directly like Studend.bloodgroup=''
+           //we can add property like we did before with nationality 
+           //but here we will use prototype to add property 
+           Student.prototype.bloodgrp = 'unkown';  //now its updated to Student 
+
+
+           let a = prompt('age ?')
+        //use (new) keybord is compulsory 
+        let student1 = new Student("ayush","nagar",a); 
+        student1.changename('aayushhh')
+        let student2 = new Student("piyush","bharti",18,'12th');
+        let student3 = new Student ('none','furr',50,'12th')
+        student3.bloodgrp='redandblue';
+
+        console.log(student1);
+        console.log(student2);
+        console.log(student2.fullname())
+        console.log(student1.fullname())
+        console.log(typeof student1)
+        console.log(student1.bloodgrp);
+        console.log(Student);
+        console.log(student3.bloodgrp)
+
+    </script>
+</body>
+</html>

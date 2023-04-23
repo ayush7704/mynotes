@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        {// every javascript object has its prototype
+            // object banate hi uska prototype bhi ban jaata hai 
+            let a = {}
+            console.log(a) //isko expend karne pe iske andar prototype connect milega  
+            console.log(a.hasOwnProperty('name')) // hasOwnproperty() return boolian 
+
+
+            function Constructer(n) {
+                this.name = n
+            }
+            // jitne bhi property ya method Constructer me he bo uske objects me copy paste ho jayengi 
+
+            // prototype chaining
+            // Constructer function pro-metho > copy-paste in their objects > and these objects connects to Constructer function's prototype > and this prototype connects to objects default prototype 
+
+            let one = new Constructer('ayush')
+            console.log(one) // esko expand karne par pehle Constructer ka prototype aayga uske andar , object bala
+        }
+        {
+            // use of prototype
+            // inheritance
+
+            function Person(fN, lN, A) {
+                this.firstName = fN;
+                this.lastName = lN;
+                this.age = A;
+                this.name = function () {
+                    return this.firstName + ' ' + this.lastName
+                }
+            }
+
+            let person1 = new Person('ayush', 'nagar', 44)
+            let person2 = new Person('piyush', 'nagar', 84)
+
+            console.log(Person)
+            //  yaha property's to sabki alag hoti hai par name method copy paste ho raha hai sabhi objects me constructer function se joki dry method ko crash kar raha hai hai 
+            console.log(person1)
+            console.log(person2)
+
+            //  dry method ko rakhne ke liy hum methods ko constructer function ke prototype me rakhte hai 
+            // constructer function ka prototype connect hota hai objects se copy paste nahi hota 
+
+
+            {
+                function SecondFinal(name, age, salary, role) {
+                    this.name = name;
+                    this.age = age;
+                    this.salary = salary;
+                    this.role = role;
+                }
+                // prototype se method add karne se constructer function ke prototype me method add ho jayega  
+                // or bo objects se connect ho jaayega not copy paste
+                SecondFinal.prototype.fullRole = function () {
+                    return this.name + ' ' + this.role
+                }
+                let first = new SecondFinal('ayush', 22, 99000, 'front-end developer')
+                let second = new SecondFinal('piyush', 22, 100000, 'back-end developer')
+
+                console.log(SecondFinal)
+                // console me dekho method nahi batayega objects ke sath 
+                console.log(first)
+                console.log(first.fullRole())
+                console.log(second)
+            }
+
+            {
+                function People(fName,lName,age,){
+                    this.firstName = fName;
+                    this.lastName = lName;
+                    this.age = age
+                }
+                People.prototype.name = function(){
+                   return this.firstName +' '+ this.lastName
+                }
+                let one =  new People('ayush','nagar',18)
+                console.log(one.name())
+
+                function log(first,last,age=0){
+                    this.firstName = first;
+                    this.lastName = last;
+                    this.age = age;
+                }
+                log.prototype.umar = function(){
+                    return this.age
+                }
+                let pillo = new log('me pillu','jaati dullu')
+
+                log.prototype.__proto__= People.prototype  // People inheritade by log here
+                // yani people ke saare methods log ke paas aagye 
+                // khud ke method will still work 
+                console.log(pillo)
+                console.log(pillo.umar())
+                console.log(pillo.name())
+                // console.log(one.umar()) // this will not work 
+
+                // inheritance = a object can use another objects methods 
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>

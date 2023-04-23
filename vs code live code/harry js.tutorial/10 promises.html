@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>// simple promise syntax 
+           // it has two parameters resolve and reject 
+           //promise me do tariko se fullfillment ho sakta resolve and reject 
+        let a = new Promise(function(resolve,reject){
+            console.log('promises is pending')
+            setTimeout(()=>{
+              console.log('console in settimeout')
+            //   resolve(true)
+            //   reject(new Error())
+              //resolve() me value daalke ye bataya jaata heki sab sahi raha
+              //reject() me error daalke aap yeh bata sakte haiki job fail ho chuki hai
+            },3000)
+        })
+        // promise k resolve hone par kuch karne k liy then() ko use kiya jaata hai
+        a.then((value)=>{
+            console.log(value)
+        })
+
+          // promise k reject hone par kuch karne k liy catch() ko use kiya jaata hai
+        a.catch((error)=>{console.log('eror')})
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 90%;
+            margin: auto;
+            border: 1px solid black;
+            padding: 10px;
+            box-sizing: border-box;
+            font-size: 20px;
+            height: 300px;
+            display: block;
+        }
+
+        .wordandcharacter {
+            justify-content: space-around;
+            background: aquamarine;
+            height: auto;
+            margin: 0 5%;
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+
+    <textarea name="" id="" cols="30" rows="10" class="container" id="text"></textarea>
+    <div class="wordandcharacter">
+        <span id="char">char</span> <span id="word">word</span>
+    </div>
+
+    <script>
+        let container = document.querySelector('textarea');
+        container.addEventListener('input', function (a) {
+            let char = document.getElementById('char');
+            let word = document.getElementById('word');
+            let value = this.value;
+            value = value.trim()
+            let vl = value.length;
+            char.innerHTML = 'character' + ' ' + vl
+
+            let charsplit = value.split(' ');
+            let charsplitfilter = charsplit.filter((value) => { return value != '' })
+            word.innerHTML = charsplitfilter.length <= 1 ? 'word' + charsplitfilter.length : 'words ' + charsplitfilter.length
+        })
+        console.log(container)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      background-color: green;
+    }
+    div.container{ 
+      margin: auto; max-width: 500px; background-color: #fff; height: 600px; padding: 20px;
+    }
+    form{
+      margin-right: 15px;
+    }
+    form input{
+       width: 100%; padding: 10px; margin: 8px 0 8px;
+      }
+      select{
+        width: 100%;  margin-top: 0px; padding: 10px;
+      }
+     input[type="radio"] {
+      display: inline-block;
+    width: 21px;
+     }
+  </style>
+</head>
+<body>
+ <div class="container">
+  <form action="">
+    <label for="name">name</label>
+    <input type="text" name="name" placeholder="Enter your name">
+    <label for="email">Email</label>
+    <input type="email" name="email" placeholder="Enter your email">
+    <label for="age">age</label>
+    <input type="text" name="age" placeholder="Enter your age">
+    <label for="role"> which option best describe you</label>
+    <select name="select" id="">
+      <option value="student">student</option>
+      <option value="youtouber">youtouber</option>
+      <option value="free">free</option>
+    </select>
+    <p>would you like recommened geeks for freinds</p>
+    <input type="radio" name="hh" value="yes">yes <br>
+    <input type="radio" name="hh" value="no">no <br>
+    <input type="radio" name="hh" value="okay">okay <br>
+  </form>
+ </div> 
+</body>
+</html>

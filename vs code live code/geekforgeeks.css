@@ -1,0 +1,429 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: black;
+    font-size: 1.5rem;
+    height: 65px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.hiddergeek {
+    margin-left: 45px;
+}
+
+header::before {
+    content: "";
+    background-color: #17b517;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+ul {
+    display: flex;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+ul li {
+    text-transform: capitalize;
+    list-style: none;
+   
+    cursor: pointer;
+}
+ul li a{
+     padding: 0 65px;
+}
+.links{
+    color: black;
+    text-decoration: none;
+    border-right: 1px solid black;
+    scroll-behavior: smooth;
+    transition: scroll 1s;
+}
+
+.hid-li:hover {
+    background: white;
+    border: none;
+    border-radius: 20px;
+}
+
+.hid-ul:hover .links {
+    border: none;
+}
+
+
+ul li:last-child {
+    border: none;
+}
+
+/* section */
+.hii-geeks {
+    height: 720px;
+    position: relative;
+    margin: 0;
+}
+
+.hii-geeks::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hii-geeks h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 20px;
+    margin: 0px;
+}
+
+hr {
+    border-width: thin;
+}
+
+.abt {
+    color: green;
+    padding: 10px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+u {
+    text-decoration-thickness: 2px
+}
+
+.img {
+    width: 37%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    box-sizing: border-box;
+    padding: 50px;
+    height: 380px;
+    float: left;
+}
+
+.img img {
+    width: 150px;
+    height: 150px;
+    box-sizing: border-box;
+}
+
+.lorem {
+    color: white;
+    width: 63%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    float: left;
+    box-sizing: border-box;
+    padding: 0 108px;
+}
+
+.leftgeek {
+    text-align: left;
+}
+
+/* project section */
+
+.projects {
+    position: relative;
+}
+
+.projects h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 0;
+    padding: 40px;
+}
+
+.projects::before {
+    content: "";
+    background-color: peachpuff;
+    position: absolute;
+    width: 100%;
+    height: 107%;
+    z-index: -1;
+}
+
+.projects-ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 556px 30px 55px;
+    cursor: progress;
+}
+
+.projects-li {
+    border: none;
+    list-style-type: disc;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.geeksforgeeks {
+    right: 269px;
+    position: absolute;
+    width: 305px;
+    top: 308px;
+    height: 90px;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.geekforgeeks-h2 {
+    font-size: 55px;
+    margin: 0px;
+    padding: 0px;
+    color: rgb(53, 151, 53);
+}
+
+.geekforgeeks-p {
+    margin: 2px 10px;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* achievements section */
+
+.achievements {
+    position: relative;
+    color: white;
+    height: 375px;
+}
+
+.achievements::before {
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.h1-achievements {
+    text-align: center;
+    margin-top: 0px;
+    padding: 20px 0;
+}
+
+.h1-achievements {
+    color: green;
+    text-align: center;
+    font-size: 2.3rem;
+}
+
+.achievements-ul,
+.achievements-sublist-ul {
+    display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    flex-direction: column;
+}
+
+.achievements-sublist-ul {
+    display: flex;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    flex-direction: column;
+}
+
+.achievements-li {
+    list-style-position: inside;
+    padding: 10px;
+    list-style-type: disc;
+    border: none;
+}
+
+.achievements-sublist-li {
+    list-style-position: inside;
+    list-style-type: circle;
+    border: none;
+    padding: 0 45px;
+}
+
+/* contactform */
+
+.contactform {
+    position: relative;
+}
+
+.contactform::before {
+    content: "";
+    position: absolute;
+    /* background-color: rgb(221, 133, 0); */
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.contact-h1 {
+    text-align: center;
+    margin-top: 0;
+    font-size: 2rem;
+    padding: 20px 0;
+    font-weight: 100;
+}
+
+.formcontainer {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    background-color: black;
+    color: white;
+    padding: 10px 0 15px;
+    width: 30%;
+    margin-bottom: 100px;
+    box-shadow: 0 4px 3px rgb(92, 90, 90);
+    border-radius: 20px;
+}
+
+.input-container {
+    padding: 10px;
+}
+ 
+.input-container4 {
+    display: flex;
+    align-items: center;
+
+    margin: 7px 10px;
+}
+
+label{
+    padding-left: 30px;
+}
+
+
+textarea {
+    resize: none;
+}
+
+.submit-button {
+    width: 64px;
+    margin-top: 20px;
+    margin-left: 113px;
+    font-weight: bold;
+}
+
+.reset-button {
+    width: 64px;
+    font-weight: bold;
+    transform: translate(194px, -21px);
+    padding: 0;
+}
+
+/* bottom-ul */
+
+.bottom-ul {
+    position: relative;
+    margin: 0;
+}
+
+.bottom-ul::before {
+    content: "";
+    position: absolute;
+    background-color: #17b517;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.bottom-ul-container {
+    display: flex;
+    padding: 15px 15px;
+    margin: 0;
+    justify-content: center;
+}
+.bottom-ul-container:hover .bottom-li{
+    border: none;
+}
+.bottom-li:hover {
+    background: white;
+    border: none;
+    border-radius: 20px;   
+    box-sizing: border-box;
+}
+
+.bottom-li {
+    padding: 4px 50px;
+}
+
+/* footer */
+
+footer {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.footer-h3 {
+    margin: 0;
+    padding: 15px 400px 15px 480px;
+
+    color: white;
+    text-align: center;
+}
+
+.top {
+    color: #17b517;
+}
+
+@media screen and (max-width:500px) and (min-width:300px) {
+
+    body {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        height: 80px;
+        justify-content: center;
+
+    }
+
+    .hid-li {
+        padding: 4px;
+        border-right: none;
+    }
+
+    .hiddergeek,
+    .ul {
+        width: 100wh;
+        margin: 0;
+        padding: 0;
+        font-size: 1.3rem;
+    }
+
+    h3,
+    .hid-ul {
+        margin: 0;
+        padding: 0;
+    }
+}

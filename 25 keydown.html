@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 150px;
+            height: 150px;
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+
+    <script>
+        window.addEventListener('keydown',checkkey);
+        // window pe jo bhi key down hoga bo console pe dikhega
+
+        function checkkey(event){
+         console.log(event.key); //jo name paremeter me  diya bo name 
+        //  let p = event.key.value;
+        if(event.key === "a"){
+            alert('aysh');
+          }
+        }
+    </script>
+</body>
+</html>

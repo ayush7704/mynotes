@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var use</title>
+</head>
+<body>
+    <h2>variable use </h2>
+  <p id="demo">
+<hr>
+  </p> 
+  <h2>one statement many variables</h2>
+  <p id="demo2"></p>
+<hr>
+<p id="demo3"></p>
+<p>As with algebra, you can do arithmetic with JavaScript variables, using operators like = and +: </p>
+  <script>
+      // Creating a variable in JavaScript is called "declaring" a variable. var carName;
+
+     var carname= "volvo";
+    document.getElementById("demo").innerHTML=carname;
+
+    // below we're using multiple variables
+    var carName="volvo2",
+        name="alto",
+        nagar="boleno";
+        document.getElementById("demo2").innerHTML=nagar;
+    // we can use them by , 
+
+    // dont use quatetions on digits browser takes it like text
+    var x = 5 + 3 * 3;
+    document.getElementById("demo3").innerHTML=x+ "<hr>";
+
+    let crt = document.createElement('h1');
+    crt.className="try";
+    let text = document.createTextNode('created by js')
+    crt.appendChild(text);
+    // crt.innerHTML="by createElement";
+    document.body.appendChild(crt);
+    
+
+  </script> 
+</body>
+</html>

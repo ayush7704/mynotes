@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            display: grid;
+            justify-content: center;
+            /* place-items: center; */
+            background: linear-gradient(314deg, #bb34e7, #0000001f);
+        }
+
+        .container {
+            display: flex;
+            min-width: 300px;
+            max-width: 500px;
+            height: 378px;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        .info h2,
+        h3 {
+            margin: 0;
+        }
+
+        .info :first-child {
+            margin-bottom: 6px;
+        }
+
+        .info :last-child {
+            font-weight: bold;
+            margin: 8px 0;
+            color: #d41cd7;
+        }
+
+        .middle {
+            margin: -4px;
+            font-family: monospace;
+        }
+
+        h3:nth-child(2){
+            text-shadow: 1px 1px white,
+             -1px -1px white, 
+             2px 2px white, 
+             -2px -2px white,
+              -2px 2px white,
+               0px 2px white,
+                0px -2px white,
+                2px -1px white
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin: 0 auto;
+            width: 90%;
+        }
+
+        input,
+        select {
+            padding: 10px;
+            border-radius: 37px;
+            margin: 4px;
+            background: white;
+            border: none;
+        }
+
+        input:focus {
+            border: none;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="info">
+            <h3>Win</h3>
+            <h3 class="middle">Paytm</h3>
+            <H2 class="middle">CASHBACK</H2>
+            <h2>Enter your details</h2>
+        </div>
+        <form action="">
+            <input type="tel" placeholder="paytm number">
+            <input type="text" name="name" placeholder="Name">
+            <input type="email" placeholder="email">
+            <select name="gender" id="gender">
+                <option value="male">Male</option>
+                <option value="male">female</option>
+                <option value="male">other</option>
+            </select>
+
+        </form>
+    </div>
+    <!-- <input type="radio" name="gender">Male 
+    <input type="radio" name="gender">Female 
+    <input type="radio" name="gender">other -->
+
+</body>
+
+</html>

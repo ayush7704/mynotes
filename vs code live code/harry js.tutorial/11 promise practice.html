@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // promise immedietly run hota hai 
+        let promise = new Promise (function(resolve,reject){
+            console.log('state pending')
+            setTimeout(()=>{
+                console.log('settimeout in promise 5s')
+                resolve('done')
+            },5000)
+        })
+        // console.log(promise) // iski state abhi pending aayegi or result undefined bcoz kyoki bo pura nahi run hua 
+        // abhi tak  agar hum settimeout hata de to bo state fullfilled or result jobi hoga bo 
+          
+        // promise ke khatam hone par kuch karne k liy promisename....then() karte hai (resolve)
+       promise.then((value)=>{
+        console.log(value)
+       })
+      
+       let promise2 = new Promise (function(resolve,reject){
+            setTimeout(()=>{
+                console.log('promise 2')
+                reject(new Error ('something wrongn in promise 2 '))
+            },5000)
+        })
+       // same catch se error ko handle karte hai 
+       // error ko yaha handle karne se console me error nahi ayega
+       promise2.catch((e)=>{
+        console.log(e)}
+        )
+    </script>
+</body>
+</html>

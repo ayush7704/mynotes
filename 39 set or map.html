@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set and map</title>
+</head>
+
+<body>
+
+    <script>
+        {// A JavaScript Set is a collection of unique values.
+            // Pass an Array to the new Set() constructor:
+            // s will be capital in new Set 
+
+            let st = new Set(["a", 'a', "b", "c"])
+            st.add('four') // we can add value like this
+            st.add('four') // If you add equal elements, only the first will be saved:
+            let five = 'five';
+            st.add(five) // variable bhi pass kar sakte hai
+            st.size // for getting size of array 
+            st.delete('a') // for delete an element 
+
+            let a = ''
+            // for(key of st){
+            //     a += key +' ';
+            // }
+            st.forEach((value) => {
+                a += value + ' '
+            })
+            console.log(st)
+            console.log(a)
+        }
+
+        {
+            // A Map holds key-value pairs where the keys can be any datatype.
+            // You can create a Map by passing an Array to the new Map() constructor:
+
+            let mp = new Map([
+                ['ram', 'first'], // the first parameter will be save like key ,and second like value 
+                ['bharat', 'second'],
+                ['laksman', 'third']
+            ])
+            mp.set('satru', 'fourth') // also add like this 
+            console.log(mp.get('bharat')) // get(key-name) for its value
+            console.log(mp.size) //The size property returns the number of elements in a Map:
+            mp.delete('bharat')
+            console.log(mp.get('bharat'))
+            console.log(mp.has('bharat')) // has method return boolian 
+
+            // they are directly iterable 
+            { // iteration 
+                let text = '';
+                mp.forEach((value, key) => {
+                    text += key + ' = ' + value + '<br>';
+                })
+                document.write(text)
+                document.write('<hr>')
+            }
+            {
+                let text = '';
+                for(x of mp){
+                    text += x +'<br>'
+                }
+                document.write(text)
+                document.write('<hr>')
+            }
+          
+        }
+    </script>
+</body>
+
+</html>

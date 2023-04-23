@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function</title>
+</head>
+
+<body>
+    <h1>My Web Page</h1>
+
+    <p id="myPar">I am a paragraph.</p>
+    <div id="myDiv">I am a div.</div>
+
+
+    <p>
+        <button type="button" id="demo" onclick="setTimeout(ff, 5000)">Try it</button>
+        <!-- function ko use karne ka tarika -->
+    </p>
+
+    <script>
+        
+        let time = setTimeout(ff, 5000);
+    //   let demo= document.getElementById('demo');
+    //    demo.addEventListener('click',ff);
+       function ff(){
+            let x = "hello ayush";
+            document.getElementById("myPar").innerHTML = x;
+            document.getElementById("myDiv").innerHTML = "How are you?";
+        }
+
+    </script>
+
+    <p>When you click on "Try it", the two elements will change after some seconds.</p>
+
+</body>
+
+</html>

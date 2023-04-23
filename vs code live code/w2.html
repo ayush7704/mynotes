@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            /* width: 50vw; */
+            margin: 0;
+        }
+        p{
+            font-size: 20px;
+        }
+        header{
+            background: orange;
+    padding: 10px;
+        }
+        section{
+            display: grid;
+            grid-template-areas: 'one two three';
+            background-color: #a59b9b00;
+        }
+        .divs{
+            margin: 0 5px;
+    padding: 10px;
+        }
+       .one{
+        grid-area: one;
+       }
+       .two{
+        grid-area: two;
+       }
+       .three{
+        grid-area: three;
+       }
+
+       .container{
+        margin: 0 33px;
+       }
+       header h1{
+        margin: 0;
+       }
+       @media  screen and (max-width:450px) {
+         section{
+            display: grid;
+            grid-template-columns: 1fr;
+         }
+       }
+    </style>
+</head>
+<body>
+   <div class="container">
+    <header>
+        <h1>W3.CSS Demo</h1>
+        <p>Resize this responsive page!</p>
+    </header>
+    <section>
+    <div class="divs one">
+        <h3></h3>
+        <p>London is the capital city of England.</p>
+        <p>It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+    </div>
+    <div class="divs two">
+        <h3></h3>
+        <p>Paris is the capital of France.</p>
+        <p>The Paris area is one of the largest population centers in Europe, with more than 12 million inhabitants.</p>
+    </div>
+    <div class="divs three">
+        <h3></h3>
+        <p>Tokyo is the capital of Japan.</p>
+        <p>It is the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.</p>
+    </div>
+</section>
+
+   </div>
+</body>
+</html>

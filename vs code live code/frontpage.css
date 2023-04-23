@@ -1,0 +1,64 @@
+body{
+    margin: 8px;
+    padding: 0px;
+}
+
+ul{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin: 0px 8px;
+    padding: 13px;
+    box-sizing: border-box;
+}
+ul li{
+    float: right;
+    list-style-type: none;
+    margin-left: 15px;
+}
+.left{
+    float: left;
+    position: absolute;
+    left: -15px;
+    font-weight: bold;
+}
+span{
+    color:red;
+}
+.imgtext{
+    display: flex;
+    flex-direction: column;
+   
+}
+.imgtext p{
+    position: relative;
+    left: 240px;
+}
+img{
+   height: 70vh;
+    width: 80vw;
+   align-self: flex-end;
+}
+.exptokyo{
+    background-color: white;
+    color: black;
+    display: inline-block;
+    height: 300px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: absolute;
+    top: 30vh;
+    left: 145px;
+    
+}
+.exptokyo p{
+    margin: 0px;
+    font-size: 40px;
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-transform: capitalize;
+}

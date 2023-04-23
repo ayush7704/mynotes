@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>food website</title>
+    <link rel="stylesheet" href="foodweb.css">
+    <link rel="stylesheet" href="foodweb phone.css">
+</head>
+<body>
+    <nav class="navvar">
+        <div class="logo">
+            <img src="one direction.jpg" alt="logo">
+        </div>
+        <ul class="ul">
+            <li class="item"><a href="#home">home</a></li>
+            <li class="item"><a href="#services">services</a></li>
+            <li class="item"><a href="#about">about us</a></li>
+            <li class="item"><a href="#contact">contact</a></li>
+        </ul>
+    </nav>
+    <section class="home" id="home">
+        <h1 class="h-primary center">welcome to mannu dhaba and restaurant</h1>
+        <p class="p-primary center">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+             Nam reprehenderit fugit, quasi doloremque nemo sed?</p>
+        <p class="p-primary center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            Nam reprehenderit fugit, quasi doloremque nemo sed?</p>
+        <button class="btn" id="ayush" value="order now"> order Now</button>
+    </section>
+    <h1 class="h2center" id="services">Our Services</h1>
+    <section class="services-container">
+        <div class="services-item">
+            <img src="food 3.jpg" alt="food image">
+            <h2 class="h2-primary center">Food Ordering</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore debitis ut sapiente,
+                 ea neque quasi at non officiis necessitatibus, voluptas eos alias aliquid dolorem 
+                 temporibus. Excepturi, qui vero. Ea, facilis.
+            </p>
+            <input type="button" value="Order now" class="servicebtn btn order" onclick="order()">
+        </div>
+        <div class="services-item">
+            <img src="food 1.jpg" alt="food image">
+            <h2 class="h2-primary center">Food Ordering</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore debitis ut sapiente,
+                ea neque quasi at non officiis necessitatibus, voluptas eos alias aliquid dolorem 
+                temporibus. Excepturi, qui vero. Ea, facilis.
+           </p>
+            <input type="button" value="Order now" class="servicebtn btn order" onclick="order()">
+        </div>
+        <div class="services-item">
+            <img src="food 2.jpg" alt="food image">
+            <h2 class="h2-primary center">Food Ordering</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore debitis ut sapiente,
+                ea neque quasi at non officiis necessitatibus, voluptas eos alias aliquid dolorem 
+                temporibus. Excepturi, qui vero. Ea, facilis.
+           </p>
+           <input type="button" value="Order now" class="servicebtn btn order" onclick="order()">
+        </div>
+    </section>
+    <section class="ourclients" id="about">
+        <h2 class="h2primary">We Also Work With...</h2>
+        <div class="ourclientsimg">
+            <img src="swiggy.png" alt="ff">
+            <img src="Zomato.jpg" alt="ff">
+        <img src="foodhunter.png" alt="ff">
+        </div>
+    </section>
+    <section class="formcontainer" id="contact">
+        <h2 class="h2primary">Contact Us</h2>
+        <div class="formcontain">
+        <form action="" name="myform" id="demo">
+            <div>
+                <label for="name">Name</label>
+                <input type="text"  class="formgrp" name="name" placeholder="Enter Name" required>
+            </div>
+            <div  >
+                <label for="email">email</label>
+                <input type="email" class="formgrp" name="email" placeholder="Enter Email"  required>
+            </div>
+            <div  >
+                <label for="number">Number</label>
+                <input type="number"  class="formgrp" name="tel" maxlength="11" minlength="9" placeholder="Mobile Number"  required>
+            </div>
+           <div >
+                <label for="message">message for us </label>
+                <textarea name="message"  class="formgrp" id="" cols="20" rows="5" ></textarea>
+           </div>
+                <div >
+                <input type="submit">
+           </div>
+        </form>
+    </div>
+    </section>
+    <footer>mannu dhaba and family restaurant pvt lmtd.</footer>
+    <script>
+
+        function event(){
+              let c = confirm('do you want to order')
+              if(c){
+                 alert(`go below and choose from menus 
+thankyou !`);
+              }
+              else{
+                alert('your going to miss some delecious');
+              }
+        }
+        
+        let x= document.getElementById('ayush');
+       
+       x.addEventListener('click', event);
+
+    //    let time = new Date();
+    //    let hour = time.getHours();
+       
+
+    //    if(hour >12 && hour < 17){
+    //     alert(`good afternoon from mannu dhaba and restaurant `);
+    //    }
+    //    else if( hour > 17 && hour < 19){
+    //     alert(`good evening from mannu dhaba and restaurant `);
+    //    }
+    //    else if( hour > 19 && hour < 24){
+    //     alert(`good night from mannu dhaba and restaurant `);
+    //    }
+    //    else{
+    //     alert('good morning from mannu dhaba and restaurant!')
+    //    }
+       
+function order(){
+            window.open('order.html','_parent');
+    }
+      
+      let submitbtn =document.getElementById('demo').addEventListener('submit',()=>{
+        let cls = document.getElementsByClassName('formgrp').value;
+       alert('submitted')
+      });
+      </script>
+</body>
+</html> 

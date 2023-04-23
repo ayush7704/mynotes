@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <STYle>
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: black;
+            color: white;
+        }
+
+        .container {
+            padding: 0 33px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: monospace;
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+
+        ul {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            cursor: pointer;
+        }
+
+        ul li {
+            padding: 10px;
+        }
+
+        button:first-of-type {
+            background-color: aqua;
+            color: black;
+            padding: 8px 17px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:first-of-type:active{
+           transform:translate(0,3px);
+        }
+
+        .w-50:first-of-type {
+            box-sizing: border-box;
+            width: 49%;
+            padding: 16px;
+        }
+
+
+        section {
+            display: flex;
+            align-items: center;
+        }
+        @media (max-width:500px){
+            section{
+                flex-direction: row;
+            }
+        }
+
+        .w-50 {
+            width: 50%;
+        }
+
+        .w-50 img {
+            max-width: 82%;
+            border-radius: 50%;
+        }
+
+        .blue {
+            color: rgb(10, 104, 104);
+        }
+
+        h3,
+        h2 {
+            margin: 0;
+            font-family: system-ui;
+            font-weight: 400;
+        }
+    </STYle>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li>HOME</li>
+                <LI>ABOUT</LI>
+                <LI>SERVICES</LI>
+                <LI>BLOG</LI>
+                <LI>MORE</LI>
+            </ul>
+            <button>contact</button>
+        </nav>
+        <section>
+            <div class="w-50">
+                <img src="/my photo.jpg" alt="photo">
+            </div>
+            <div class="w-50">
+                <h3 class="blue">CODEWITHAYUSH</h3>
+                <H2>i'm a front-end web </H2>
+                <h2 class="blue"> Developer</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta molestias delectus facere esse
+                    distinctio porro placeat incidunt neque quisquam veritatis. Aliquam ad sapiente culpa vero?</p>
+                <button>DOWNLOAD CV</button>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

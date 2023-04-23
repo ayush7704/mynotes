@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //these map, filter,reduce method do not change the real values
+        { // map function return a new array 
+            // it has 3 optional parameters (value,index,array);
+
+            // let num =[44,6,77,3,4,6,,7,3]
+            // let b = num.filter((value)=>{
+            //     return value!== ''
+            // })
+            // let a = b.map((value)=>{
+            //     return value +2
+            // })
+            // console.log(b)
+            // console.log(a)
+            // console.log(num)
+            //    let y = []
+            // let a =[3,6,75,7,4] 
+            //    for(let i=0; i<a.length; i++){  // method one
+            //     y[i]= a[i]*2;
+            //     }
+            // let y= a.map((a)=>{return a*2}); // simple one
+            // console.log(y)
+        }
+        {// filter function 
+            // filter a value with passes in a test
+            // let num =[44,6,77,3,4,6,7,3]
+            // let a = num.filter((f)=>{
+            //        return f<10
+            // })
+            // alert(a)
+        }
+        {
+            // let num =[44,6,77,3,4,6,7,3]
+            // let a = num.reduce((f,h)=>{
+            //        return f+h
+            // })
+            // alert(a)
+
+            // reduce method can accept intial value 
+            //     let a = num.reduce(initial,100)
+            //    function initial (a , b){
+            //            return a+b
+            //     }
+            //     alert(a)
+
+
+        }
+        {
+            // every method returns Boolean
+            // same some method bhi hota hai 
+            // const numbers = [45, 4, 9, 16, 25];
+            // let allOver18 = numbers.every((value, index, array) => {
+            //     return value > 18;
+            // });
+            // alert(allOver18)
+        }
+        {
+            // indexof
+
+            // let a = [0,3,46,4,3,35]
+            // alert(a.indexOf(3 ,5))
+            // alert(a.lastIndexOf(3))
+            // indexOf method's second parameter define the starting index
+            // par index same hi btata hai  
+        }
+        {
+            // find and findindex
+            // findIndex check the condition and then give the first occurance index 
+            // let numbers = [35,34,32,5,555,3,222,]
+            // let findindex = numbers.findIndex(function (k) {
+            //     return k >= 50;
+            // })
+            // alert(findindex)
+
+            // let numbers = [35,34,32,5,555,3,222,]
+            // let findindex = numbers.find(function (k) {
+            //     return k >= 50;
+            // })
+            // alert(numbers.indexOf(555) + ' '+ findindex)
+
+        }
+        {
+            // array.entries() make a entryies of array in index/value pairs 
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+            let entry = fruits.entries();
+            let a = [];
+            for(x of entry){
+                a += x  + '<br>';
+            }
+            document.write(a)
+        }
+        {
+            // include method check whether an elmenet present or not 
+            // const fruits = ["Banana", "Orange", "Apple", "Mango"];
+            // alert(fruits.includes('ayush'))
+        }
+    </script>
+</body>
+
+</html>

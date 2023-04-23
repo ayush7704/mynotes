@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- beforebegin -->
+    <div id="intro">  <!--selected -->
+        <!-- afterbegin -->
+        <h2>heading</h2>
+        <p>this is a p tag</p>
+        <!-- beforeend -->
+    </div>
+    <!-- afterend -->
+    <script>
+        let elm =document.getElementById('intro');
+    
+        let add = '<h1>new heading bolte</h1>';
+    
+        elm.insertAdjacentHTML('beforebegin',add);
+         // first parameter is position second is content
+        // there are four location u can see above on html 
+         console.log(window.location.href);
+    </script>
+</body>
+</html>

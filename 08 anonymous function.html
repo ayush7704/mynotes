@@ -1,0 +1,46 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    
+    <script>
+        // noraml function
+        function show(){
+    document.write("noraml function" + "<br>");
+    }
+ show();
+
+
+ //1 anonymous function ka name nahi hota
+// 2 anonymous function  sirf 1 baar use karne k liy banaya jaata hai
+// 3 anonymous function ko direct setTimeout me function name ki jagah likh sakte hai
+// 4 jab hum variable ko function assign kr dete he to use  (function experresion) kehte hai
+ let anonymous = function (){
+    document.write("anonymous funtion" + "<br>");
+    }
+ anonymous();  //variable k name ko function k tarah call karte ha
+
+
+
+//  setTimeout
+ function delay(){
+    document.write("delay in js" + "<br>");
+ }
+  
+
+ setTimeout(delay, 3000);
+
+// anonymous function in setTimeout
+ setTimeout(function (){
+  document.write("anonymous function in setTimeout");   
+ },5000); 
+//  sirf ek baar use karna ho to use kar sakte hai
+//function name ki jagah direct use kiya hai
+    </script>
+ </body>
+ </html>

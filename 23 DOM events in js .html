@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="demo">hello</button>
+</body>
+<script>
+     // DOM EVENTS!
+    //(1) ONCLICK EVENT
+    //(2) mouseover
+    //(3) mouseout
+     
+    // first method for onclick event       (inline) 
+    
+    function  error(){
+         console.log("button was clicked!");
+    }
+
+    // second method for onclick event yaha html me onclick nahi likhna hota 
+    let id = document.getElementById('demo'); 
+    id.addEventListener('click',error);  
+    // addEventListner me first parameter me likhna hota hai konsa event  show karana hai 
+    // or doosre me konsa function 
+    // function name same ase hi likhna hota hai isme simple ekdam
+    // function name ki jagah direct anonymous function bhi use kar sakte hai yadi ek baar use karna ho
+
+    //ek element par multiple addEventListner lagaaya ja sakta hai
+
+    // event name small letter se start hua is bale ka 
+    let x = function(){
+         console.log('mouse over activate');
+     };
+     id.addEventListener("mouseover",x)
+
+    // humne yaha anonymous function use kiya hai
+    
+    id.addEventListener("mouseout", function(){
+         console.log('mouse out activate');
+    });
+
+     // we can delete EventListener 
+     id.removeEventListener('click',error);
+     // now it has removed
+
+    id.removeEventListener('mouseover',x)  
+    
+    console.log(window.location.href);
+
+    
+</script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // hum kisi bhi function ko async bana sakte he or uski promise ko await kar sakte hai
+    // async lagane se pakka ho jaata he ki ye promise return kar raha hai
+       async function run(){
+        let a = new Promise ((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve('30 deg');
+            },4000)
+        })
+        let b = new Promise ((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve('35 deg');
+            },1000)
+        })
+        // a.then((value)=>{console.log(value)})
+        //  a.then(alert)
+        let awet = await a ; //await wait karta hai pura finish hone ka iske baad hi aage badega
+        let awet2 = await b;
+        return [awet,awet2]
+        }
+ 
+   let wait = run();
+   console.log(wait)
+    </script>
+</body>
+</html>

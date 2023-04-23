@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        try {
+            ayush
+        } catch (error) {
+            console.log(error.name) // ye btayaga kis type ka error he 
+            console.log(error.message) // ye message dega kuch
+        }
+       
+        try {
+           // new error bhi sent kara sakte hai (custom errors)
+        throw new ReferenceError ('ayush is not good boy')
+        } catch (error) {
+            console.log(error.name) 
+            console.log(error.message)  
+        }
+
+        try {
+            let a = prompt ('enter your age bro ')
+            // a=Number.parseInt(a)
+          console.log(a.value)
+            if(a.value == undefined){
+                alert('pas')
+              throw 'empty input'
+            }
+            if(a>100){
+                throw new ReferenceError (`chal be kutte`)
+            }
+        } catch (error) {
+            console.log(error)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        setTimeout(()=>{
+            console.log('hey how are you?')
+        },1000)
+     
+        //error ko handle karne k liy try , catch use karte hai 
+        try{
+            console.log(ayush)
+        }
+        catch(error){
+         console.log('error he babuaa' + error)
+        }
+        setTimeout(()=>{
+            console.log('hope you are doing well')
+        },2000)
+        setTimeout(()=>{
+            console.log('kabhi yadd bhi kar liya kar bhai')
+        },3000)
+
+    try{ //try and catch work syncronously agar try ke andar seduled code likha hua he to bo fail bhi ho sakte ha
+        // kyoki bo code uski timing pe chalega 
+        // lekin isse bachnaa he to andar try catch likhna
+        
+        setTimeout(() => {
+            console.log(rahul)
+        }, 100);
+    }
+    catch(v){console.log(v)}
+    </script>
+</body>
+</html>

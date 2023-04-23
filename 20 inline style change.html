@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">send</button> 
+
+    <script>
+        // inline style by javascript 
+        //it changes the old styling 
+        // if you don't want to delete the old styling use += operator (during style.cssText =)
+         let btn =document.getElementById('btn');
+         btn.style.cssText = "background-color:red; padding:20px"; // (1)
+         btn.setAttribute('style','color:white') // (2)
+         btn.style.color ='red'; // (3) for change one property only
+
+        // element par kya kya internal styling hai janne k liy getComputedstyle use kare
+         let css = getComputedStyle(btn);
+        console.log(css.color);  // 
+    </script>
+</body>
+</html>

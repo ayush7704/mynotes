@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function run(){
+    let a = new Promise ((resolve,reject)=>{
+        setTimeout(()=>{resolve('40 deg')},2000)
+    })
+
+    let b = new Promise ((resolve,reject)=>{
+        setTimeout(()=>{resolve('44 deg')},5000)
+    })
+
+    console.log('first is waiting')
+     let c = await a ; //  niche ka exicute tbhi hoga jab ye
+     // finish hoga ye function se nikal ke bahar chala jayega or bahar ka exicution start kar dega 
+     console.log('first is finished '+c)
+     console.log('second is waiting')
+     let d = await b ;
+     console.log('second is finised '+d)
+     return[c,d]
+
+       } 
+      async function ne (){
+        let k = ()=>{console.log('hello im above e ')}
+        let x = await k()
+       let e = await run(); 
+       
+    //    e.then((value)=>{ console.log(value)}) // ab function ke full run hone par hi value print hogi
+       }
+       ne()
+      
+    </script>
+</body>
+</html>

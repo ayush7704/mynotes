@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 200px;
+            height: 150px;
+            background-color: orangered;
+            color: white;
+            box-sizing: border-box;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p></p>
+    <p></p>
+    <div class="container" id="container">
+        <h1 class="h1" id="h1">click me!</h1>
+        <h2 class="h2" id="h2"></h2>
+    </div>
+    <h1 onclick="this.innerHTML='Ooops!'">Click on this text!</h1>
+
+    <script>
+        window.addEventListener("resize", function(){
+    document.write("resizing....");
+}); 
+var myNodelist = document.getElementsByTagName("p");
+document.write(myNodelist.length); 
+    </script>
+</body>
+</html>

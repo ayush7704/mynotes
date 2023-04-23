@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="demo">
+        <p>this is a paragraph</p>
+    </div>
+
+    <script>
+        let id = document.getElementById('demo')
+
+        let h1 = document.createElement('h1'); //isse koisa bhi element banate hai
+         h1.className='try'; //isse h1  element me class laga sakte hai ese hi id bhi lg jayegi
+
+        let crt = document.createTextNode("hello from creat text node"); //text note banane k liy (creatTextNote)
+        h1.appendChild(crt);  //h1 me blank element hai usme crt ko add krrahe hai crt me text note bna hua hai
+        // h1.innerHTML= "heeloo";
+
+        id.appendChild(h1); // (1) yaha id (var) me .demo id select hai jisme hum h1 (var) ko append 
+        //kara rahe hai jisme h1 element bna hua hai
+        // (2) isse demo id k andar h1 element ban jayega
+
+        //for body 
+        let appn = document.createElement('h1');
+        // appn.innerHTML ="same";                      // (1) yh sabhi same kaam karenge 
+          appn.textContent="textContent";     //(2) isse likh bhi sakte hai read bhi kar sakte hai
+        // let x = document.createTextNode('body h1 by create text mode'); //(3) 
+        // appn.appendChild(x);
+        document.body.appendChild(appn);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: grid;
+            place-items: center;
+        }
+
+        .container {
+            margin-top: 8px;
+            width: 280px;
+            height: 493px;
+            box-shadow: 0 0 8px 2px black;
+        }
+
+        .upper {
+            height: 30%;
+            padding: 20px;
+            display: grid;
+            box-sizing: border-box;
+            text-align: right;
+            background-image: linear-gradient(45deg, #ff2f00, #ffcc00);
+        }
+
+        .main {
+            height: 70%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        button {
+            border: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        button:not(.gry) {
+            background-color: white;
+        }
+
+        .zero {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        .gry {
+            background-color: #cdcdcd61;
+        }
+
+        .equal {
+            background-image: linear-gradient(45deg, #ff2f00, #ffcc00);
+        }
+        @media  (max-width:500px){
+            .container{
+                margin: 0;
+                height: 100vh;
+                width: 100vw;
+            }
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="upper">
+            <div class="row" id="result"></div>
+            <div class="row"></div>
+        </div>
+        <div class="main">
+            <button class="gry">ac</button>
+            <button class="gry">/</button>
+            <button class="gry">%</button>
+            <button class="gry">X</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button class="gry">*</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button class="gry">-</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button class="gry">+</button>
+            <button class="zero">0</button>
+            <button class="gry">.</button>
+            <button class="equal">=</button>
+        </div>
+    </div>
+    <script>
+        let result = document.getElementById('result')
+        let btn = document.querySelectorAll('button');
+        let string = '';
+        Array.from(btn).forEach(function (event) {
+            event.addEventListener('click', e => {
+
+                // if(e.target.innerHTML == '='){
+                //     lol = eval(num);
+                //     result.innerHTML = lol;
+
+                // }
+                // else{
+                //     result.innerHTML = 'kkkkkkkkkkkk'
+                // }
+                // result.innerHTML=num
+                // console.log(e.target.innerHTML)
+                if (e.target.innerHTML == '=') {
+                    string = eval(string)
+                    result.innerHTML = string;
+                }
+                else if (e.target.innerHTML == 'ac') {
+                    string = ''
+                    result.innerHTML = string;
+                }
+                else {
+                    string += e.target.innerHTML;
+                    result.innerHTML = string;
+                }
+            })
+        })
+        console.log(btn)
+
+    </script>
+</body>
+
+</html>

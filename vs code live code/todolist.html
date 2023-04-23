@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            padding: 6px 20px 6px 6px;
+            font-size: 20px;
+        }
+        #input::placeholder{
+            color: red;
+        }
+
+        @media screen and (min-width:800px) {
+            .container {
+                width: 70%;
+                background-color: blueviolet;
+                padding: 20px;
+                margin: auto;
+            }
+        }
+
+        .i {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+            margin: auto;
+        }
+
+        #free {
+            font-weight: 900;
+            font-size: 20px;
+            position: absolute;
+            right: 10px;
+            color: black;
+            z-index: 12;
+            top: 9px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="i">
+            <input type="text" placeholder="write your goal for today" id="input"><span id="free"> x </span>
+            <input type="submit" value="submit" onclick="hello()">
+        </div>
+        <div id="div"></div>
+    </div>
+    <script>
+        function hello() {
+            let input = document.getElementById('input').value;
+            let div = document.getElementById('div');
+
+            let text = document.createElement('h3');
+            text.innerHTML = input;
+            text.classList.add('goal');
+            // text.style.cssText=""
+
+            let span = document.createElement('span');
+            span.innerHTML = 'x';
+            span.style.cssText = 'display:inline-block; margin-left:10px'
+
+
+            text.append(span);
+            text.style.cssText = "word-break:break-all; margin:1px 0;"
+            if (input == '') {
+                alert('nothing')
+            }
+            else {
+                div.appendChild(text);
+                console.log(input)
+            }
+
+            span.addEventListener('click', (e) => {
+                e.target.parentElement.style.cssText = "display:none";
+                console.log(e.target.parentElement)
+            })
+        }
+        document.getElementById('free').addEventListener('click', function () {
+            let input = document.getElementById('input').value = '';
+        })
+
+    </script>
+</body>
+
+</html>

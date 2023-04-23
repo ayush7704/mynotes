@@ -1,0 +1,28 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color:khaki;
+}
+.container{
+    margin: 10px;
+height:auto;
+width: 80%;
+height: 100vh;
+background-color: rgb(204, 198, 190);
+color: black;
+padding: 15px;
+}
+form{
+    height: 80vh;
+}
+h2{
+    text-align: center;
+}
+input{
+    display: inline-block;
+    margin-bottom: 30px;
+}
+input[type="radio"]{
+    
+    margin-bottom: 10px;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    .contain{
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 30px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+h2{
+  margin-left: 10px;
+}
+</style>
+</head>
+<body>
+
+    <div class="contain">
+    <h2>Animated Button</h2>
+    
+<button class="button" style="vertical-align:middle"><span>Hover </span></button>
+
+</div>
+</body>
+
+<!-- Mirrored from www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate1 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Mar 2016 11:02:59 GMT -->
+</html>

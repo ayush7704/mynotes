@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //sabhi ek sath run hoyengi
+        let a = new Promise((resolve,reject)=>{
+            setTimeout(()=>{resolve('good')},4000)      
+        })
+        let a2 = new Promise((resolve,reject)=>{
+            setTimeout(()=>{reject(new Error('error'))},2000)    
+        })
+        let a3 = new Promise((resolve,reject)=>{
+            setTimeout(()=>{ resolve(3)},3000)   
+        })
+    //    a.then((value)=>{console.log(value)})
+    //    a2.then((value)=>{console.log(value)})
+    //    a3.then((value)=>{console.log(value)})
+
+//a.catch((e)=>{return new Promise ((resolve,reject)=>{return reject('error hai')})}).catch((e)=>{console.log(e)})
+
+       // (1)(Promise.all) yadi tino ki timing alag alag he or hum ek hi time pe tino ko dekhne chahe jese --
+       // sabhi ki timing khatam hone par hi values dikhe
+       let all = Promise.all([a,a2,a3]);
+       all.then((value)=>{ console.log(value)})
+       // isko use karte samay yadi ek bhi promise me error aaya to kuch nahi chalega 
+
+       // (2) (allSettled)  ek me ya usse jyada mebhi error hone par bhi chal jayega 
+       let all2 = Promise.allSettled([a,a2,a3]);
+       all2.then((value)=>{ console.log(value)})
+      
+       // (3) (promise.race) me jo pehle solve hogi bo aajaygi
+       // lekin agar usne error(reject) diya to error aaygi
+       let all3 = Promise.race([a,a2,a3]);
+       all3.then((value)=>{ console.log(value)})
+
+       // (4) (promise.any) ye same he race wale  ki tarah but ye sirf resolve value hi dega
+       let all4 = Promise.any([a,a2,a3]);
+       all4.then((value)=>{ console.log(value)})
+
+
+
+    </script>
+</body>
+</html>

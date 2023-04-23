@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>JavaScript Strings</h1>
+    <h2>The trim() Method</h2>
+
+    <p id="demo"></p>
+    <hr>
+    <p id="map"></p>
+    <hr>
+    <p id="filter"></p>
+    <hr>
+    <p id="reduce"></p>
+    <hr>
+    <p id="every"></p>
+    <hr>
+    <p id="some"></p>
+    <hr>
+    <p id='bind'></p>
+    <hr>
+    <script>
+        let text1 = "     Hello World!     ";
+        let text2 = text1.trim();
+        // trim() use karne se sides ki bekar space chali jaati hai  kisi khas side ki bhi kar sakte hai
+
+        document.getElementById("demo").innerHTML =
+            "Length text1 = " + text1.length + "<br>Length text2 = " + text2.length;
+
+
+
+        {   // map();
+
+            let numbers1 = [45, 4, 9, 16, 25];
+            let numbers2 = numbers1.map(function (value) { return value * 2 });
+            // numbers.map karte hi us variable me same value aagyi fir un values ko multiply kr diya 2 se
+
+            document.getElementById("map").innerHTML = numbers2;
+        }
+        {   // filter ();
+
+            let numbers1 = [45, 4, 9, 16, 25];
+            let filter = numbers1.filter((value) => { return value > 10 });
+            // filter ekdam uske name k hisab se hi kaam karta hai mene isse kaha numbers ki values > 10 dedo usne de di
+            document.getElementById('filter').innerHTML = filter;
+        }
+        {   // reduce ();
+
+            let numbers = [45, 4, 9, 16, 25, 77];
+            let sum = numbers.reduce((x, y) => { return x + y }); // sum karna tha isly 2 prmtr diye
+            // reduce sum nikalne k liye use karte hai 
+            document.getElementById("reduce").innerHTML = "The sum from reduce() " + sum;
+        }
+        { //  every();
+
+            let numbers = [45, 4, 9, 16, 25];
+            let u = numbers.every((value) => { return value > 3 });
+            // every () will give result in booliean here we said every value is > 4 it will return true
+            document.getElementById("every").innerHTML = u + ' from every() ';
+
+        }
+        { // some();
+
+            let numbers = [45, 4, 9, 16, 'hello'];
+            let some = numbers.some((value) => { return value < 4 });
+            // every () will give result in booliean here we said value is > 4 it will return true
+            document.getElementById("some").innerHTML = some + ' from some() '  ;
+
+        }
+        { // bind()
+             // With the bind() method, an object can borrow a method from another object.
+            const person = {
+                firstName: "John",
+                lastName: "Doe",
+                fullName: function () {
+                    return this.firstName + " " + this.lastName;
+                }
+            }
+
+            const member = {
+                firstName: "Hege",
+                lastName: "Nilsen",
+            }
+
+            let fullName = person.fullName.bind(member);
+            document.getElementById("bind").innerHTML = fullName()+'bind ()';
+        }
+        { //json parse()
+
+            const txt = '{"name":"John", "age":30, "city":"New York"}'
+            const obj = JSON.parse(txt);
+            // The JavaScript function JSON.parse() is used to convert the text into a JavaScript object:
+            document.write('parse () string to object  > ' + obj.name + ", " + obj.age + "<hr>");
+        }
+        {
+            let obj = { name: "John", age: 30, city: "New York" };
+            let string = JSON.stringify(obj);
+            // Use the JavaScript function JSON.stringify() to convert object into a string.
+            document.write(' stringify () object to string  > ' + string + "<hr>");
+        }
+        { // object.defineproperty 
+
+            let oobj = {
+                name: 'ayush',
+                age: 22
+            }
+            oobj.age = 15;
+            Object.defineProperty(oobj, 'age', { // first is for property 2nd is property name
+                value: 18
+            });
+            // object.defineproperty is also a method to add property in object but there is plus points
+            // (1) after defining it this can't be change however properties are try 
+            console.log(oobj);
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

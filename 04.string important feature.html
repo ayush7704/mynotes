@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="p1">Please locate where 'locate' occurs!.</p>
+    <p id="p2">Please locate where 'locate' occurs!.</p>
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <script>
+        function myFunction() {
+            var str = document.getElementById("p1").innerHTML;
+            var pos = str.indexOf("locate");
+            document.getElementById("demo").innerHTML = pos;
+
+            //  inderxof batata hai ki ki apni puchi gai value kis number par store hai
+            // Both the indexOf(), and the lastIndexOf() methods return -1 if the text is not found.
+
+            var str2 = document.getElementById("p2").innerHTML;
+            var pos = str2.lastIndexOf("locate", 13);
+            // Both methods accept a second parameter as the starting position for the search:
+            var pose = pos + " this is from lastindex";
+            document.getElementById("demo2").innerHTML = pose;
+            console.log(pos)
+
+            // join method convert an array to string 
+            // split method convert an string to array 
+
+            let text = "The rain in SPAIN stays mainly in the plain";
+            const myArr = text.match(/ain/gi);
+            // the match method return a array 
+            document.getElementById("demo3").innerHTML = myArr.length + " " + myArr;
+
+
+            // matchAll
+             let text2 = "The rain in SPAIN stays mainly in the plain";
+            const myArr2 = text2.matchAll('ain');
+            document.getElementById("demo4").innerHTML =Array.from(myArr);
+
+            // The includes() method returns true if a string contains a specified value.Otherwise it returns false.
+             alert(text2.includes('the')) // it also has second position parameter
+
+            //  The startsWith() method returns true if a string begins with a specified value. 
+            document.getElementById("demo5").innerHTML =text2.startsWith('in',9) + ' startwith';
+            // same endsWith() bhi hota hai
+        }
+        qu
+    </script>
+</body>
+
+</html>

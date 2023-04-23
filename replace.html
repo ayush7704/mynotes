@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="menu">
+        <li>Home</li>
+        <li>About</li>
+        <li>Product</li>
+    </ul>
+</body>
+<script>
+    let parent = document.getElementById('menu'); // parent has selected here 
+
+    let item = document.createElement('li'); //made a li element
+    item.textContent ="createElement"; // given a text to the item var where li is stored
+
+    // let loc = parent.firstElementChild.nextElementSibling; //location
+    let loc = parent.children[2]; 
+
+    // will select parent for replacement in child
+    parent.replaceChild(item,loc); //first argument is what to add (2) second is where to
+</script>
+</html>
