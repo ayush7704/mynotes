@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 10px;
+            text-align: center;
+        }
+
+        textarea {
+            width: 100%;
+            resize: none;
+            padding: 10px;
+            font-size: 1rem;
+        }
+
+        h2 {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>word counter try</h1>
+        <textarea name="" id="textarea" cols="30" rows="10"></textarea>
+        <h2><span id="char">0</span><span id="word">0</span></h2>
+    </div>
+    <script>
+        document.getElementById('textarea').addEventListener('input', function () {
+            let char = document.getElementById('char')
+            let word = document.getElementById('word');
+
+            let value = this.value;
+            let values = value.split(' ')
+            console.log(values.length)
+           char.innerHTML = value.length - (values.length - 1) <= 1 ? value.length - (values.length - 1) + ' character' : value.length - (values.length - 1) + ' characters';
+           
+            filtervalues = values.filter(val =>{return val !== ''})
+           word.innerHTML = filtervalues.length <= 1  ? filtervalues.length +' word' : filtervalues.length +' words';
+           console.log(Array.isArray(values))
+        })
+    </script>
+</body>
+
+</html>

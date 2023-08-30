@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-weight: bold;
+            font-family: system-ui;
+            /* outline: 1px solid red; */
+
+        }
+
+        .containerblue{
+            background-image: linear-gradient(180deg, #4a6281a3, #0000001c);
+        }
+        nav {
+            display: flex;
+            padding: 10px 118px;
+            box-shadow: 1px 0 1px 1px #66535375;
+            justify-content: space-between;
+        }
+
+        ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            padding: 0 8px;
+            color: black;
+        }
+
+        nav ul li:hover a {
+            color: blue;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            padding: 50px 118px;
+        }
+    
+        .m-y-5 {
+            margin-bottom: 17px;
+            font-size: 1.2rem;
+        }
+
+        h2 mark {
+            background: none;
+            color: #ff5e00;
+        }
+
+        p mark {
+            background: none;
+            color: #a93306;
+        }
+
+        /* .btn {
+            color: white;
+            border-radius: 17px;
+            background: #022d62;
+            ;
+            text-decoration: none;
+            padding: 7px 27px;
+
+
+            display: inline-block;
+            border-radius: 4px;
+            background-color: #f4511e;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 28px;
+            padding: 20px;
+            width: 200px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        } */
+
+
+        .btn {
+            color: white;
+            border-radius: 17px;
+            background: #022d62;
+            text-decoration: none;
+            padding: 7px 27px;
+        }
+
+        .btn span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .btn span:after {
+            content: '»';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .btn:hover span {
+            padding-right: 25px;
+        }
+
+        .btn:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+        img {
+            width: 100%;
+            height: 80%;
+            display: block;
+            border-radius: 20px;
+        }
+
+        .section1{
+            align-self: center;
+        }
+        @media screen and (min-width:500px) and (max-width:840px) {
+            .container{
+                grid-template-columns: 100%;
+                padding: 25px 118px;
+            }
+            .section1{
+                margin-bottom: 20px;
+            }
+            .m-y-5{
+                font-size: 1.1rem;
+            }
+        }
+        @media screen and (max-width:500px) {
+            .container{
+                grid-template-columns: 100%;
+                padding: 25px 118px;
+            }
+            .section1{
+                margin-bottom: 20px;
+            }
+            .m-y-5{
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="containerblue">
+        <nav>
+            <p>ForAll a tech</p>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Mission and vision</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <section class="container">
+            <div class="section section1">
+                <h2 style="font-size: 2.5rem;">Better Solutions For your Business</h2>
+                <p class="m-y-5">we are team of talanted designers making Website with Bootstrap</p>
+                <a href="#" class="btn"><span>Get Started</span></a>
+            </div>
+            <div class="section">
+                <img src="teamimg.jpg"  alt="">
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

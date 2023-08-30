@@ -3,118 +3,230 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
-    <STYle>
-        body {
-            padding: 0;
+    <style>
+        * {
             margin: 0;
-            background-color: black;
-            color: white;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Poppins, sans-serif;
         }
 
-        .container {
-            padding: 0 33px;
+        body {
+            height: 2000px;
         }
 
         nav {
+            font-family: BUNGEE;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-family: monospace;
-            font-size: 1.2rem;
-            font-weight: 400;
-        }
-
-        ul {
-            display: flex;
-            list-style-type: none;
-            padding: 0;
-            cursor: pointer;
-        }
-
-        ul li {
-            padding: 10px;
-        }
-
-        button:first-of-type {
-            background-color: aqua;
-            color: black;
-            padding: 8px 17px;
-            border: none;
+            position: sticky;
+            top: 0;
+            color: white;
+            padding: 5px 15px;
+            /* background: linear-gradient(45deg, #652e5e, black); */
+            background-color: #10002b;
             font-weight: bold;
-            cursor: pointer;
-        }
-        button:first-of-type:active{
-           transform:translate(0,3px);
         }
 
-        .w-50:first-of-type {
-            box-sizing: border-box;
-            width: 49%;
-            padding: 16px;
-        }
-
-
-        section {
+        .img-name {
             display: flex;
             align-items: center;
         }
-        @media (max-width:500px){
-            section{
-                flex-direction: row;
-            }
-        }
 
-        .w-50 {
-            width: 50%;
-        }
-
-        .w-50 img {
-            max-width: 82%;
+        .logo {
+            width: 40px;
+            height: 40px;
+            margin-right: 8px;
             border-radius: 50%;
         }
 
-        .blue {
-            color: rgb(10, 104, 104);
+        svg {
+            fill: white;
+            font-size: 50px;
         }
 
-        h3,
-        h2 {
-            margin: 0;
-            font-family: system-ui;
-            font-weight: 400;
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            list-style: none;
         }
-    </STYle>
+
+        ul li a {
+            text-decoration: none;
+            padding: 8px;
+            color: white;
+            text-wrap: nowrap;
+            word-spacing: 2px;
+        }
+
+        .click {
+            display: none;
+            width: 30px;
+        }
+
+        .click span {
+            position: relative;
+            display: block;
+        }
+
+        .click span,
+        .click span::before,
+        .click span::after {
+            width: 100%;
+            height: 3px;
+            background-color: white;
+        }
+
+        .click span::before,
+        .click span::after {
+            content: '';
+            position: absolute;
+        }
+
+        .click span::before {
+            top: var(--spanbefore, -8px);
+            transform: rotate(var(--beforerotate, 0));
+        }
+
+        .click span::after {
+            bottom: var(--spanafter, -8px);
+            transform: rotate(var(--afterrotate, 0));
+        }
+
+        #blue {
+            color: black;
+        }
+
+
+        @media screen and (max-width:750px) {
+            nav {
+                flex-direction: column;
+            }
+
+        }
+
+        @media screen and (max-width:570px) {
+            nav {
+                flex-direction: row;
+            }
+
+            ul {
+                display: none;
+                position: absolute;
+                width: 100%;
+                height: auto;
+                left: 0;
+                padding: 15px;
+                transition: 1s linear;
+                top: var(--ultopmargin);
+                box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.2);
+                background-color: white;
+            }
+
+            ul li {
+                padding: 8px 0;
+                border-bottom: 1px solid white;
+                background: linear-gradient(45deg, #652e5e, black);
+            }
+
+            ul li:hover {
+                background-color: black;
+            }
+
+            ul li a {
+                color: white;
+            }
+
+            ul li:last-of-type {
+                border: none;
+            }
+
+            .click {
+                display: block;
+            }
+
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container">
-        <nav>
-            <ul>
-                <li>HOME</li>
-                <LI>ABOUT</LI>
-                <LI>SERVICES</LI>
-                <LI>BLOG</LI>
-                <LI>MORE</LI>
-            </ul>
-            <button>contact</button>
-        </nav>
-        <section>
-            <div class="w-50">
-                <img src="/my photo.jpg" alt="photo">
-            </div>
-            <div class="w-50">
-                <h3 class="blue">CODEWITHAYUSH</h3>
-                <H2>i'm a front-end web </H2>
-                <h2 class="blue"> Developer</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta molestias delectus facere esse
-                    distinctio porro placeat incidunt neque quisquam veritatis. Aliquam ad sapiente culpa vero?</p>
-                <button>DOWNLOAD CV</button>
-            </div>
-        </section>
-    </div>
+    <nav>
+        <div class="img-name">
+            <h3>Ayush nagar</h3>
+        </div>       
+        <a href="https://github.com/ayush7704">
+            <svg xmlns="http://www.w3.org/2000/svg" height="0.625em"
+                viewBox="0 0 496 512">
+                <path
+                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+            </svg>
+        </a> 
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li class="servicesoption"><a href="#">PROJECTS</a> </li>
+            <li><a href="#">HIRE ME!</a></li>
+            <li><a href="#">CONTACT ME</a></li>
+        </ul>
+        <h2 class="click">
+            <span class="span"></span>
+        </h2>
+    </nav>
+    <h2 id="blue">helo <span class="typed-cursor">|</span></h2>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <script>
+        // Setup and start animation!
+        const typed = new Typed('#blue', {
+            strings: ['web developer', 'Front-end developer.'],
+            startDelay: 1100,
+            typeSpeed: 100,
+            backSpeed: 100,
+            backDelay: 1000,
+            showCursor: true,
+            cursorChar: '|',
+            autoInsertCss: true,
+            loop: true
+        });
+
+
+        // navbar hamburgue
+        const click = document.querySelector('.click');
+        click.addEventListener('click', function () {
+            const nav = document.querySelector('nav').offsetHeight;
+            const span = document.querySelector('.span');
+            const navul = document.querySelector('nav ul');
+            const clickspan = document.querySelector('.click span')
+            const h2before = window.getComputedStyle(clickspan, '::before')
+            const h2bafter = window.getComputedStyle(clickspan, '::after')
+            if (h2before.top == '-8px') {
+                navul.style.cssText = `display:block;`
+                clickspan.style.background = 'transparent'
+                document.documentElement.style.setProperty('--ultopmargin', `${nav}px`)
+                document.documentElement.style.setProperty('--spanbefore', `0px`)
+                document.documentElement.style.setProperty('--spanafter', `0px`)
+                document.documentElement.style.setProperty('--beforerotate', `135deg`)
+                document.documentElement.style.setProperty('--afterrotate', `-135deg`)
+            } else {
+                navul.style.cssText = ``
+                clickspan.style.background = ''
+                document.documentElement.style.setProperty('--ultopmargin', ``)
+                document.documentElement.style.setProperty('--spanbefore', `-8px`)
+                document.documentElement.style.setProperty('--spanafter', `-8px`)
+                document.documentElement.style.setProperty('--beforerotate', `0deg`)
+                document.documentElement.style.setProperty('--afterrotate', `0deg`)
+            }
+        })
+    </script>
 </body>
 
 </html>

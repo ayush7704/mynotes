@@ -13,51 +13,48 @@
         }
 
         ul {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
             background-color: black;
-        }
-
-        li {
-            /* list-style-type: none; */
-            display: inline-block;
-            padding: 14px 15px;
             color: white;
-            font-weight: bold;
+            display: flex;
         }
 
-        li:hover {
-            background-color: darkgray;
+        ul li {
+            list-style-type: none;
+            padding: 12px;
         }
 
-        li:first-child {
+        a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        li:first-of-type {
             position: relative;
-            display: inline-block;
         }
 
         .none {
+
             display: none;
             position: absolute;
-            background-color: red;
+            background-color: #f9f9f9;
             min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            top: 20px;
-            left: 0;
-
         }
 
-        li:first-child:hover .none {
+        li:first-of-type:hover .none {
             display: block;
-
         }
     </style>
 </head>
 
 <body>
     <ul>
-        <li>Home <div class="none">
-                <p>hello motto</p>
+        <li>Home<div class="none">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
             </div>
         </li>
         <li>News</li>

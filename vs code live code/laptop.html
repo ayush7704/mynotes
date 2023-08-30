@@ -106,6 +106,9 @@
         .search:focus .sl {
             background-color: red;
         }
+        .searchcontainer:focus .sl::before{
+            background: black;
+        }
 
         .searchcontainer:hover {
             /* border-color: ; */
@@ -531,6 +534,7 @@
         searchcontainer.addEventListener('focus', function () {
             let cc = this.previousElementSibling.firstElementChild;
             cc.style.borderColor = 'black'
+            // cc.style.cssText="sl::before{background:black;}"
             this.parentElement.style.cssText =
                 'border-color:#2ec5ce; background-color:white; color:black; outline:none;'
             console.log(searchcontainer)

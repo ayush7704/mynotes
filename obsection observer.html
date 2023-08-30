@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 2000px;
+        }
+        .container{
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .card{
+            width: 100px;
+            padding: 5px;
+            border: 1px solid red;
+            transform: translateX(150px);
+            transition:2s;
+        }
+        .show{
+            transform: translateX(0px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">this is card</div>
+        <div class="card">this is card</div>
+        <div class="card">this is card</div>
+        <div class="card">this is card</div>
+        <div class="card">this is card</div>
+        <div class="card">this is card</div>
+        <div class="card">this is card</div>
+        <div class="card">this is card</div>
+        <div class="card">this is card</div>
+        <div class="card">this is card</div>
+    </div>
+    <script>
+        const card = document.querySelectorAll('.card');
+        const options = {
+            threshold:0.5
+            // threshold when will the animation work its between 0/1 0px to 100%
+        }
+        
+        const observer = new IntersectionObserver(entries=>{
+            entries.forEach(entry => {
+                entry.target.classList.toggle('show',entry.isIntersecting)
+                 console.log(entry)
+            })
+        },options)
+        card.forEach(cards=>{
+            observer.observe(cards)
+        })
+    </script>
+</body>
+</html>

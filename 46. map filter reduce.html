@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // JavaScript const variables must be assigned a value when they are declared:
+        // return is complesury for all 
+        // The map() method creates a new array by performing a function on each array element.
+        // map does not execute for empty value's of array
+
+        let arr = [9, 5, 3, 2]
+        let map = arr.map((value, index, arr) => {
+            return value * 2
+        })
+        document.write(map)
+        document.write('<br>')
+
+        // The filter() method creates a new array with array elements that pass a test.
+        let filter = arr.filter((v) => { return v > 3 })
+        document.write(map)
+        document.write(filter)
+
+
+        document.write('<br>')
+        // The reduce() method runs a function on each array element to produce (reduce it to) a single value.
+        let reduce = arr.reduce((total, value) => { return total + value })
+        document.write(reduce)
+
+        document.write('<br>')
+        // find method returns the value of the first array element that passes a test function.
+        let find = arr.find((v) => { return v > 5 })
+        document.write(find)
+
+        document.write('<br>')
+        // findIndex() method returns the index of the first array element that passes a test function.
+        let findIndex = arr.findIndex((v) => { return v > 5 })
+        document.write(findIndex)
+
+        document.write('<br>')
+        // The entries() method returns an Array Iterator object with key/value pairs:
+        const f = arr.entries();
+        for (let x of f) {
+            document.write(x + "<br>");
+        }
+
+        document.write('<br>')
+        // return absolute (positive) value of x:
+        document.write(Math.abs(-4.7)) // 4.7
+
+
+    </script>
+</body>
+
+</html>

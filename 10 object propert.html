@@ -1,46 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
+
 <body>
-    
-    <script>
-        // let person = {
-        //     "first name" : 'ayush',  //yadi object me bich me space hai to '' se surround kare
-        //     lastname : 'kumar',       //[''] or is type itterate kare
-        //     course : 'b.a'
-        // };
-        // person.age =18.5;  // after assignment
-        // person.lastname ="dhakad"; //after modify
-        // delete person.course;  // we can also delete values
 
-        // console.log(person["first name"]);   //(person['lastname']) se bhi same result aayega!
-        // console.log(person);
-        // console.log("percent" in person);  // isko property he ya nhi jaanne k liy use karte hai.
-                                           //remember jo property jaanna hai usko "" me likhna hai
+  <script>
+    let person = {
+      "first name": 'ayush',  //yadi object ke name me bich me space hai to '' se surround kare
+      lastname: 'kumar',       //[''] or is type itterate kare
+      course: 'b.a'
+    };
+    person.age = 18.5;  // after assignment
+    person.lastname = "dhakad"; //after modify
+    delete person.course;  // we can also delete values
+
+    console.log(person["first name"]);   //(person['lastname']) se bhi same result aayega!
+    console.log(person);
+    console.log("percent" in person);  // isko property he ya nhi jaanne k liy use karte hai.
+    //remember jo property jaanna hai usko "" me likhna hai
 
 
-          let student = {         //whole object itterte
-            class : "12th",
-            course: "mathscience",
-            goal : "not yet"
-          }     
-          
-         
-          // for(let key in student){   // use for in loop  for itterate object
-          //   console.log(`${key} : ${student[key]}`)
-          // }
-          // console.log(student)
-          
-          let objvalues = Object.values(student)
-          console.log(objvalues)
+    let student = {         //whole object itterte
+      class: "12th",
+      course: "mathscience",
+      goal: "not yet"
+    }
+
+
+    for (let key in student) {   // use for in loop  for itterate object
+      console.log(`${key} : ${student[key]}`)
+    }
+    // console.log(student)
+
+    let objvalues = Object.values(student)
+    let objkeys = Object.keys(student)
+    let objentry = Object.entries(student)
+    console.log(objvalues)
+    console.log(objkeys)
+    console.log(objentry)
         //   Any JavaScript object can be converted to an array using Object.values():
 
 
-    </script>
+  </script>
 </body>
+
 </html>

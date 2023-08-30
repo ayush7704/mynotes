@@ -1,18 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<html>
 <body>
-    <h1 id="time"></h1>
-    <script>
-        setInterval(() => {
-            let date = new Date()  
-            document.getElementById('time').innerHTML= date.toDateString()+' '+ date.getHours() +' : '+date.getMinutes() +' : '+ date.getSeconds()
-        }, 1000);
-    </script>
+
+<h1>JavaScript Dates</h1>
+<h2>Using new Date()</h2>
+
+<p id='result'></p>
+<input type='text' id='demo'>
+<input type="text" id="today">
+<input type='submit' onclick="demo()">
+
+<script>
+function demo(a){
+const d = document.getElementById('demo').value;
+const today = document.getElementById('today').value;
+let da = new Date(d)
+let ta = new Date(today)
+// if(da.getFullYear() > ta.getFullYear()){
+//     document.getElementById("result").innerHTML = da.getFullYear() - ta.getFullYear();
+// }else{
+// document.getElementById("result").innerHTML =  ta.getFullYear() - da.getFullYear();
+// }
+document.getElementById("result").innerHTML = da.getFullYear() > ta.getFullYear() ? da.getFullYear() - ta.getFullYear(): ta.getFullYear() - da.getFullYear() ;
+
+}
+</script>
+
 </body>
 </html>

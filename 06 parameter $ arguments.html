@@ -1,56 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+
     <script>
         // parameter and argument
-        function Array(a,b){
-        for(i=1; i<=10; i++){
-            document.write(`${a} x ${i} = ${a*[i]}<br>`);
+        function Array(a, b) {
+            for (i = 1; i <= 10; i++) {
+                document.write(`${a} x ${i} = ${a * [i]}<br>`);
+            }
+            document.write(`<br>`)
         }
-        document.write(`<br>`)
-       }
-      Array(6);//arguments
-      Array(8);//arguments
-      document.write(`<hr>`)
+        Array(6);//arguments
+        Array(8);//arguments
+        document.write(`<hr>`)
 
-     //  simple p$a
-    function second(one,two){
-         document.write(one + two);
+        //  simple p$a
+        function second(one, two) {
+            document.write(one + two);
         }
-        second(5,5);//arguments
-          document.write("<hr>")
+        second(5, 5);//arguments
+        document.write("<hr>")
 
-        function lotof(){
-        document.write(arguments[1]);
+        function lotof() {
+            document.write(arguments[1]);
         }
         // lotof(1,2);
-        lotof(3,4,5);
+        lotof(3, 4, 5);
         // lotof(6,7,8,9);
 
         document.write("<hr>")
 
-        function final(){
-            if(arguments.length == 0){
+        function final() {
+            if (arguments.length == 0) {
                 document.write("no arguments passed");
             }
             else {
                 var sum = 0;
-                for(s=0; s<arguments.length; s++){
-                  sum += arguments[s]; 
+                for (s = 0; s < arguments.length; s++) {
+                    sum += arguments[s];
                 }
                 document.write(sum)
             }
-            
         }
-            final(5,4,8)
-         
+        final(5, 4, 8)
+
     </script>
 </body>
+
 </html>

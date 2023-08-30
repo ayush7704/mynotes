@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #demo{
+        #demo {
             background-color: yellow;
             width: 200px;
             height: 100px;
-            border: 1px solid red;
+            border: 5px solid red;
+            padding: 20px;
         }
     </style>
 </head>
+
 <body>
+
     <div id="demo"> </div>
 
     <script>
         let id = document.getElementById('demo');
-        // let width = id.offsetWidth; //isme width + border width  aaygi 
+        let width = id.offsetWidth; //isme width + border + padding width  aaygi 
 
-        let width = id.clientWidth;         //isme  border width remove karke  aaygi 
+        // let width = id.clientWidth;         //isme  border width remove karke  aaygi 
+        console.log(width)
+        let height = id.offsetHeight; //isme height + border height aaygi 
 
-        // let height = id.offsetHeight; //isme height + border height aaygi 
-
-        let height = id.clientHeight;      //isme  border height remove karke  aaygi 
+        // let height = id.clientHeight;      //isme  border height remove karke  aaygi 
         
-        console.log(width );
+        console.log(width);
         console.log(height);
     </script>
 </body>
+
 </html>

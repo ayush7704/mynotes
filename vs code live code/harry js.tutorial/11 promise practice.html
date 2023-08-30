@@ -25,7 +25,7 @@
        })
       
        let promise2 = new Promise (function(resolve,reject){
-            setTimeout(()=>{
+            setTimeout(()=>{    
                 console.log('promise 2')
                 reject(new Error ('something wrongn in promise 2 '))
             },5000)

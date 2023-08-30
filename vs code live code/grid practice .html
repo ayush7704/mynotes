@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: grid;
+            /* grid-template-areas: 
+            'header header  header . . '
+            'header header  header . . '; */
+            /* isme 5 columns bnenge jisme 3 me header rahega or aage . lagana jaruri hai */
+
+            /* grid: 150px / auto auto auto; */
+            /* grid: 150px / repeat(auto-fit,minmax(210px,1fr)); */
+            /* before / area is for rows  after / area is for columns */
+
+            /* grid-template-columns: auto auto; */
+            /* isse columns ko width dete hai */
+
+            /* grid-template-rows: repeat(3,200px); */
+            /* isse rows ki height define hogi */
+
+            grid-auto-rows: 150px;
+            /* for default height in all rows */
+
+            /* grid-auto-columns: 150px; */
+            /* for default width in all columns and grid-template-columns overwrites this property*/
+
+            /* grid-template-columns: auto auto auto ; */
+
+        }
+        .header{
+            /* grid-area: 1 / 1 / span 0 / span 5;
+            /* the first 1 is for row where to start */
+            /* the second 1 is for column */
+            /* now the ending area starts , the first span 2 says span two rows */
+            /* the  second span 2 says span 2 columns */
+
+            /* grid-column: 1 / span 2; */
+            /* grid-column and  row propery shorthands of grid-columns-start and end  */
+        }
+
+        .item {
+            background-color: wheat;
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="item header">header</header>
+        <aside class="item aside">aside</aside>
+        <section class="item main">main</section>
+        <section class="item right">right</section>
+        <footer class="item footer">footer</footer>
+    </div>
+</body>
+
+</html>

@@ -39,7 +39,7 @@ ul li {
    
     cursor: pointer;
 }
-ul li a{
+.hid-ul .hid-li a{
      padding: 0 65px;
 }
 .links{

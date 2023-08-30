@@ -8,7 +8,7 @@
 </head>
 <body>
     <script>
-        let n = 88.90;
+        let n = '88.90';
         let x = parseInt(n); 
     //parseInt() parses a string and returns a whole number. Spaces are allowed. Only the first number is returned:
         document.write(x);
@@ -25,10 +25,21 @@
       let g=Number.isInteger(n) // isInteger boolian return karta hai agar variable ki value me . heto false 
       document.write(g);
       document.write('<br>');
+      
+      //   The Number.isSafeInteger() method returns true if the argument is a safe integer.
+        document.write(Number.isSafeInteger(222222222)+'<br>')
 
       let l = 9.656; //toFixed() returns a string, with the number written with a specified number of decimals: round figure
       let u = l.toFixed(2); 
-      document.write(u);
+      document.write(Number(u));
+      
+      document.write('<br>');
+      // The unary + operator can be used to convert a variable to a number:
+      // we just need to add + before variable name
+      // we have also unary - operator
+      let unary =  + n;
+      document.write(unary +' '+ typeof unary)
+
     </script>
 </body>
 </html>

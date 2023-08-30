@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculator</title>
     <style>
         body {
             margin: 0;
@@ -30,6 +30,13 @@
             background-image: linear-gradient(45deg, #ff2f00, #ffcc00);
         }
 
+        #result {
+            font-size: 3rem;
+            text-align: right;
+            color: white;
+            font-weight: bold;
+        }
+
         .main {
             height: 70%;
             display: grid;
@@ -40,9 +47,10 @@
             border: none;
             font-weight: bold;
             font-size: 16px;
+            cursor: pointer;
         }
 
-        button:not(.gry) {
+        button:not(.gray) {
             background-color: white;
         }
 
@@ -51,20 +59,21 @@
             grid-column-end: 3;
         }
 
-        .gry {
+        .gray {
             background-color: #cdcdcd61;
         }
 
         .equal {
             background-image: linear-gradient(45deg, #ff2f00, #ffcc00);
         }
-        @media  (max-width:500px){
-            .container{
+
+        @media (max-width:500px) {
+            .container {
                 margin: 0;
                 height: 100vh;
                 width: 100vw;
             }
-            
+
         }
     </style>
 </head>
@@ -76,24 +85,24 @@
             <div class="row"></div>
         </div>
         <div class="main">
-            <button class="gry">ac</button>
-            <button class="gry">/</button>
-            <button class="gry">%</button>
-            <button class="gry">X</button>
+            <button class="gray">ac</button>
+            <button class="gray">/</button>
+            <button class="gray">%</button>
+            <button class="gray" id="remove">X</button>
             <button>7</button>
             <button>8</button>
             <button>9</button>
-            <button class="gry">*</button>
+            <button class="gray">*</button>
             <button>4</button>
             <button>5</button>
             <button>6</button>
-            <button class="gry">-</button>
+            <button class="gray">-</button>
             <button>1</button>
             <button>2</button>
             <button>3</button>
-            <button class="gry">+</button>
+            <button class="gray">+</button>
             <button class="zero">0</button>
-            <button class="gry">.</button>
+            <button class="gray">.</button>
             <button class="equal">=</button>
         </div>
     </div>
@@ -103,17 +112,8 @@
         let string = '';
         Array.from(btn).forEach(function (event) {
             event.addEventListener('click', e => {
-
-                // if(e.target.innerHTML == '='){
-                //     lol = eval(num);
-                //     result.innerHTML = lol;
-
-                // }
-                // else{
-                //     result.innerHTML = 'kkkkkkkkkkkk'
-                // }
-                // result.innerHTML=num
-                // console.log(e.target.innerHTML)
+                console.log(e.target)
+                
                 if (e.target.innerHTML == '=') {
                     string = eval(string)
                     result.innerHTML = string;
@@ -122,13 +122,18 @@
                     string = ''
                     result.innerHTML = string;
                 }
+
+                else if (e.target.innerHTML == 'X') {
+                    string = string.slice(0,-1)
+                    result.innerHTML=string
+                }
                 else {
                     string += e.target.innerHTML;
                     result.innerHTML = string;
                 }
             })
         })
-        console.log(btn)
+       
 
     </script>
 </body>

@@ -17,7 +17,7 @@
 
             // let num =[44,6,77,3,4,6,,7,3]
             // let b = num.filter((value)=>{
-            //     return value!== ''
+            //     return value!== '' 
             // })
             // let a = b.map((value)=>{
             //     return value +2
@@ -49,12 +49,11 @@
             // alert(a)
 
             // reduce method can accept intial value 
-            //     let a = num.reduce(initial,100)
+            //     let a = num.reduce(initial)
             //    function initial (a , b){
             //            return a+b
             //     }
             //     alert(a)
-
 
         }
         {
@@ -84,6 +83,7 @@
             // })
             // alert(findindex)
 
+            // find method give the value 
             // let numbers = [35,34,32,5,555,3,222,]
             // let findindex = numbers.find(function (k) {
             //     return k >= 50;
@@ -97,9 +97,10 @@
             let entry = fruits.entries();
             let a = [];
             for(x of entry){
-                a += x  + '<br>';
+                a += x;
             }
-            document.write(a)
+            console.log(a)
+            console.log(entry)
         }
         {
             // include method check whether an elmenet present or not 

@@ -1,3 +1,4 @@
+]
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,85 +8,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        input {
-            padding: 6px 20px 6px 6px;
-            font-size: 20px;
-        }
-        #input::placeholder{
-            color: red;
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
         }
 
-        @media screen and (min-width:800px) {
-            .container {
-                width: 70%;
-                background-color: blueviolet;
-                padding: 20px;
-                margin: auto;
-            }
+        .container {
+            padding: 20px;
         }
 
-        .i {
-            position: relative;
+        form {
             display: flex;
             flex-direction: column;
-            width: 70%;
+        }
+
+        input {
+            padding: 10px;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        input[type='submit'] {
+            width: 50%;
             margin: auto;
         }
 
-        #free {
-            font-weight: 900;
-            font-size: 20px;
+        .add {
+            display: grid;
+            grid-template-columns: 90% 10%;
+        }
+
+        span {
+            position: relative;
+            font-size: 1.8rem;
+            font-weight: 500;
+        }
+
+        span:hover .block{
+            display: block;
+        }
+
+        span::before {
+            content: ':';
             position: absolute;
-            right: 10px;
-            color: black;
-            z-index: 12;
-            top: 9px;
+            width: 100%;
+        }
+
+        .block {
+            position: absolute;
+            /* display: none; */
+            /* visibility: hidden; */
+        }
+
+        .x:focus .block{
+            /* display: block; */
+            /* visibility: visible; */
         }
     </style>
 </head>
 
 <body>
-    <div class="container" id="container">
-        <div class="i">
-            <input type="text" placeholder="write your goal for today" id="input"><span id="free"> x </span>
-            <input type="submit" value="submit" onclick="hello()">
-        </div>
-        <div id="div"></div>
+    <div class="container">
+        <form action="" name="myform" onsubmit="return add()">
+            <input type="text" name="todo" placeholder="Write Your Goal For Today">
+            <input type="submit" value="add">
+        </form>
+        <!-- <span>
+            hello
+            <div class="block">
+                <p>edit</p>
+                <p>delete</p>
+                <p>copy</p>
+            </div>
+        </span> -->
     </div>
+
     <script>
-        function hello() {
-            let input = document.getElementById('input').value;
-            let div = document.getElementById('div');
+        function add() {
+            let input = document.forms.myform.todo;
+            if (input.value == '') {
+                alert('Input is blank');
+                return false;
+            } else {
+                let hover ='<div class="block"><p>edit</p><p>delete</p><p>copy</p></div>';
+                let container = document.querySelector('.container');
 
-            let text = document.createElement('h3');
-            text.innerHTML = input;
-            text.classList.add('goal');
-            // text.style.cssText=""
+                let div = document.createElement('div');
+                div.classList.add('add');
 
-            let span = document.createElement('span');
-            span.innerHTML = 'x';
-            span.style.cssText = 'display:inline-block; margin-left:10px'
+                container.appendChild(div);
 
+                let h1 = document.createElement('h2');
+                h1.innerHTML = input.value;
+                div.appendChild(h1);
 
-            text.append(span);
-            text.style.cssText = "word-break:break-all; margin:1px 0;"
-            if (input == '') {
-                alert('nothing')
+                let span = document.createElement('span');
+                // span.innerHTML = 'X';
+                span.classList.add('x');
+                div.appendChild(span);
+                input.value = '';
+                
+                span.addEventListener('mouseover',function(th){
+                    let range = document.createRange();
+                    let fragment = range.createContextualFragment(hover);
+                    // span.appendChild(fragment)
+                    span.appendChild(fragment)
+                    console.log(fragment)
+                })
             }
-            else {
-                div.appendChild(text);
-                console.log(input)
-            }
-
-            span.addEventListener('click', (e) => {
-                e.target.parentElement.style.cssText = "display:none";
-                console.log(e.target.parentElement)
-            })
+            let bchild = document.querySelectorAll('.block').children;
+            console.log(bchild)
+            Array.from(bchild).forEach(element => {
+                element.addEventListener('click',function(e){
+                    e.parentElement.parentElement.style.display='none'
+                })
+            });
+            return false;
         }
-        document.getElementById('free').addEventListener('click', function () {
-            let input = document.getElementById('input').value = '';
-        })
-
     </script>
 </body>
 

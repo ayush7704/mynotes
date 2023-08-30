@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>new Age</title>
+</head>
+<body>
+
+    <h1>JavaScript Dates</h1>
+    <h2>Using new Date()</h2>
+
+    <p>A date object can be created with a specified date and time:</p>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <input type="date" id="dob">
+    <input type="date" id="today">
+    <input type="submit" onclick="cal()">
+
+    <script>
+        function cal() {
+            let dob = document.getElementById('dob').value;
+            let today = document.getElementById('today').value;
+            const d = new Date(dob);
+            const e = new Date(today)
+            let minus = new Date()
+            minus.setFullYear(d.getFullYear() - e.getFullYear())
+            minus.setMonth(d.getMonth() - e.getMonth())
+            minus.setDate((d.getDate() - e.getDate()))
+            const month = minus.getMonth()
+
+            document.getElementById("demo4").innerHTML = minus.getFullYear() +' year ' + month +' month ' + minus.getDate() +' day '
+            document.getElementById("demo").innerHTML = minus.getDate();
+            document.getElementById("demo2").innerHTML = minus.getMonth();
+            document.getElementById("demo3").innerHTML = minus.toString();
+        }
+    </script>
+
+</body>
+
+</html>

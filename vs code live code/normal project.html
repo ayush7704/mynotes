@@ -14,12 +14,13 @@
   
     <script>
         let btn = document.querySelector("input[type='submit']").addEventListener('click',function () {
-            let input = document.querySelector('input').value;
+            let input = document.querySelector('input[type="text"]').value;
             let p = document.createElement('p');
             p.style.cssText="font-size:20px; font-weight:bold; margin:0"
             p.innerHTML=input;
             document.body.appendChild(p)
             console.log(input)
+            input =''
         })
     </script>
 </body>

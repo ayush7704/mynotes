@@ -26,14 +26,16 @@
             console.log(typeof dob + ' ' + dob)
             let dobsplit = dob.split('-')
             let dateobject = new Date(...dobsplit)
+            console.log(dobsplit)
+            console.log(dateobject.getMonth()-1)
             console.log(typeof dobsplit + ' ' + dobsplit)
-            console.log(typeof dateobject + ' ' + dateobject.getFullYear() + ' ' + dateobject.getDate())
+            console.log( dateobject.getMonth() + 1 -date.getMonth() )
             // dob = Number.parseFloat(dob)
 
             console.log(new Date().getMonth()+1)
             let year = date.getFullYear() - dateobject.getFullYear();
-            let month = date.getMonth()+1 - dateobject.getMonth()+1;
-            let day = date.getDate() - dateobject.getDate();
+            let month = dateobject.getMonth() - date.getMonth();
+            let day =  dateobject.getDate() - date.getDate();
             //    +'year'+ date.getMonth() - dateobject.getMonth() +'months' + date.getDate() - dateobject.getDate() +'day';
             result.value = year + 'year ' + month + 'month ' + day + ' day';
             //    alert (minus.toString())

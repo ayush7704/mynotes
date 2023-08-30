@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <h1></h1>
+    <script>
+        let arr = [1,45,3,4,45,33,42,3,9]
+        // new method to find lowest and largest number in an array
+        document.getElementById('demo').innerHTML=myfunction(arr)
+        // document.getElementById('demo').innerHTML=arr.sort((a,b)=>{return a-b})  sorting method
+        function myfunction(e){
+          return  Math.min.apply(null,e)
+        }
+
+
+        // Sorting Object Arrays
+        // believe me it will work
+        let arr2 = [
+            {type:'alto',year:2015},
+            {type:'boleno',year:2021},
+            {type:'volvo',year:2012}
+    ]
+    arr2.sort((a,b)=>{
+        return a.year - b.year
+    })
+    document.querySelector('h1').innerHTML=arr2[0].type +' '+arr2[0].year
+    </script> 
+</body>
+</html>

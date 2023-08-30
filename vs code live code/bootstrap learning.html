@@ -10,6 +10,10 @@
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link rel="stylesheet" href="/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
   <style>
+    body {
+      height: 100vw;
+    }
+
     /* .ctive{
       background-color: greenyellow !important;
     }
@@ -45,19 +49,29 @@
 
   <!-- when ever we define a div with a row class it devides that class in 12 columns -->
   <!-- <div class="row" style="height: 200px;">
-        <div class="bg-danger col-sm-8"></div>
-        <div class="bg-success col-sm-4"></div>  -->
-
+    <div class="bg-danger col-sm-8"></div>
+    <div class="bg-success col-sm-4"></div>
+  </div>
+  <div class="row"  style="height: 200px;">
+    <div class="col-12 bg-secondary">
+    </div>
+    <div class="row" style="height: 100px;">
+      <div class="col-sm-6 bg-primary"></div>
+      <div class="col-sm-6 bg-warning"></div>
+    </div>
+  </div> -->
   <!-- column class must be inside row container -->
 
-  <!-- <div class="bg-warning col-sm-8"></div>
+  <!-- <div class="row" style="height:200px;">
+    <div class="bg-warning col-sm-8"></div>
         <div class="bg-primary col-sm-4">
-            <div class="row">
-                <div class="col-sm-6"></div>
+            <div class="row"  style="height:200px;">
+                <div class="bg-success col-sm-6"></div>
                 <div class="bg-primary  col-sm-6"></div>
             </div>
         </div> 
-    </div> -->
+    </div>
+  </div> -->
 
   <!-- ek column ke andar direct nyi column nhi de sakte pahle row banani padegi -->
   <!-- </div> -->
@@ -80,14 +94,20 @@
 
     </pre> -->
 
-  <!-- <div class="row"> -->
+  <!-- <div class="container-fluid">
+    <div class="row row-cols-3">
+      <div class="col bg-danger flex-grow-1">danger</div>
+      <div class="col-auto bg-primary">col-auto</div>
+      <div class="col bg-secondary flex-grow-1">col bg-secondary</div>
+      <div class="col bg-primary">col bg-primary</div>
+      <div class="col flex-fill bg-secondary">bg-secondary bg-secondary bg-secondary bg-secondary</div>
+      <div class="col bg-primary">col bg-primary</div>
+    </div>
+  </div> -->
   <!-- (s1) yh hume shortcut milta he equal width ke liy class='col' only -->
-  <!-- <div class="col bg-danger">danger</div> -->
-  <!-- <div class="col-lg-auto bg-primary">bg-primary</div> -->
-  <!-- <div class="col bg-secondary">bg-secondary</div> -->
   <!-- (s2) bich me kisi ko bhi kuch de (col-*) de sakte hai -->
   <!-- (col-auto) karne se sirf content jitni hi width lijaayegi isme md,lg,sm bhi likh sakte hai -->
-  <!-- </div> -->
+
 
   <!-- defining columns  -->
   <!-- ( row-cols-2) karne se row me kitne colums define karne hai hai btaya jaata hai -->
@@ -109,7 +129,8 @@
         One of three columns Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, quidem.
       </div>
       <div class="col bg-secondary">
-        One of three columns Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur quasi excepturi harum libero nulla, ipsam vitae ut odio voluptatem dolorum.
+        One of three columns Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur quasi excepturi harum
+        libero nulla, ipsam vitae ut odio voluptatem dolorum.
       </div>
     </div>
   </div> -->
@@ -141,14 +162,13 @@
   <!-- offset se left side me gap diya jaata hai as column kitne gap chahiye bo -->
   <!-- we can also use them with breakpoints -->
 
-  <!-- <div class="container">
+  <!-- <div class="container mt-3">
     <div class="row">
-      <div class="col-4 order-1">hello world 1</div>
-      <div class="col-4">hello world 2</div>
-      <div class="col-4 order-0">hello world 3</div>
+      <div class="col-4 bg-secondary order-1">hello world 1</div>
+      <div class="col-4 bg-primary">hello world 2</div>
+      <div class="col-4 bg-danger order-0">hello world 3</div>
     </div>
   </div> -->
-
 
   <!-- classes and components -->
   <!-- bg-danger for background-color red -->
@@ -156,12 +176,18 @@
   <!-- text-white for make text color white -->
   <!-- rounded se radius lagate hai -->
   <!-- <div class="container">
-        <div class="row bg-danger"><div class="col-12"><p class="text-center rounded-5 text-white">hello</p></div></div>
-    </div> -->
+    <div class="row rounded-5 bg-danger">
+      <div class="col-12">
+        <p class="text-center text-white">hello</p>
+      </div>
+    </div>
+  </div> -->
 
   <!-- img-fluid se img ko risponsive kiya jaata hai -->
   <!-- <div class="container-fluid">
-        <div class="row"><img src="car.jfif" class="img-fluid" alt=""></div>
+        <div class="row ">
+          <img src="car.jfif" class="img-fluid g-0" alt="">
+        </div>
     </div> -->
 
   <!-- <div class="alert alert-primary text-center">
@@ -496,14 +522,14 @@
   <!-- .btn-group for create a group   on container-->
   <!-- the id in the button will be same as aria-labelledby in ul  -->
   <!-- .dropdown-toggle class for the down arrow in the button  -->
-  <!-- <div class="btn-group">
+  <div class="btn-group">
     <button type="button" id='idd' class="btn btn-primary dropdown-toggle" aria-expanded="false"
    data-bs-toggle="dropdown">click to see</button>
     <ul class="dropdown-menu" aria-labelledby="idd">
       <li class="dropdown-item" role="button">item 1</li>
       <li class="dropdown-item" role="button">item 2</li>
     </ul>
-  </div> -->
+  </div>
 
   <!-- list-group  -->
   <!-- .list-group  and .list-group-item classes make a simple structure -->
@@ -691,27 +717,28 @@
 
   <!-- Button trigger modal -->
   <!-- div .modal wale par data-bs-backdrop="static" data-bs-keyboard="false" lagane sirf modal click se hi close hoga  -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-</button>
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-       Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, atque!
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button>
+  <!-- Modal -->
+  <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static"
+    data-bs-keyboard="false" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, atque!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
       </div>
     </div>
-  </div>
-</div>
+  </div> -->
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"

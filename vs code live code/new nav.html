@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        nav{
+            padding: 0 4rem;
+            display: flex;
+            /* justify-content: space-between; */
+            background-color: gray;
+            align-items: center;
+        }
+        ul{
+            display: flex;
+            list-style: none;
+            display: none;
+        }
+        li a{
+            padding:10px;
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+        h3{
+            margin-left: auto;
+        }
+        .block{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">BLOG</a></li>
+            <li><a href="#">HIRE US</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+        <h3 class="cross">x</h3>
+    </nav>
+
+    <script>
+        let ul = document.querySelector('ul');
+        let click = document.querySelector('.cross').addEventListener('click',function(){
+            ul.classList.toggle('block')
+        })
+    </script>
+</body>
+</html>

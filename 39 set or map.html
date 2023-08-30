@@ -11,7 +11,8 @@
 <body>
 
     <script>
-        {// A JavaScript Set is a collection of unique values.
+        {
+            // A JavaScript Set is a collection of unique values.
             // Pass an Array to the new Set() constructor:
             // s will be capital in new Set 
 
@@ -30,6 +31,8 @@
             st.forEach((value) => {
                 a += value + ' '
             })
+
+            st.forEach((v => { console.log(v) }))
             console.log(st)
             console.log(a)
         }
@@ -37,14 +40,14 @@
         {
             // A Map holds key-value pairs where the keys can be any datatype.
             // You can create a Map by passing an Array to the new Map() constructor:
-
+            // map is an alternative or a better version of objects , in maps we can give any datatype as a key but not in object
             let mp = new Map([
-                ['ram', 'first'], // the first parameter will be save like key ,and second like value 
+                [1, 'first'], // the first parameter will be save like key ,and second like value 
                 ['bharat', 'second'],
                 ['laksman', 'third']
             ])
-            mp.set('satru', 'fourth') // also add like this 
-            console.log(mp.get('bharat')) // get(key-name) for its value
+            mp.set(true, 'fourth') // also add like this 
+            console.log(mp.get(true)) // get(key-name) for its value
             console.log(mp.size) //The size property returns the number of elements in a Map:
             mp.delete('bharat')
             console.log(mp.get('bharat'))
@@ -61,13 +64,29 @@
             }
             {
                 let text = '';
-                for(x of mp){
-                    text += x +'<br>'
+                for (x of mp) {
+                    text += x + '<br>'
                 }
                 document.write(text)
+                // document.write(mp.entries())
+                // entries return an iterator for key values
+                for (x of mp.keys()) {
+                    document.write(x + '<br>')
+                }
+                document.write('hhhhhhh'.constructor)
                 document.write('<hr>')
+
+                const fruits = new Date();
+                document.getElementById("demo").innerHTML = isArray(fruits);
+
+                function isArray(myArray) {
+                    document.write(myArray.constructor.toString().indexOf('Array'))
+                    return myArray.constructor.toString().indexOf("Array") > -1;
+                }
+
+                // The instanceof operator returns true if an object is an instance of the specified object:
             }
-          
+
         }
     </script>
 </body>
